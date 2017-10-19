@@ -1,0 +1,63 @@
+{
+  "version" : "1.0.1",
+  "name" : "groovy-extend",
+  "number" : "1508401533721",
+  "type" : "GRADLE",
+  "buildAgent" : {
+    "name" : "Gradle",
+    "version" : "3.5-rc-2"
+  },
+  "agent" : {
+    "name" : "Gradle",
+    "version" : "3.5-rc-2"
+  },
+  "started" : "2017-10-19T17:25:33.590+0900",
+  "durationMillis" : 2717,
+  "principal" : "kaname",
+  "artifactoryPrincipal" : "developer",
+  "artifactoryPluginVersion" : "Unknown",
+  "vcs" : [ ],
+  "licenseControl" : {
+    "runChecks" : false,
+    "includePublishedArtifacts" : false,
+    "autoDiscover" : false,
+    "scopesList" : "",
+    "licenseViolationsRecipientsList" : ""
+  },
+  "modules" : [ {
+    "id" : "jp.sharelock:groovy-extend:1.6-SNAPSHOT",
+    "artifacts" : [ {
+      "type" : "jar",
+      "sha1" : "0c68c1cc06987b7a966276418f85f88a3ae255f2",
+      "md5" : "78200844984ffb655aaa24462f55856d",
+      "name" : "groovy-extend-1.6-SNAPSHOT.jar"
+    }, {
+      "type" : "pom",
+      "sha1" : "c88fbc09c6b2deebe7a0e3ae9a5ea4c40e9aa6bf",
+      "md5" : "77912259b5fee951afe950c1ae28c4e4",
+      "name" : "groovy-extend-1.6-SNAPSHOT.pom"
+    } ],
+    "excludedArtifacts" : [ ],
+    "dependencies" : [ {
+      "type" : "jar",
+      "sha1" : "342fc284019f590e1308056990fdb24a08f06318",
+      "md5" : "67cdd14323977fa71a21d9603b3d59b6",
+      "id" : "commons-net:commons-net:3.5",
+      "scopes" : [ "compileClasspath" ]
+    }, {
+      "type" : "jar",
+      "sha1" : "4660c69a6fb68c1507d09e3de01e56bc87ffd85d",
+      "md5" : "345c8b92a94bd4ae7e9e3e2377984384",
+      "id" : "org.codehaus.groovy:groovy-all:2.4.10",
+      "scopes" : [ "compileClasspath" ]
+    } ]
+  } ],
+  "governance" : {
+    "blackDuckProperties" : {
+      "runChecks" : false,
+      "includePublishedArtifacts" : false,
+      "autoCreateMissingComponentRequests" : false,
+      "autoDiscardStaleComponentRequests" : false
+    }
+  }
+}

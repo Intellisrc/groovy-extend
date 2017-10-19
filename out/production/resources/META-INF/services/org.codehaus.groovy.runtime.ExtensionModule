@@ -1,0 +1,9 @@
+moduleName = groovy-extend
+moduleVersion = 1.0
+extensionClasses = jp.sharelock.groovy.StringExt, \
+                   jp.sharelock.groovy.Inet4AddressExt, \
+                   jp.sharelock.groovy.DateExt
+                   
+staticExtensionClasses = jp.sharelock.groovy.NetworkInterfaceStaticEx \
+                         jp.sharelock.groovy.InetAddressStaticExt \
+			 jp.sharelock.groovy.RandomStaticExt

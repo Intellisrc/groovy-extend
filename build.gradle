@@ -1,0 +1,97 @@
+group groupName
+version currentVersion
+
+apply plugin: 'com.jfrog.artifactory'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'maven-publish'
+
+repositories {
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath(group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '4.+')
+    }
+}
+
+dependencies {
+    compile 'commons-net:commons-net:3.5'
+    compile 'org.codehaus.groovy:groovy-all:2.4.10'
+    testCompile group: 'org.spockframework', name: 'spock-unitils', version: '1.1-groovy-2.4'
+}
+
+task generateModule << {
+    def allFiles = sourceSets.main.groovy.with { g ->
+        g.findAll {
+            it.parentFile.name == 'groovy' && it.name.endsWith( 'groovy' )
+        }.collect {
+            it.toString().replaceAll( '\\' + File.separator, '.' )
+        }.collect {
+            it - ( g.srcDirs as List )[0].toString().replaceAll( '\\' + File.separator, '.' )
+        }.collect {
+            it[ 1..-8 ]
+        }
+    }
+    def extensionFiles = allFiles.findAll {
+        !it.contains('Static')
+    }.join(",")
+    def staticFiles = allFiles.findAll {
+        it.contains('Static')
+    }.join(",")
+    new File( "$buildDir/classes/main/META-INF/services" ).with { f ->
+        f.mkdirs()
+        new File( f, 'org.codehaus.groovy.runtime.ExtensionModule' ).withWriter { w ->
+            w.writeLine 'moduleName=groovy-common-extensions'
+            w.writeLine "moduleVersion=$version"
+            w.writeLine "extensionClasses=$extensionFiles"
+            w.writeLine "staticExtensionClasses=$staticFiles"
+        }
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId "${artifact}"
+            from components.java
+        }
+    }
+}
+
+artifactory {
+    contextUrl = "${repositoryURL}"
+    publish {
+        repository {
+            repoKey = currentVersion.endsWith("SNAPSHOT") ? "${repositoryDevelop}" : "${repositoryStable}" // The Artifactory repository key to publish to
+            username = "${artifactoryUser}" // The publisher user name
+            password = "${artifactoryPassword}" // The publisher password
+        }
+        defaults {
+            publications('mavenJava')
+            publishArtifacts = true
+            // Properties to be attached to the published artifacts.
+            properties = ['qa.level': 'basic', 'dev.team' : 'core']
+            // Publish generated POM files to Artifactory (true by default)
+            publishPom = true
+        }
+    }
+    resolve {
+        repository {
+            repoKey =  "${repositoryResolve}" // The Artifactory repository key to publish to
+            username = "${artifactoryUser}" // The publisher user name
+            password = "${artifactoryPassword}" // The publisher password
+        }
+    }
+}
+
+// Hook up dependencies
+jar.dependsOn( generateModule )
+test.dependsOn( jar )
+artifacts {
+    archives jar
+}
