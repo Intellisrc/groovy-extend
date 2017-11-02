@@ -53,7 +53,7 @@ class StringExt {
         } else {
             (self) =~ /\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}/
         }
-        toDate(self, "yyyy-MM-dd HH:mm:ss")
+        toDate(self,noTime ? "yyyy-MM-dd" : "yyyy-MM-dd HH:mm:ss")
     }
     /**
      * Appends a random number to a String
