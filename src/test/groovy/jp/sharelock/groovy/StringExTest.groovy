@@ -43,6 +43,12 @@ class StringExTest extends Specification {
         when:
             Date date = map["date_time"].toDateSTD()
         then:
-            date != null
+            assert date != null
+    }
+    def "date without time"() {
+        given:
+            Date date = "2000-01-01 12:30:54".toDateSTD(true)
+        expect:
+            assert date.toStringSTD() == "2000-01-01 00:00:00"
     }
 }

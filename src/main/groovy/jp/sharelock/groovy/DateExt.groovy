@@ -62,7 +62,7 @@ class DateExt {
      * @param dateFormat
      * @return
      */
-    static String toStringSTD(final Date self) {
-        toString(self, "yyyy-MM-dd HH:mm:ss")
+    static String toStringSTD(final Date self, final boolean noTime = false) {
+        toString(self, noTime ? "yyyy-MM-dd" : "yyyy-MM-dd HH:mm:ss")
     }
 }

@@ -1,18 +1,18 @@
 {
   "version" : "1.0.1",
   "name" : "groovy-extend",
-  "number" : "1508401533721",
+  "number" : "1509601985007",
   "type" : "GRADLE",
   "buildAgent" : {
     "name" : "Gradle",
-    "version" : "3.5-rc-2"
+    "version" : "3.5"
   },
   "agent" : {
     "name" : "Gradle",
-    "version" : "3.5-rc-2"
+    "version" : "3.5"
   },
-  "started" : "2017-10-19T17:25:33.590+0900",
-  "durationMillis" : 2717,
+  "started" : "2017-11-02T14:53:03.560+0900",
+  "durationMillis" : 9380,
   "principal" : "kaname",
   "artifactoryPrincipal" : "developer",
   "artifactoryPluginVersion" : "Unknown",
@@ -21,21 +21,21 @@
     "runChecks" : false,
     "includePublishedArtifacts" : false,
     "autoDiscover" : false,
-    "scopesList" : "",
-    "licenseViolationsRecipientsList" : ""
+    "licenseViolationsRecipientsList" : "",
+    "scopesList" : ""
   },
   "modules" : [ {
-    "id" : "jp.sharelock:groovy-extend:1.6-SNAPSHOT",
+    "id" : "jp.sharelock:groovy-extend:1.6",
     "artifacts" : [ {
       "type" : "jar",
-      "sha1" : "0c68c1cc06987b7a966276418f85f88a3ae255f2",
-      "md5" : "78200844984ffb655aaa24462f55856d",
-      "name" : "groovy-extend-1.6-SNAPSHOT.jar"
+      "sha1" : "7e6124ca08ca1561f87c1842e1f05072f74dcbc5",
+      "md5" : "e80009f9ecf5dc53ae7cfc3352d81961",
+      "name" : "groovy-extend-1.6.jar"
     }, {
       "type" : "pom",
-      "sha1" : "c88fbc09c6b2deebe7a0e3ae9a5ea4c40e9aa6bf",
-      "md5" : "77912259b5fee951afe950c1ae28c4e4",
-      "name" : "groovy-extend-1.6-SNAPSHOT.pom"
+      "sha1" : "fbe3962b1fa8d748a3211eab2def36f24881356d",
+      "md5" : "f91039e2c563664232432256bbec45bd",
+      "name" : "groovy-extend-1.6.pom"
     } ],
     "excludedArtifacts" : [ ],
     "dependencies" : [ {

@@ -47,8 +47,12 @@ class StringExt {
      * @param String Date
      * @return
      */
-    static Date toDateSTD(final String self) throws ParseException {
-        (self) =~ /\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}/
+    static Date toDateSTD(final String self, final boolean noTime = false) throws ParseException {
+        if(noTime) {
+            (self) =~ /\d{4}-\d{2}-\d{2}/
+        } else {
+            (self) =~ /\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}/
+        }
         toDate(self, "yyyy-MM-dd HH:mm:ss")
     }
     /**
