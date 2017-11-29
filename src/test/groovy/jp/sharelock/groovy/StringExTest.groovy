@@ -10,7 +10,7 @@ class StringExTest extends Specification {
         given:
             def ipStr = "192.168.10.100"
         when:
-            def ipNet = ipStr.toInet4Address()
+            def ipNet = StringExt.toInet4Address(ipStr)
         then:
             assert ipNet
             ipNet.getHostName() == ipStr
@@ -23,32 +23,47 @@ class StringExTest extends Specification {
         given:
             def dateStr = "2017-10-10 12:00:00"
         expect:
-            "2017-10-10 12:00:00" == dateStr.toDateSTD().toStringSTD()
+            "2017-10-10 12:00:00" == DateExt.toStringSTD(StringExt.toDateSTD(dateStr))
     }
     def "toDate With millisecond"() {
         given:
             def dateStr = "2017-10-10 12:00:00.0"
         expect:
-            "2017-10-10 12:00:00" == dateStr.toDateSTD().toStringSTD()
+            "2017-10-10 12:00:00" == DateExt.toStringSTD(StringExt.toDateSTD(dateStr))
     }
     def "toDate With Timezone"() {
         given:
             def dateStr = "2017-10-10 12:00:00.999 GMT"
         expect:
-            "2017-10-10 12:00:00" == dateStr.toDateSTD().toStringSTD()
+            "2017-10-10 12:00:00" == DateExt.toStringSTD(StringExt.toDateSTD(dateStr))
     }
     def "date from HashMap"() {
         given:
-            LinkedHashMap<String,String> map = [ id : 200, date_time : "2017-10-10 12:00:00.0" ]
+            def map = [ id : 200, date_time : "2017-10-10 12:00:00.0" ]
         when:
-            Date date = map["date_time"].toDateSTD()
+            Date date = StringExt.toDateSTD(map["date_time"].toString())
         then:
             assert date != null
     }
     def "date without time"() {
         given:
-            Date date = "2000-01-01 12:30:54".toDateSTD(true)
+            Date date = StringExt.toDateSTD("2000-01-01")
         expect:
-            assert date.toStringSTD() == "2000-01-01 00:00:00"
+            assert DateExt.toStringSTD(date) == "2000-01-01 00:00:00"
+    }
+    def "Query to Map"() {
+        setup:
+        //NOTE: for queries, %20 and + are the same
+        def uri = new URI("http://localhost/?one=1&two=2&three=third+member&four=true")
+        def uri2 = new URI("http://localhost/?one=1&two=2&three=third%20member&four=true")
+        when:
+        def map = StringExt.getQueryMap(uri.query)
+        def map2 = StringExt.getQueryMap(uri2.query)
+        then:
+        assert map.size() == 4
+        assert map.one == 1
+        assert map.three == "third member"
+        assert map.four == true
+        assert map.three == map2.three
     }
 }

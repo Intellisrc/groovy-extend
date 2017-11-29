@@ -1,4 +1,4 @@
 moduleName=groovy-common-extensions
-moduleVersion=1.6.1
-extensionClasses=jp.sharelock.groovy.DateExt,jp.sharelock.groovy.Inet4AddressExt,jp.sharelock.groovy.StringExt
-staticExtensionClasses=jp.sharelock.groovy.RandomStaticExt,jp.sharelock.groovy.InetAddressStaticExt,jp.sharelock.groovy.NetworkInterfaceStaticEx
+moduleVersion=1.6.3
+extensionClasses=jp.sharelock.groovy.DateExt,jp.sharelock.groovy.Inet4AddressExt,jp.sharelock.groovy.MapExt,jp.sharelock.groovy.StringExt
+staticExtensionClasses=jp.sharelock.groovy.InetAddressStaticExt,jp.sharelock.groovy.NetworkInterfaceStaticEx,jp.sharelock.groovy.RandomStaticExt

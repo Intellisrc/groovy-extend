@@ -25,31 +25,33 @@ dependencies {
     testCompile group: 'org.spockframework', name: 'spock-unitils', version: '1.1-groovy-2.4'
 }
 
-task generateModule << {
-    def allFiles = sourceSets.main.groovy.with { g ->
-        g.findAll {
-            it.parentFile.name == 'groovy' && it.name.endsWith( 'groovy' )
-        }.collect {
-            it.toString().replaceAll( '\\' + File.separator, '.' )
-        }.collect {
-            it - ( g.srcDirs as List )[0].toString().replaceAll( '\\' + File.separator, '.' )
-        }.collect {
-            it[ 1..-8 ]
+task generateModule {
+    doLast {
+        def allFiles = sourceSets.main.groovy.with { g ->
+            g.findAll {
+                it.parentFile.name == 'groovy' && it.name.endsWith('groovy')
+            }.collect {
+                it.toString().replaceAll('\\' + File.separator, '.')
+            }.collect {
+                it - (g.srcDirs as List)[0].toString().replaceAll('\\' + File.separator, '.')
+            }.collect {
+                it[1..-8]
+            }
         }
-    }
-    def extensionFiles = allFiles.findAll {
-        !it.contains('Static')
-    }.join(",")
-    def staticFiles = allFiles.findAll {
-        it.contains('Static')
-    }.join(",")
-    new File( "$buildDir/classes/main/META-INF/services" ).with { f ->
-        f.mkdirs()
-        new File( f, 'org.codehaus.groovy.runtime.ExtensionModule' ).withWriter { w ->
-            w.writeLine 'moduleName=groovy-common-extensions'
-            w.writeLine "moduleVersion=$version"
-            w.writeLine "extensionClasses=$extensionFiles"
-            w.writeLine "staticExtensionClasses=$staticFiles"
+        def extensionFiles = allFiles.findAll {
+            !it.contains('Static')
+        }.join(",")
+        def staticFiles = allFiles.findAll {
+            it.contains('Static')
+        }.join(",")
+        new File("$buildDir/classes/main/META-INF/services").with { f ->
+            f.mkdirs()
+            new File(f, 'org.codehaus.groovy.runtime.ExtensionModule').withWriter { w ->
+                w.writeLine 'moduleName=groovy-common-extensions'
+                w.writeLine "moduleVersion=$version"
+                w.writeLine "extensionClasses=$extensionFiles"
+                w.writeLine "staticExtensionClasses=$staticFiles"
+            }
         }
     }
 }

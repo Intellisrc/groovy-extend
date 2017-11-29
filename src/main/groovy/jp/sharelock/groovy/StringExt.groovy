@@ -47,13 +47,16 @@ class StringExt {
      * @param String Date
      * @return
      */
-    static Date toDateSTD(final String self, final boolean noTime = false) throws ParseException {
-        if(noTime) {
-            (self) =~ /\d{4}-\d{2}-\d{2}/
+    static Date toDateSTD(final String self) throws ParseException {
+        def time
+        if(self =~ /^\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}/) {
+            time = true
+        } else if(self =~ /^\d{4}-\d{2}-\d{2}/) {
+            time = false
         } else {
-            (self) =~ /\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}/
+            throw new ParseException("Unknown date format", 0)
         }
-        toDate(self,noTime ? "yyyy-MM-dd" : "yyyy-MM-dd HH:mm:ss")
+        toDate(self, time ?  "yyyy-MM-dd HH:mm:ss" : "yyyy-MM-dd")
     }
     /**
      * Appends a random number to a String
@@ -63,5 +66,38 @@ class StringExt {
     static appendRandomNum(final String self, int max = 9999) {
         Random rand = new Random()
         return self + rand.nextInt(max)
+    }
+
+    /**
+     * Convert query to Map
+     * @param self
+     * @return
+     */
+    static Map getQueryMap(final String self) {
+        String query = self
+        if(query.startsWith('?')) {
+            query = query.substring(1)
+        }
+        return query.split('&').inject([:]) {
+            Map map, String kv ->
+                def parts = kv.split('=').toList()
+                String key = parts[0]
+                String val = parts[1]
+                def value = val != null ? URLDecoder.decode(val, "UTF-8") : null
+                //Auto convert boolean values
+                if (val.toLowerCase() == "true" || val.toLowerCase() == "false") {
+                    value = val.toLowerCase() == "true"
+                }
+                //Auto convert numeric values
+                try {
+                    if (Integer.parseInt(val).toString() == val) {
+                        value = Integer.parseInt(val)
+                    }
+                } catch (NumberFormatException e) {
+                    //Ignore
+                }
+                map[key] = value
+                return map
+        }
     }
 }
