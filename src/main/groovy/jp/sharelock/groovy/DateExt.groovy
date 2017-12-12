@@ -62,7 +62,61 @@ class DateExt {
      * @param dateFormat
      * @return
      */
-    static String toStringSTD(final Date self, final boolean noTime = false) {
-        toString(self, noTime ? "yyyy-MM-dd" : "yyyy-MM-dd HH:mm:ss")
+    static String toYMDHms(final Date self) {
+        toString(self, "yyyy-MM-dd HH:mm:ss")
+    }
+    /**
+     * Converts a Date to standard style:  "yyyy-MM-dd" without time
+     * @param self
+     * @param dateFormat
+     * @return
+     */
+    static String toYMD(final Date self) {
+        toString(self, "yyyy-MM-dd")
+    }
+    /**
+     * Converts a Date to standard style:  "yyyy" without time
+     * @param self
+     * @param dateFormat
+     * @return
+     */
+    static String toYYYY(final Date self) {
+        toString(self, "yyyy")
+    }
+    /**
+     * Converts a Date to standard style:  "yy" without time
+     * @param self
+     * @param dateFormat
+     * @return
+     */
+    static String toYY(final Date self) {
+        toString(self, "yy")
+    }
+    /**
+     * Converts a Date to standard style:  "MM" without time
+     * @param self
+     * @param dateFormat
+     * @return
+     */
+    static String toMM(final Date self) {
+        toString(self, "MM")
+    }
+    /**
+     * Converts a Date to standard style:  "dd" without time
+     * @param self
+     * @param dateFormat
+     * @return
+     */
+    static String toDD(final Date self) {
+        toString(self, "dd")
+    }
+    /**
+     * Converts a Date to standard style:  "HH"
+     * @param self
+     * @param dateFormat
+     * @return
+     */
+    static String toHH(final Date self) {
+        toString(self, "HH")
     }
 }

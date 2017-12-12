@@ -47,16 +47,24 @@ class StringExt {
      * @param String Date
      * @return
      */
-    static Date toDateSTD(final String self) throws ParseException {
-        def time
+    static Date fromYMDHis(final String self) throws ParseException {
         if(self =~ /^\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}/) {
-            time = true
-        } else if(self =~ /^\d{4}-\d{2}-\d{2}/) {
-            time = false
+            toDate(self, "yyyy-MM-dd HH:mm:ss")
         } else {
             throw new ParseException("Unknown date format", 0)
         }
-        toDate(self, time ?  "yyyy-MM-dd HH:mm:ss" : "yyyy-MM-dd")
+    }
+    /**
+     * Converts a string date: yyyy-MM-dd into Date
+     * @param String Date
+     * @return
+     */
+    static Date fromYMD(final String self) throws ParseException {
+        if(self =~ /^\d{4}-\d{2}-\d{2}/) {
+            return toDate(self, "yyyy-MM-dd")
+        } else {
+            throw new ParseException("Unknown date format", 0)
+        }
     }
     /**
      * Appends a random number to a String

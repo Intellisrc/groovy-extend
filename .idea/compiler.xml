@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="groovy-extend_main" target="1.8" />
       <module name="groovy-extend_test" target="1.8" />
+      <module name="sharelock-groovy-extend_main" target="1.8" />
+      <module name="sharelock-groovy-extend_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

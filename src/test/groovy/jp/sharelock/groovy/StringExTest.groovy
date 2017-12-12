@@ -23,33 +23,33 @@ class StringExTest extends Specification {
         given:
             def dateStr = "2017-10-10 12:00:00"
         expect:
-            "2017-10-10 12:00:00" == DateExt.toStringSTD(StringExt.toDateSTD(dateStr))
+            "2017-10-10 12:00:00" == DateExt.toYMDHms(StringExt.fromYMDHis(dateStr))
     }
     def "toDate With millisecond"() {
         given:
             def dateStr = "2017-10-10 12:00:00.0"
         expect:
-            "2017-10-10 12:00:00" == DateExt.toStringSTD(StringExt.toDateSTD(dateStr))
+            "2017-10-10 12:00:00" == DateExt.toYMDHms(StringExt.fromYMDHis(dateStr))
     }
     def "toDate With Timezone"() {
         given:
             def dateStr = "2017-10-10 12:00:00.999 GMT"
         expect:
-            "2017-10-10 12:00:00" == DateExt.toStringSTD(StringExt.toDateSTD(dateStr))
+            "2017-10-10 12:00:00" == DateExt.toYMDHms(StringExt.fromYMDHis(dateStr))
     }
     def "date from HashMap"() {
         given:
             def map = [ id : 200, date_time : "2017-10-10 12:00:00.0" ]
         when:
-            Date date = StringExt.toDateSTD(map["date_time"].toString())
+            Date date = StringExt.fromYMDHis(map["date_time"].toString())
         then:
             assert date != null
     }
     def "date without time"() {
         given:
-            Date date = StringExt.toDateSTD("2000-01-01")
+            Date date = StringExt.fromYMDHis("2000-01-01")
         expect:
-            assert DateExt.toStringSTD(date) == "2000-01-01 00:00:00"
+            assert DateExt.toYMDHms(date) == "2000-01-01 00:00:00"
     }
     def "Query to Map"() {
         setup:
