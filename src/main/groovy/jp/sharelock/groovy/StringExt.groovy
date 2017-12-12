@@ -47,7 +47,7 @@ class StringExt {
      * @param String Date
      * @return
      */
-    static Date fromYMDHis(final String self) throws ParseException {
+    static Date fromYMDHms(final String self) throws ParseException {
         if(self =~ /^\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}/) {
             toDate(self, "yyyy-MM-dd HH:mm:ss")
         } else {

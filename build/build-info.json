@@ -1,7 +1,7 @@
 {
   "version" : "1.0.1",
   "name" : "groovy-extend",
-  "number" : "1511947040879",
+  "number" : "1513047828782",
   "type" : "GRADLE",
   "buildAgent" : {
     "name" : "Gradle",
@@ -11,8 +11,8 @@
     "name" : "Gradle",
     "version" : "3.5-rc-2"
   },
-  "started" : "2017-11-29T18:17:20.336+0900",
-  "durationMillis" : 21648,
+  "started" : "2017-12-12T12:03:48.772+0900",
+  "durationMillis" : 1408,
   "principal" : "lepe",
   "artifactoryPrincipal" : "developer",
   "artifactoryPluginVersion" : "Unknown",
@@ -21,21 +21,21 @@
     "runChecks" : false,
     "includePublishedArtifacts" : false,
     "autoDiscover" : false,
-    "scopesList" : "",
-    "licenseViolationsRecipientsList" : ""
+    "licenseViolationsRecipientsList" : "",
+    "scopesList" : ""
   },
   "modules" : [ {
-    "id" : "jp.sharelock:groovy-extend:1.6.3",
+    "id" : "jp.sharelock:groovy-extend:1.6.4",
     "artifacts" : [ {
       "type" : "jar",
-      "sha1" : "98c9024eafb06af44061772a0f561f95e6f31b91",
-      "md5" : "1e3f9b328387f1c348de6f22879614c2",
-      "name" : "groovy-extend-1.6.3.jar"
+      "sha1" : "8cf3c220f9d83fec9cf3676494763cb58b26f2b0",
+      "md5" : "71383f4a7010e7b11a31c7198f6858d7",
+      "name" : "groovy-extend-1.6.4.jar"
     }, {
       "type" : "pom",
-      "sha1" : "726a1bf2488170ce226749a1391079cc24ed8959",
-      "md5" : "f3b316d05499068871f78fe9639ea403",
-      "name" : "groovy-extend-1.6.3.pom"
+      "sha1" : "92e9c6f41fa25de0ebd57fb2f053856291b8fc71",
+      "md5" : "18b6c39aca3256050ff0f187c553ae2d",
+      "name" : "groovy-extend-1.6.4.pom"
     } ],
     "excludedArtifacts" : [ ],
     "dependencies" : [ {
@@ -46,9 +46,9 @@
       "scopes" : [ "compileClasspath" ]
     }, {
       "type" : "jar",
-      "sha1" : "4660c69a6fb68c1507d09e3de01e56bc87ffd85d",
-      "md5" : "345c8b92a94bd4ae7e9e3e2377984384",
-      "id" : "org.codehaus.groovy:groovy-all:2.4.10",
+      "sha1" : "7e410735a50e495323dd4855ddd13ea7dad23ac1",
+      "md5" : "a4a09cf9b728dae9a61b46f83359e78f",
+      "id" : "org.codehaus.groovy:groovy-all:2.4.13",
       "scopes" : [ "compileClasspath" ]
     } ]
   } ],

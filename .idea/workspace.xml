@@ -1,52 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="1.6.3 : Added toQueryMap and toQueryString. Modified tests to use Ext classes so it can be tested">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_all_2_4_13.xml" />
-      <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/annotation-processors.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/annotation-processors.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_collections_commons_collections_3_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_lang_commons_lang_2_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__ognl_ognl_2_6_9.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_all_2_4_10.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_spockframework_spock_core_1_1_groovy_2_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_spockframework_spock_unitils_1_1_groovy_2_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_unitils_unitils_core_3_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" />
+    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/META-INF/services/org.codehaus.groovy.runtime.ExtensionModule" afterPath="$PROJECT_DIR$/build/classes/main/META-INF/services/org.codehaus.groovy.runtime.ExtensionModule" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/DateExt.class" afterPath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/DateExt.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/Inet4AddressExt.class" afterPath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/Inet4AddressExt.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/InetAddressStaticExt.class" afterPath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/InetAddressStaticExt.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/NetworkInterfaceStaticEx$_getIPinNetwork_closure4.class" afterPath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/NetworkInterfaceStaticEx$_getIPinNetwork_closure4.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/NetworkInterfaceStaticEx$_getIPinNetwork_closure5.class" afterPath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/NetworkInterfaceStaticEx$_getIPinNetwork_closure5.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/NetworkInterfaceStaticEx.class" afterPath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/NetworkInterfaceStaticEx.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/RandomStaticExt.class" afterPath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/RandomStaticExt.class" />
-      <change beforePath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/StringExt.class" afterPath="$PROJECT_DIR$/build/classes/main/jp/sharelock/groovy/StringExt.class" />
-      <change beforePath="$PROJECT_DIR$/build/publications/mavenJava/pom-default.xml" afterPath="$PROJECT_DIR$/build/publications/mavenJava/pom-default.xml" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" afterPath="$PROJECT_DIR$/gradle.properties" />
-      <change beforePath="$PROJECT_DIR$/groovy-extend.iml" afterPath="$PROJECT_DIR$/groovy-extend.iml" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/DateExt.class" afterPath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/DateExt.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/Inet4AddressExt.class" afterPath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/Inet4AddressExt.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/InetAddressStaticExt.class" afterPath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/InetAddressStaticExt.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/NetworkInterfaceStaticEx$_getIPinNetwork_closure4.class" afterPath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/NetworkInterfaceStaticEx$_getIPinNetwork_closure4.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/NetworkInterfaceStaticEx$_getIPinNetwork_closure5.class" afterPath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/NetworkInterfaceStaticEx$_getIPinNetwork_closure5.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/NetworkInterfaceStaticEx.class" afterPath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/NetworkInterfaceStaticEx.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/RandomStaticExt.class" afterPath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/RandomStaticExt.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/StringExt.class" afterPath="$PROJECT_DIR$/out/production/classes/jp/sharelock/groovy/StringExt.class" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/jp/sharelock/groovy/NetworkInterfaceStaticExTest.class" afterPath="$PROJECT_DIR$/out/test/classes/jp/sharelock/groovy/NetworkInterfaceStaticExTest.class" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/jp/sharelock/groovy/StringExTest.class" afterPath="$PROJECT_DIR$/out/test/classes/jp/sharelock/groovy/StringExTest.class" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/DateExt.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/DateExt.groovy" />
+      <change beforePath="$PROJECT_DIR$/build/build-info.json" afterPath="$PROJECT_DIR$/build/build-info.json" />
       <change beforePath="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/StringExt.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/StringExt.groovy" />
       <change beforePath="$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/StringExTest.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/StringExTest.groovy" />
     </list>
@@ -113,11 +70,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringExt.groovy" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MapExt.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/MapExt.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringExt.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/StringExt.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="67" column="4" lean-forward="false" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+            <state relative-caret-position="774">
+              <caret line="60" column="6" lean-forward="false" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -136,7 +103,7 @@
       <file leaf-file-name="StringExTest.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/StringExTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
+            <state relative-caret-position="522">
               <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
               <folding />
             </state>
@@ -153,7 +120,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapExtTest.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MapExtTest.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/MapExtTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -166,8 +133,18 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="450">
               <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -636,10 +613,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-3" />
-    <option name="y" value="33" />
-    <option name="width" value="1926" />
-    <option name="height" value="1170" />
+    <option name="y" value="52" />
+    <option name="width" value="1922" />
+    <option name="height" value="1165" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -658,6 +634,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -720,8 +698,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -996,7 +972,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511947618277</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1.6.4 : Renamed toDateSTD : toYMDHms and added more shortcuts">
+      <created>1513047980264</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1513047980264</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1033,22 +1016,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="33" width="1926" height="1170" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6252101" sideWeight="0.53636366" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33524355" sideWeight="0.46363637" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33524355" sideWeight="0.46363637" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24520256" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24520256" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JFrog" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19829424" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1059,8 +1039,12 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1069,7 +1053,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1.6 Added conditional to handle time in toStringSTD and toDateSTD" />
     <MESSAGE value="1.6.3 : Added toQueryMap and toQueryString. Modified tests to use Ext classes so it can be tested" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.6.3 : Added toQueryMap and toQueryString. Modified tests to use Ext classes so it can be tested" />
+    <MESSAGE value="1.6.4 : Renamed toDateSTD : toYMDHms and added more shortcuts" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.6.4 : Renamed toDateSTD : toYMDHms and added more shortcuts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1305,13 +1290,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/Inet4AddressExt.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1371,37 +1349,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/URIExt.groovy" />
     <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/URLExt.groovy" />
     <entry file="file://$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/URIExtTest.groovy" />
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/MapExt.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/StringExt.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="67" column="4" lean-forward="false" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/DateExt.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2052">
@@ -1412,7 +1359,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/StringExTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
+        <state relative-caret-position="522">
           <caret line="29" column="37" lean-forward="false" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
           <folding />
         </state>
@@ -1430,6 +1377,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/MapExt.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/StringExt.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="60" column="6" lean-forward="false" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
           <folding />
         </state>
       </provider>
