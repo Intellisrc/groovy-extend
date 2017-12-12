@@ -66,4 +66,17 @@ class StringExTest extends Specification {
         assert map.four == true
         assert map.three == map2.three
     }
+    def "Test shortcuts"() {
+        setup:
+        String sdate = "2015-12-20 11:23:54"
+        Date date = StringExt.fromYMDHms(sdate)
+        expect:
+        assert DateExt.toYYYY(date) == 2015
+        assert DateExt.toYY(date) == 15
+        assert DateExt.toMM(date) == 12
+        assert DateExt.toDD(date) == 20
+        assert DateExt.toHH(date) == 11
+        assert DateExt.toYMDHms(date) == sdate
+        assert DateExt.toYMDHm(date) == "2015-12-20 11:23"
+    }
 }

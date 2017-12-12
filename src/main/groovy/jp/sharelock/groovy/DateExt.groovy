@@ -66,13 +66,22 @@ class DateExt {
         toString(self, "yyyy-MM-dd HH:mm:ss")
     }
     /**
+     * Converts a Date to standard style:  "yyyy-MM-dd HH:mm"
+     * @param self
+     * @param dateFormat
+     * @return
+     */
+    static String toYMDHm(final Date self) {
+        toString(self, "yyyy-MM-dd HH:mm")
+    }
+    /**
      * Converts a Date to standard style:  "yyyy-MM-dd" without time
      * @param self
      * @param dateFormat
      * @return
      */
-    static String toYMD(final Date self) {
-        toString(self, "yyyy-MM-dd")
+    static String toYMD(final Date self, String separator = '-') {
+        toString(self, "yyyy"+separator+"MM"+separator+"dd")
     }
     /**
      * Converts a Date to standard style:  "yyyy" without time
@@ -80,8 +89,8 @@ class DateExt {
      * @param dateFormat
      * @return
      */
-    static String toYYYY(final Date self) {
-        toString(self, "yyyy")
+    static int toYYYY(final Date self) {
+        Integer.parseInt(toString(self, "yyyy"))
     }
     /**
      * Converts a Date to standard style:  "yy" without time
@@ -89,8 +98,8 @@ class DateExt {
      * @param dateFormat
      * @return
      */
-    static String toYY(final Date self) {
-        toString(self, "yy")
+    static int toYY(final Date self) {
+        Integer.parseInt(toString(self, "yy"))
     }
     /**
      * Converts a Date to standard style:  "MM" without time
@@ -98,8 +107,8 @@ class DateExt {
      * @param dateFormat
      * @return
      */
-    static String toMM(final Date self) {
-        toString(self, "MM")
+    static int toMM(final Date self) {
+        Integer.parseInt(toString(self, "MM"))
     }
     /**
      * Converts a Date to standard style:  "dd" without time
@@ -107,8 +116,8 @@ class DateExt {
      * @param dateFormat
      * @return
      */
-    static String toDD(final Date self) {
-        toString(self, "dd")
+    static int toDD(final Date self) {
+        Integer.parseInt(toString(self, "dd"))
     }
     /**
      * Converts a Date to standard style:  "HH"
@@ -116,7 +125,7 @@ class DateExt {
      * @param dateFormat
      * @return
      */
-    static String toHH(final Date self) {
-        toString(self, "HH")
+    static int toHH(final Date self) {
+        Integer.parseInt(toString(self, "HH"))
     }
 }
