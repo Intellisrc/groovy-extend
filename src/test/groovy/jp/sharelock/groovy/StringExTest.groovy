@@ -47,7 +47,7 @@ class StringExTest extends Specification {
     }
     def "date without time"() {
         given:
-            Date date = StringExt.fromYMDHms("2000-01-01")
+            Date date = StringExt.fromYMD("2000-01-01")
         expect:
             assert DateExt.toYMDHms(date) == "2000-01-01 00:00:00"
     }
