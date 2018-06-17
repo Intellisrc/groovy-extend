@@ -17,7 +17,7 @@ class LocalDateStaticExt {
      * @param self
      * @return
      */
-    static LocalDate parse(final String dateTime, final String format = "yyyy-MM-dd", final LocalDate self) {
+    static LocalDate parseStr(final String dateTime, final String format = "yyyy-MM-dd", final LocalDate self) {
         return LocalDate.parse(dateTime, DateTimeFormatter.ofPattern(format))
     }
 }

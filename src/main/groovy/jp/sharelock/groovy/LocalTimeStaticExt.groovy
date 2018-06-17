@@ -17,7 +17,7 @@ class LocalTimeStaticExt {
      * @param self
      * @return
      */
-    static LocalTime parse(final String dateTime, final String format = "HH:mm:ss", final LocalTime self) {
+    static LocalTime parseStr(final String dateTime, final String format = "HH:mm:ss", final LocalTime self) {
         return LocalTime.parse(dateTime, DateTimeFormatter.ofPattern(format))
     }
 }

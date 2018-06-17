@@ -37,11 +37,11 @@ class LocalDateExtTest extends Specification {
     }
     def "Test Static parse"() {
         setup:
-            // The way it will be used is: def time = LocalTime.parse("10:10:00")
-            LocalDate date = LocalDateStaticExt.parse("2000-01-01", null)
-            LocalTime time = LocalTimeStaticExt.parse("12:15:23",null)
+            // The way it will be used is: def time = LocalTime.parseStr("10:10:00")
+            LocalDate date = LocalDateStaticExt.parseStr("2000-01-01", null)
+            LocalTime time = LocalTimeStaticExt.parseStr("12:15:23",null)
             LocalDateTime ldt = LocalDateTime.of(date, time)
         expect:
-            assert LocalDateTimeStaticExt.parse("2000-01-01 12:15:23",null) == ldt
+            assert LocalDateTimeStaticExt.parseStr("2000-01-01 12:15:23",null) == ldt
     }
 }
