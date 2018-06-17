@@ -17,7 +17,17 @@ class LocalDateTimeStaticExt {
      * @param self
      * @return
      */
-    static LocalDateTime parseStr(final String dateTime, final String format = "yyyy-MM-dd HH:mm:ss", final LocalDateTime self) {
+    static LocalDateTime parse(final String dateTime, final String format, final LocalDateTime self) {
         return LocalDateTime.parse(dateTime, DateTimeFormatter.ofPattern(format))
+    }
+    /**
+     * Boolean parameter was added to make a distinction with the original parse() method.
+     * @param dateTime
+     * @param auto
+     * @param self
+     * @return
+     */
+    static LocalDateTime parse(final String dateTime, boolean auto, final LocalDateTime self) {
+        return auto ? parse(dateTime, "yyyy-MM-dd HH:mm:ss", self) : LocalDateTime.parse(dateTime)
     }
 }

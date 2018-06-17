@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/fileSnapshots.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/3.5-rc-2/taskHistory/taskHistory.bin" afterDir="false" />
@@ -103,8 +102,8 @@
       <file leaf-file-name="LocalDateStaticExt.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateStaticExt.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            <state relative-caret-position="414">
+              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
               <folding>
                 <element signature="e#29#55#0" expanded="true" />
               </folding>
@@ -115,8 +114,8 @@
       <file leaf-file-name="LocalTimeStaticExt.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalTimeStaticExt.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            <state relative-caret-position="252">
+              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
               <folding>
                 <element signature="e#29#55#0" expanded="true" />
               </folding>
@@ -127,8 +126,8 @@
       <file leaf-file-name="LocalDateTimeStaticExt.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateTimeStaticExt.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            <state relative-caret-position="72">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#29#59#0" expanded="true" />
               </folding>
@@ -139,8 +138,8 @@
       <file leaf-file-name="LocalDateExtTest.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/LocalDateExtTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
+            <state relative-caret-position="231">
+              <caret line="44" column="78" lean-forward="true" selection-start-line="44" selection-start-column="78" selection-end-line="44" selection-end-column="78" />
               <folding>
                 <element signature="e#29#60#0" expanded="true" />
               </folding>
@@ -407,10 +406,10 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="7578004899000" />
+        <entry key="$PROJECT_DIR$" value="7578007081000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="1958469764" />
-        <entry key="$PROJECT_DIR$/gradle.properties" value="2293434220" />
+        <entry key="$PROJECT_DIR$/gradle.properties" value="1662603217" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="615277776" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="1289169003" />
         <entry key="$PROJECT_DIR$/../main" value="1487467690892" />
@@ -650,8 +649,8 @@
         <option value="$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/StringExTest.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/LocalDateExt.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateExt.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateStaticExt.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateTimeStaticExt.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateStaticExt.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalTimeStaticExt.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/LocalDateExtTest.groovy" />
         <option value="$PROJECT_DIR$/gradle.properties" />
@@ -988,13 +987,17 @@
       <option name="project" value="LOCAL" />
       <updated>1529207639877</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="1.7.2 : Renamed parse() to parseStr() as it conflicts with original parse()">
+      <created>1529207994058</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1529207994058</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LocalDateExtTest_Test_LocalDate_shortcuts - 2018.06.15 at 18h 44m 51s.xml">
-      <configuration name="LocalDateExtTest.Test LocalDate shortcuts" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LocalDateExtTest_Test_LocalDate_shortcuts - 2018.06.15 at 18h 45m 36s.xml">
       <configuration name="LocalDateExtTest.Test LocalDate shortcuts" configurationId="JUnit" />
     </history-entry>
@@ -1022,6 +1025,9 @@
     <history-entry file="LocalDateExtTest_Test_Static_parse - 2018.06.17 at 12h 51m 49s.xml">
       <configuration name="LocalDateExtTest.Test Static parse" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LocalDateExtTest_Test_Static_parse - 2018.06.17 at 13h 09m 34s.xml">
+      <configuration name="LocalDateExtTest.Test Static parse" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="33" width="1030" height="738" extended-state="6" />
@@ -1042,7 +1048,7 @@
       <window_info anchor="bottom" id="Build" order="8" weight="0.3295129" />
       <window_info anchor="bottom" id="Tail" order="9" />
       <window_info anchor="bottom" id="JFrog" order="8" />
-      <window_info anchor="right" id="Gradle" order="3" weight="0.19591837" />
+      <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.19591837" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3983549" />
@@ -1097,7 +1103,8 @@
     <MESSAGE value="1.6.4 : Fixed method name" />
     <MESSAGE value="1.7.0 : Removed DateExt methods to replace them with LocalDateTime" />
     <MESSAGE value="1.7.1 : Added static extension to LocalDateTime, etc." />
-    <option name="LAST_COMMIT_MESSAGE" value="1.7.1 : Added static extension to LocalDateTime, etc." />
+    <MESSAGE value="1.7.2 : Renamed parse() to parseStr() as it conflicts with original parse()" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.7.2 : Renamed parse() to parseStr() as it conflicts with original parse()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1420,30 +1427,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateStaticExt.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding>
-            <element signature="e#29#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateTimeStaticExt.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        <state relative-caret-position="72">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#29#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateStaticExt.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding>
+            <element signature="e#29#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalTimeStaticExt.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        <state relative-caret-position="252">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding>
             <element signature="e#29#55#0" expanded="true" />
           </folding>
@@ -1452,8 +1459,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/LocalDateExtTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
+        <state relative-caret-position="231">
+          <caret line="44" column="78" lean-forward="true" selection-start-line="44" selection-start-column="78" selection-end-line="44" selection-end-column="78" />
           <folding>
             <element signature="e#29#60#0" expanded="true" />
           </folding>

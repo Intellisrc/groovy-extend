@@ -12,12 +12,22 @@ import java.time.format.DateTimeFormatter
 class LocalDateStaticExt {
     /**
      * Shortcut for parsing Strings to LocalDate
-     * @param dateTime
+     * @param date
      * @param format
      * @param self
      * @return
      */
-    static LocalDate parseStr(final String dateTime, final String format = "yyyy-MM-dd", final LocalDate self) {
-        return LocalDate.parse(dateTime, DateTimeFormatter.ofPattern(format))
+    static LocalDate parse(final String date, final String format, final LocalDate self) {
+        return LocalDate.parse(date, DateTimeFormatter.ofPattern(format))
+    }
+    /**
+     * Boolean parameter was added to make a distinction with the original parse() method.
+     * @param date
+     * @param auto
+     * @param self
+     * @return
+     */
+    static LocalDate parse(final String date, boolean auto, final LocalDate self) {
+        return auto ? parse(date, "yyyy-MM-dd", self) : LocalDate.parse(date)
     }
 }

@@ -12,12 +12,22 @@ import java.time.format.DateTimeFormatter
 class LocalTimeStaticExt {
     /**
      * Shortcut for parsing Strings to LocalTime
-     * @param dateTime
+     * @param time
      * @param format
      * @param self
      * @return
      */
-    static LocalTime parseStr(final String dateTime, final String format = "HH:mm:ss", final LocalTime self) {
-        return LocalTime.parse(dateTime, DateTimeFormatter.ofPattern(format))
+    static LocalTime parse(final String time, final String format, final LocalTime self) {
+        return LocalTime.parse(time, DateTimeFormatter.ofPattern(format))
+    }
+    /**
+     * Boolean parameter was added to make a distinction with the original parse() method.
+     * @param time
+     * @param auto
+     * @param self
+     * @return
+     */
+    static LocalTime parse(final String time, boolean auto, final LocalTime self) {
+        return auto ? parse(time, "HH:mm:ss", self) : LocalTime.parse(time)
     }
 }
