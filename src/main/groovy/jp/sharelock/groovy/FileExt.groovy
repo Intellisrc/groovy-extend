@@ -7,7 +7,7 @@ import java.nio.file.attribute.PosixFilePermission
  * @since 2/17/18.
  */
 class FileExt {
-    static int lines(final File self) {
+    static int getLines(final File self) {
         LineNumberReader lr = new LineNumberReader(new FileReader(self))
         while(lr.skip(Long.MAX_VALUE) > 0) {}
         return lr.lineNumber + 1

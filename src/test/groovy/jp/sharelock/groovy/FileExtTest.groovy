@@ -24,7 +24,7 @@ class FileExtTest extends Specification {
     }
     def "Counting number of lines"() {
         expect:
-            assert FileExt.lines(file) == 8
+            assert FileExt.getLines(file) == 8
     }
     def "Testing clear permissions"() {
         setup :
