@@ -35,13 +35,13 @@ class LocalDateExtTest extends Specification {
         expect:
             assert LocalDateExt.toDate(local).toInstant().toEpochMilli() == date.toInstant().toEpochMilli()
     }
-    def "Test Static parse"() {
+    def "Test String conversion"() {
         setup:
-            // The way it will be used is: def time = LocalTime.parse("10:10:00", true)
-            LocalDate date = LocalDateStaticExt.parse("2000-01-01", true, null)
-            LocalTime time = LocalTimeStaticExt.parse("12:15:23", true, null)
+            // The way it will be used is: def time = "10:10:00".toTime()
+            LocalDate date = StringExt.toDate("2000-01-01")
+            LocalTime time = StringExt.toTime("12:15:23")
             LocalDateTime ldt = LocalDateTime.of(date, time)
         expect:
-            assert LocalDateTimeStaticExt.parse("2000-01-01 12:15:23", true , null) == ldt
+            assert StringExt.toDateTime("2000-01-01 12:15:23") == ldt
     }
 }

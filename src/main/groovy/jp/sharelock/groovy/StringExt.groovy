@@ -3,6 +3,10 @@ package jp.sharelock.groovy
 import java.text.DateFormat
 import java.text.ParseException
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.LocalTime
+import java.time.format.DateTimeFormatter
 
 @groovy.transform.CompileStatic
 /**
@@ -74,5 +78,32 @@ class StringExt {
                 map[key] = value
                 return map
         }
+    }
+    /**
+     * Convert String to LocalDateTime
+     * @param format
+     * @param self
+     * @return
+     */
+    static LocalDateTime toDateTime(final String format = "yyyy-MM-dd HH:mm:ss", final String self) {
+        return LocalDateTime.parse(self, DateTimeFormatter.ofPattern(format))
+    }
+    /**
+     * Convert String to LocalDate
+     * @param format
+     * @param self
+     * @return
+     */
+    static LocalDate toDate(final String format = "yyyy-MM-dd", final String self) {
+        return LocalDate.parse(self, DateTimeFormatter.ofPattern(format))
+    }
+    /**
+     * Convert String to Time
+     * @param format
+     * @param self
+     * @return
+     */
+    static LocalTime toTime(final String format = "HH:mm:ss", final String self) {
+        return LocalTime.parse(self, DateTimeFormatter.ofPattern(format))
     }
 }
