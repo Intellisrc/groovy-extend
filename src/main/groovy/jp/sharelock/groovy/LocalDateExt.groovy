@@ -9,6 +9,7 @@ import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 
 /**
+ * Extensions to LocalDateTime, LocalDate and LocalTime
  * @since 18/06/15.
  */
 @CompileStatic
@@ -53,15 +54,23 @@ class LocalDateExt {
      * @param self
      * @return
      */
-    static String YMDHms(final LocalDateTime self, String separatorDate = '-', String separator = ' ', String separatorTime = ':') {
+    static String getYMDHms(final LocalDateTime self, String separatorDate = '-', String separator = ' ', String separatorTime = ':') {
         format(self, "yyyy${separatorDate}MM${separatorDate}dd${separator}HH${separatorTime}mm${separatorTime}ss")
+    }
+    /**
+     * Converts a LocalDateTime to standard style:  "yyyy-MM-dd HH:mm:ss.SSS"
+     * @param self
+     * @return
+     */
+    static String getYMDHmsS(final LocalDateTime self, String separatorDate = '-', String separator = ' ', String separatorTime = ':') {
+        format(self, "yyyy${separatorDate}MM${separatorDate}dd${separator}HH${separatorTime}mm${separatorTime}ss.SSS")
     }
     /**
      * Converts a LocalDateTime to standard style:  "yyyy-MM-dd HH:mm"
      * @param self
      * @return
      */
-    static String YMDHm(final LocalDateTime self, String separatorDate = '-', String separator = ' ', String separatorTime = ':') {
+    static String getYMDHm(final LocalDateTime self, String separatorDate = '-', String separator = ' ', String separatorTime = ':') {
         format(self, "yyyy${separatorDate}MM${separatorDate}dd${separator}HH${separatorTime}mm")
     }
     /**
@@ -69,7 +78,7 @@ class LocalDateExt {
      * @param self
      * @return
      */
-    static String YMD(final LocalDate self, String separator = '-') {
+    static String getYMD(final LocalDate self, String separator = '-') {
         format(self, "yyyy${separator}MM${separator}dd")
     }
     /**
@@ -77,7 +86,7 @@ class LocalDateExt {
      * @param self
      * @return
      */
-    static String YY(final LocalDate self) {
+    static String getYY(final LocalDate self) {
         format(self, "yy")
     }
     /**
@@ -85,7 +94,7 @@ class LocalDateExt {
      * @param self
      * @return
      */
-    static String MM(final LocalDate self) {
+    static String getMM(final LocalDate self) {
         format(self, "MM")
     }
     /**
@@ -93,7 +102,7 @@ class LocalDateExt {
      * @param self
      * @return
      */
-    static String DD(final LocalDate self) {
+    static String getDD(final LocalDate self) {
         format(self, "dd")
     }
     /**
@@ -101,7 +110,7 @@ class LocalDateExt {
      * @param self
      * @return
      */
-    static String HH(final LocalTime self) {
+    static String getHH(final LocalTime self) {
         format(self, "HH")
     }
     /**
@@ -109,7 +118,7 @@ class LocalDateExt {
      * @param self
      * @return
      */
-    static String HHmm(final LocalTime self, String separator = ':') {
+    static String getHHmm(final LocalTime self, String separator = ':') {
         format(self, "HH${separator}mm")
     }
     /**
@@ -117,7 +126,7 @@ class LocalDateExt {
      * @param self
      * @return
      */
-    static String HHmmss(final LocalTime self, String separator = ':') {
+    static String getHHmmss(final LocalTime self, String separator = ':') {
         format(self, "HH${separator}mm${separator}ss")
     }
 }

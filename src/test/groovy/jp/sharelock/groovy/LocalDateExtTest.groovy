@@ -2,7 +2,9 @@ package jp.sharelock.groovy
 
 import spock.lang.Specification
 
+import java.time.LocalDate
 import java.time.LocalDateTime
+import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
 /**
@@ -14,15 +16,17 @@ class LocalDateExtTest extends Specification {
             String sdate = "2015-12-20 11:23:54"
             LocalDateTime date = LocalDateTime.parse(sdate, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
         expect:
-            assert LocalDateExt.YMDHms(date) == sdate
-            assert LocalDateExt.YMDHm(date) == "2015-12-20 11:23"
-            assert LocalDateExt.YMD(date.toLocalDate()) == "2015-12-20"
-            assert LocalDateExt.YY(date.toLocalDate()) == "15"
-            assert LocalDateExt.MM(date.toLocalDate()) == "12"
-            assert LocalDateExt.DD(date.toLocalDate()) == "20"
-            assert LocalDateExt.HH(date.toLocalTime()) == "11"
-            assert LocalDateExt.HHmm(date.toLocalTime()) == "11:23"
-            assert LocalDateExt.HHmmss(date.toLocalTime()) == "11:23:54"
+            // These will normally be used as: LocalDateTime.now().YY
+            assert LocalDateExt.getYMDHms(date) == sdate
+            assert LocalDateExt.getYMDHm(date) == "2015-12-20 11:23"
+            assert LocalDateExt.getYMDHmsS(date) == "2015-12-20 11:23:54.000"
+            assert LocalDateExt.getYMD(date.toLocalDate()) == "2015-12-20"
+            assert LocalDateExt.getYY(date.toLocalDate()) == "15"
+            assert LocalDateExt.getMM(date.toLocalDate()) == "12"
+            assert LocalDateExt.getDD(date.toLocalDate()) == "20"
+            assert LocalDateExt.getHH(date.toLocalTime()) == "11"
+            assert LocalDateExt.getHHmm(date.toLocalTime()) == "11:23"
+            assert LocalDateExt.getHHmmss(date.toLocalTime()) == "11:23:54"
     }
     def "Converting from-to Date"() {
         setup:
@@ -30,5 +34,14 @@ class LocalDateExtTest extends Specification {
             LocalDateTime local = DateExt.toLocalDateTime(date)
         expect:
             assert LocalDateExt.toDate(local).toInstant().toEpochMilli() == date.toInstant().toEpochMilli()
+    }
+    def "Test Static parse"() {
+        setup:
+            // The way it will be used is: def time = LocalTime.parse("10:10:00")
+            LocalDate date = LocalDateStaticExt.parse("2000-01-01", null)
+            LocalTime time = LocalTimeStaticExt.parse("12:15:23",null)
+            LocalDateTime ldt = LocalDateTime.of(date, time)
+        expect:
+            assert LocalDateTimeStaticExt.parse("2000-01-01 12:15:23",null) == ldt
     }
 }
