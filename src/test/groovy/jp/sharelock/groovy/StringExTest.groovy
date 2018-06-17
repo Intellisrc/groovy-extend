@@ -19,38 +19,6 @@ class StringExTest extends Specification {
         expect:
             "200".padLeft(5) == "  200"
     }
-    def "toDate Normal"() {
-        given:
-            def dateStr = "2017-10-10 12:00:00"
-        expect:
-            "2017-10-10 12:00:00" == DateExt.toYMDHms(StringExt.fromYMDHms(dateStr))
-    }
-    def "toDate With millisecond"() {
-        given:
-            def dateStr = "2017-10-10 12:00:00.0"
-        expect:
-            "2017-10-10 12:00:00" == DateExt.toYMDHms(StringExt.fromYMDHms(dateStr))
-    }
-    def "toDate With Timezone"() {
-        given:
-            def dateStr = "2017-10-10 12:00:00.999 GMT"
-        expect:
-            "2017-10-10 12:00:00" == DateExt.toYMDHms(StringExt.fromYMDHms(dateStr))
-    }
-    def "date from HashMap"() {
-        given:
-            def map = [ id : 200, date_time : "2017-10-10 12:00:00.0" ]
-        when:
-            Date date = StringExt.fromYMDHms(map["date_time"].toString())
-        then:
-            assert date != null
-    }
-    def "date without time"() {
-        given:
-            Date date = StringExt.fromYMD("2000-01-01")
-        expect:
-            assert DateExt.toYMDHms(date) == "2000-01-01 00:00:00"
-    }
     def "Query to Map"() {
         setup:
         //NOTE: for queries, %20 and + are the same
@@ -65,18 +33,5 @@ class StringExTest extends Specification {
         assert map.three == "third member"
         assert map.four == true
         assert map.three == map2.three
-    }
-    def "Test shortcuts"() {
-        setup:
-        String sdate = "2015-12-20 11:23:54"
-        Date date = StringExt.fromYMDHms(sdate)
-        expect:
-        assert DateExt.toYYYY(date) == 2015
-        assert DateExt.toYY(date) == 15
-        assert DateExt.toMM(date) == 12
-        assert DateExt.toDD(date) == 20
-        assert DateExt.toHH(date) == 11
-        assert DateExt.toYMDHms(date) == sdate
-        assert DateExt.toYMDHm(date) == "2015-12-20 11:23"
     }
 }

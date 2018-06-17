@@ -34,39 +34,6 @@ class StringExt {
         return (Inet4Address) new InetAddress().getByName(self)
     }
     /**
-     * Converts a string date into Date
-     * @param String Date
-     * @return
-     */
-    static Date toDate(final String self, final String format) throws ParseException {
-        DateFormat df = new SimpleDateFormat(format)
-        return df.parse(self)
-    }
-    /**
-     * Converts a string date: yyyy-MM-dd HH:mm:ss into Date
-     * @param String Date
-     * @return
-     */
-    static Date fromYMDHms(final String self) throws ParseException {
-        if(self =~ /^\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}/) {
-            toDate(self, "yyyy-MM-dd HH:mm:ss")
-        } else {
-            throw new ParseException("Unknown date format", 0)
-        }
-    }
-    /**
-     * Converts a string date: yyyy-MM-dd into Date
-     * @param String Date
-     * @return
-     */
-    static Date fromYMD(final String self) throws ParseException {
-        if(self =~ /^\d{4}-\d{2}-\d{2}/) {
-            return toDate(self, "yyyy-MM-dd")
-        } else {
-            throw new ParseException("Unknown date format", 0)
-        }
-    }
-    /**
      * Appends a random number to a String
      * @param str
      * @return
