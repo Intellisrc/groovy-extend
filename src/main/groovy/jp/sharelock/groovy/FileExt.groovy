@@ -1,11 +1,14 @@
 package jp.sharelock.groovy
 
+import groovy.transform.CompileStatic
+
 import java.nio.file.Files
 import java.nio.file.attribute.PosixFilePermission
 
 /**
  * @since 2/17/18.
  */
+@CompileStatic
 class FileExt {
     static int getLines(final File self) {
         LineNumberReader lr = new LineNumberReader(new FileReader(self))

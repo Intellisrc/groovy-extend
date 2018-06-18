@@ -1,8 +1,11 @@
 package jp.sharelock.groovy
 
+import groovy.transform.CompileStatic
+
 /**
  * @since 17/11/29.
  */
+@CompileStatic
 class MapExt {
     /**
      * Encodes a Map as query string
