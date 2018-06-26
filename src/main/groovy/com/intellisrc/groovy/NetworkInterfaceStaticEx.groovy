@@ -1,4 +1,4 @@
-package jp.sharelock.groovy
+package com.intellisrc.groovy
 
 @groovy.transform.CompileStatic
 /**

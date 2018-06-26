@@ -1,4 +1,4 @@
-package jp.sharelock.groovy
+package com.intellisrc.groovy
 
 import org.apache.commons.net.util.SubnetUtils
 import org.apache.commons.net.util.SubnetUtils.SubnetInfo
