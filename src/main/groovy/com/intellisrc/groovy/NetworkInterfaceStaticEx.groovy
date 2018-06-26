@@ -5,7 +5,7 @@ package com.intellisrc.groovy
  * Static extension methods for NetworkInterface
  * NOTE: Instance and Static methods should be defined separately:
  * see: http://docs.groovy-lang.org/next/html/documentation/core-metaprogramming.html#_extending_existing_classes
- * @author Alberto Lepe <lepe@sharelock.jp>
+ * @author Alberto Lepe <lepe@intellisrc.com>
  */
 class NetworkInterfaceStaticEx {
     /**
