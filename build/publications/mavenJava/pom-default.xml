@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.intellisrc</groupId>
   <artifactId>groovy-extend</artifactId>
-  <version>1.7.7</version>
+  <version>1.7.6.3-SNAPSHOT</version>
   <dependencies>
     <dependency>
       <groupId>commons-net</groupId>
