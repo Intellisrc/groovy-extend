@@ -23,6 +23,14 @@ class LocalDateExt {
         return Date.from(self.atZone(ZoneId.systemDefault()).toInstant())
     }
     /**
+     * Convert LocalDate to LocalDateTime (at 00:00:00)
+     * @param self
+     * @return
+     */
+    static LocalDateTime toDateTime(final LocalDate self) {
+        return LocalDateTime.of(self, LocalTime.MIN)
+    }
+    /**
      * Converts a LocalDateTime to String using DateTimeFormatter
      * @param self
      * @param dateFormat

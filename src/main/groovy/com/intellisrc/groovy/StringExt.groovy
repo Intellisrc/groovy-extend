@@ -82,7 +82,7 @@ class StringExt {
      * @param self
      * @return
      */
-    static LocalDateTime toDateTime(final String format = "yyyy-MM-dd HH:mm:ss", final String self) {
+    static LocalDateTime toDateTime(final String format = "yyyy-MM-dd['T'][' '][HH:mm][:ss][.SSS]", final String self) {
         return LocalDateTime.parse(self, DateTimeFormatter.ofPattern(format))
     }
     /**
@@ -91,7 +91,7 @@ class StringExt {
      * @param self
      * @return
      */
-    static LocalDate toDate(final String format = "yyyy-MM-dd", final String self) {
+    static LocalDate toDate(final String format = "yyyy-MM-dd['T'][' '][HH:mm][:ss][.SSS]", final String self) {
         return LocalDate.parse(self, DateTimeFormatter.ofPattern(format))
     }
     /**
@@ -100,7 +100,7 @@ class StringExt {
      * @param self
      * @return
      */
-    static LocalTime toTime(final String format = "HH:mm:ss", final String self) {
+    static LocalTime toTime(final String format = "[yyyy-MM-dd]['T'][' ']HH:mm[:ss][.SSS]", final String self) {
         return LocalTime.parse(self, DateTimeFormatter.ofPattern(format))
     }
 }

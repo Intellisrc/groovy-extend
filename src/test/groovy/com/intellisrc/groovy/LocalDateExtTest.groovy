@@ -14,7 +14,7 @@ class LocalDateExtTest extends Specification {
     def "Test LocalDate shortcuts"() {
         setup:
             String sdate = "2015-12-20 11:23:54"
-            LocalDateTime date = LocalDateTime.parse(sdate, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
+            LocalDateTime date = StringExt.toDateTime("yyyy-MM-dd HH:mm:ss", sdate)
         expect:
             // These will normally be used as: LocalDateTime.now().YY
             assert LocalDateExt.getYMDHms(date) == sdate
@@ -43,5 +43,70 @@ class LocalDateExtTest extends Specification {
             LocalDateTime ldt = LocalDateTime.of(date, time)
         expect:
             assert StringExt.toDateTime("2000-01-01 12:15:23") == ldt
+    }
+    def "Date to DateTime"() {
+        setup:
+            def str = "2011-01-01"
+        expect:
+            assert LocalDateExt.getYMDHms(LocalDateExt.toDateTime(StringExt.toDate(str))) == str.substring(0, 10) + " " + "00:00:00"
+    }
+    def "Parse Date"() {
+        setup:
+            def dates = [
+                    "2015-03-15",
+                    "2015-03-15 10:30",
+                    "2015-03-15T00:00",
+                    "2015-03-15 10:30:22",
+                    "2015-03-15T10:30:22",
+                    "2015-03-15 10:30:15.203",
+                    "2015-03-15T10:30:15.203",
+            ]
+        expect:
+            dates.each {
+                assert LocalDateExt.getYMD(StringExt.toDate(it)) == it.substring(0, 10)
+            }
+    }
+    def "Parse DateTime Zero"() {
+        setup:
+        def dates = [
+                "2015-03-15 00:00",
+                "2015-03-15T00:00",
+                "2015-03-15 00:00:00",
+                "2015-03-15T00:00:00",
+                "2015-03-15 00:00:00.000",
+                "2015-03-15T00:00:00.000",
+        ]
+        expect:
+        dates.each {
+            assert LocalDateExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "00:00:00"
+        }
+    }
+    def "Parse DateTime Hours"() {
+        setup:
+        def datehours = [
+                "2015-03-15 10:30",
+                "2015-03-15T10:30",
+                "2015-03-15 10:30:00",
+                "2015-03-15T10:30:00",
+                "2015-03-15 10:30:00.000",
+                "2015-03-15T10:30:00.000",
+        ]
+        expect:
+        datehours.each {
+            assert LocalDateExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "10:30:00"
+        }
+    }
+    def "Parse DateTime with seconds"() {
+        setup:
+        def datesecs = [
+                "2015-03-15 10:30:15",
+                "2015-03-15T10:30:15",
+                "2015-03-15 10:30:15.000",
+                "2015-03-15T10:30:15.000",
+        ]
+        expect:
+        datesecs.each {
+            assert LocalDateExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "10:30:15"
+        }
     }
 }
