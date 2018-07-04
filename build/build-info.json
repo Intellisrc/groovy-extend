@@ -1,7 +1,7 @@
 {
   "version" : "1.0.1",
   "name" : "groovy-extend",
-  "number" : "1530458320119",
+  "number" : "1530496782789",
   "type" : "GRADLE",
   "buildAgent" : {
     "name" : "Gradle",
@@ -11,9 +11,9 @@
     "name" : "Gradle",
     "version" : "3.5-rc-2"
   },
-  "started" : "2018-07-02T00:18:40.094+0900",
-  "durationMillis" : 4745,
-  "principal" : "kaname",
+  "started" : "2018-07-02T10:59:42.777+0900",
+  "durationMillis" : 4376,
+  "principal" : "lepe",
   "artifactoryPrincipal" : "developer",
   "artifactoryPluginVersion" : "Unknown",
   "vcs" : [ ],
@@ -21,21 +21,21 @@
     "runChecks" : false,
     "includePublishedArtifacts" : false,
     "autoDiscover" : false,
-    "scopesList" : "",
-    "licenseViolationsRecipientsList" : ""
+    "licenseViolationsRecipientsList" : "",
+    "scopesList" : ""
   },
   "modules" : [ {
-    "id" : "com.intellisrc:groovy-extend:1.7.6.3-SNAPSHOT",
+    "id" : "com.intellisrc:groovy-extend:1.7.7",
     "artifacts" : [ {
       "type" : "jar",
-      "sha1" : "11ead049f05d9a3696a6327b335f12b056e33253",
-      "md5" : "2ef8c0d9ad92ef82d6fe41c56496a3b3",
-      "name" : "groovy-extend-1.7.6.3-SNAPSHOT.jar"
+      "sha1" : "af0ad8476f0d1b0cc5b21ab82f78d565f23c6a30",
+      "md5" : "afde19accfefb63b76c82df757960cb1",
+      "name" : "groovy-extend-1.7.7.jar"
     }, {
       "type" : "pom",
-      "sha1" : "8ec4c1d3b308ef43ba8a07a3e1ebc7bd36c708fe",
-      "md5" : "d0b4e9eb59826facefd2bfa516dce0ff",
-      "name" : "groovy-extend-1.7.6.3-SNAPSHOT.pom"
+      "sha1" : "3c07e286d226f8a24dc64da1aa65f0cd625448a1",
+      "md5" : "a832177f2edb01254c382f90465bcb62",
+      "name" : "groovy-extend-1.7.7.pom"
     } ],
     "excludedArtifacts" : [ ],
     "dependencies" : [ {

@@ -14,7 +14,7 @@ class RandomStaticExt {
      * @param max
      * @return
      */
-    static int range(Random self, int min, int max) {
-        self.nextInt((max - min) + 1) + min
+    static int range(final Random self, int min, int max) {
+        return new Random().nextInt((max - min) + 1) + min
     }
 }

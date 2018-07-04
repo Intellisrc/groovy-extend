@@ -2,8 +2,6 @@ package com.intellisrc.groovy
 
 import spock.lang.Specification
 
-import java.time.LocalDateTime
-
 /**
  * Created by lepe on 17/02/23.
  */
