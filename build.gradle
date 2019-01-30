@@ -29,26 +29,26 @@ task generateModule {
     doLast {
         SourceSet main = sourceSets.main
         SourceDirectorySet groovy = main.groovy
-        List allClasses = groovy.toList().collect {
+        List<String> extensionFiles = []
+        List<String> staticFiles = []
+        groovy.toList().each {
             File g ->
                 String pkg = g.absolutePath.replaceAll('\\' + File.separator, '.') -
                         groovy.srcDirs[0].toString().replaceAll('\\' + File.separator, '.')
-                return pkg[1 .. pkg.lastIndexOf('.') - 1]
+                String clsName = pkg[1 .. pkg.lastIndexOf('.') - 1].toString()
+                if(clsName.contains('Static')) {
+                    staticFiles << clsName
+                } else {
+                    extensionFiles << clsName
+                }
         }
-        //allClasses : contains package name
-        def extensionFiles = allClasses.findAll {
-            !it.contains('Static')
-        }.join(",")
-        def staticFiles = allClasses.findAll {
-            it.contains('Static')
-        }.join(",")
         new File("$buildDir/classes/main/META-INF/services").with { f ->
             f.mkdirs()
             new File(f, 'org.codehaus.groovy.runtime.ExtensionModule').withWriter { w ->
                 w.writeLine 'moduleName=groovy-common-extensions'
                 w.writeLine "moduleVersion=$version"
-                w.writeLine "extensionClasses=$extensionFiles"
-                w.writeLine "staticExtensionClasses=$staticFiles"
+                w.writeLine "extensionClasses=${extensionFiles.join(',')}"
+                w.writeLine "staticExtensionClasses=${staticFiles.join(',')}"
             }
         }
     }
