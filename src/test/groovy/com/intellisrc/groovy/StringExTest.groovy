@@ -21,17 +21,17 @@ class StringExTest extends Specification {
     }
     def "Query to Map"() {
         setup:
-        //NOTE: for queries, %20 and + are the same
-        def uri = new URI("http://localhost/?one=1&two=2&three=third+member&four=true")
-        def uri2 = new URI("http://localhost/?one=1&two=2&three=third%20member&four=true")
+            //NOTE: for queries, %20 and + are the same
+            def uri = new URI("http://localhost/?one=1&two=2&three=third+member&four=true")
+            def uri2 = new URI("http://localhost/?one=1&two=2&three=third%20member&four=true")
         when:
-        def map = StringExt.getQueryMap(uri.query)
-        def map2 = StringExt.getQueryMap(uri2.query)
+            def map = StringExt.getQueryMap(uri.query)
+            def map2 = StringExt.getQueryMap(uri2.query)
         then:
-        assert map.size() == 4
-        assert map.one == 1
-        assert map.three == "third member"
-        assert map.four == true
-        assert map.three == map2.three
+            assert map.size() == 4
+            assert map.one == 1
+            assert map.three == "third member"
+            assert map.four == true
+            assert map.three == map2.three
     }
 }

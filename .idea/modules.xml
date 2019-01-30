@@ -5,9 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/groovy-extend.iml" filepath="$PROJECT_DIR$/groovy-extend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" group="groovy-extend" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" group="groovy-extend" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/intellisrc-groovy-extend.iml" filepath="$PROJECT_DIR$/.idea/modules/intellisrc-groovy-extend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/intellisrc-groovy-extend_main.iml" filepath="$PROJECT_DIR$/.idea/modules/intellisrc-groovy-extend_main.iml" group="groovy-extend" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/intellisrc-groovy-extend_test.iml" filepath="$PROJECT_DIR$/.idea/modules/intellisrc-groovy-extend_test.iml" group="groovy-extend" />
     </modules>
   </component>
 </project>

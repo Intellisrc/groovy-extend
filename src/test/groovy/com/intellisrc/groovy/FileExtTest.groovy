@@ -47,4 +47,21 @@ class FileExtTest extends Specification {
                     PosixFilePermission.GROUP_READ
             )
     }
+    /**
+     * Read a directory asynchronously
+     * Usage: new File("some/path").eachFileAsync {
+     *     File file ->
+     *
+     * }
+     */
+    def "Test Async Dir"() {
+        setup :
+            File tmpDir = new File(System.getProperty("java.io.tmpdir"))
+        when:
+            FileExt.eachFileAsync(tmpDir, {
+                println it.name
+            })
+        then:
+            noExceptionThrown()
+    }
 }

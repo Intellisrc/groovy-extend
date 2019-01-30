@@ -21,22 +21,21 @@ buildscript {
 
 dependencies {
     compile 'commons-net:commons-net:3.5'
-    compile 'org.codehaus.groovy:groovy-all:2.4.13'
-    testCompile group: 'org.spockframework', name: 'spock-unitils', version: '1.1-groovy-2.4'
+    compile 'org.codehaus.groovy:groovy-all:2.5.5'
+    testCompile 'org.spockframework:spock-unitils:1.2-groovy-2.5'
 }
 
 task generateModule {
     doLast {
-        def allFiles = sourceSets.main.groovy.with { g ->
-            g.findAll {
-                it.parentFile.name == 'groovy' && it.name.endsWith('groovy')
-            }.collect {
-                it.toString().replaceAll('\\' + File.separator, '.')
-            }.collect {
-                it - (g.srcDirs as List)[0].toString().replaceAll('\\' + File.separator, '.')
-            }.collect {
-                it[1..-8]
-            }
+        def allFiles = sourceSets.main.groovy.each {
+            g ->
+                g.findAll {
+                    it.parentFile.name == 'groovy' && it.name.endsWith('groovy')
+                }.collect {
+                    it.toString().replaceAll('\\' + File.separator, '.') - (g.srcDirs as List)[0].toString().replaceAll('\\' + File.separator, '.')
+                }.collect {
+                    it[1..-8]
+                }
         }
         def extensionFiles = allFiles.findAll {
             !it.contains('Static')
