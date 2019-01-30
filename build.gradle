@@ -27,16 +27,20 @@ dependencies {
 
 task generateModule {
     doLast {
-        def allFiles = sourceSets.main.groovy.each {
-            g ->
+        SourceSet main = sourceSets.main
+        SourceDirectorySet groovy = main.groovy
+        List<File> allFiles = groovy.each {
+            File g ->
+                
+                /*
                 g.findAll {
                     it.parentFile.name == 'groovy' && it.name.endsWith('groovy')
                 }.collect {
                     it.toString().replaceAll('\\' + File.separator, '.') - (g.srcDirs as List)[0].toString().replaceAll('\\' + File.separator, '.')
                 }.collect {
                     it[1..-8]
-                }
-        }
+                }*/
+        }.toList()
         def extensionFiles = allFiles.findAll {
             !it.contains('Static')
         }.join(",")

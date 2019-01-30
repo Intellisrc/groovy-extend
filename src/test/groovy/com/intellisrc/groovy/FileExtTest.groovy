@@ -57,11 +57,39 @@ class FileExtTest extends Specification {
     def "Test Async Dir"() {
         setup :
             File tmpDir = new File(System.getProperty("java.io.tmpdir"))
+            int x = 0
         when:
             FileExt.eachFileAsync(tmpDir, {
                 println it.name
+                x++
             })
         then:
             noExceptionThrown()
+            assert x > 0
+    }
+
+    /**
+     * Read a directory asynchronously while matching a file
+     * Usage: new File("some/path").eachFileMatchAsync("*.{jpg,png}") {
+     *     File file ->
+     *
+     * }
+     */
+    def "Test Async Dir Match"() {
+        setup :
+            File tmpDir = new File(System.getProperty("java.io.tmpdir"))
+            File matchFile = new File(tmpDir, "test.match")
+            matchFile.text = "Just a test"
+            int x = 0
+        when:
+            FileExt.eachFileMatchAsync(tmpDir, "*.match", {
+                println it.name
+                x++
+            })
+        then:
+            noExceptionThrown()
+            assert x > 0
+        cleanup:
+            matchFile.delete()
     }
 }

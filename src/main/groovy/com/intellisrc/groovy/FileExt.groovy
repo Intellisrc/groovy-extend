@@ -185,32 +185,40 @@ class FileExt {
     }
 
     /**
-     * Return files asynchronously (e.g. directories with many files)
-     * It supports a filter. e.g:
-     *    file.eachFileAsync({
+     * Return all files asynchronously (e.g. directories with many files)
+     *    file.eachFileAsync {
      *        File f ->
-     *    }, "*.{jpg,png,gif}")
+     *    }
      * @param self
      * @param closure
      * @param filter
      */
-    static void eachFileAsync(final File self, @ClosureParams(value=SimpleType.class,options="java.io.File") final Closure closure, final String filter = "*.*") {
-        if(self.exists()) {
-            if (self.isDirectory()) {
-                DirectoryStream<Path> stream = null
-                try {
-                    stream = Files.newDirectoryStream(self.toPath(), filter)
-                    stream.each {
-                        Path p ->
-                            closure(p.toFile())
-                    }
-                } catch (IOException ex) {
-                    ex.printStackTrace()
-                } finally {
-                    stream.close()
+    static void eachFileAsync(final File self, @ClosureParams(value=SimpleType.class,options="java.io.File") final Closure closure) {
+        eachFileMatchAsync(self, "*.*", closure)
+    }
+
+    /**
+     * Return files asynchronously which match a filter (e.g. directories with many files)
+     *    file.eachFileMatchAsync("*.{jpg,png,gif}) {
+     *        File f ->
+     *    }
+     * @param self
+     * @param closure
+     * @param filter
+     */
+    static void eachFileMatchAsync(final File self, final String filter, @ClosureParams(value=SimpleType.class,options="java.io.File") final Closure closure) {
+        if(self.exists() && self.isDirectory()) {
+            DirectoryStream<Path> stream = null
+            try {
+                stream = Files.newDirectoryStream(self.toPath(), filter)
+                stream.each {
+                    Path p ->
+                        closure(p.toFile())
                 }
-            } else {
-                closure(self)
+            } catch (IOException ex) {
+                ex.printStackTrace()
+            } finally {
+                stream.close()
             }
         }
     }
