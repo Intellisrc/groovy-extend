@@ -21,7 +21,7 @@ buildscript {
 
 dependencies {
     compile 'commons-net:commons-net:3.5'
-    compile 'org.codehaus.groovy:groovy-all:2.5.5'
+    compile 'org.codehaus.groovy:groovy-all:2.5.7'
     testCompile 'org.spockframework:spock-unitils:1.2-groovy-2.5'
 }
 
@@ -33,25 +33,23 @@ task generateModule {
         List<String> staticFiles = []
         groovy.toList().each {
             File g ->
-                String pkg = g.absolutePath.replaceAll('\\' + File.separator, '.') -
-                        groovy.srcDirs[0].toString().replaceAll('\\' + File.separator, '.')
+                String pkg = g.absolutePath.replaceAll(File.separator, '.') -
+                        groovy.srcDirs[0].toString().replaceAll(File.separator, '.')
                 String clsName = pkg[1 .. pkg.lastIndexOf('.') - 1].toString()
                 if(clsName.contains('Static')) {
                     staticFiles << clsName
                 } else {
                     extensionFiles << clsName
                 }
-        }
-        new File("$buildDir/classes/main/META-INF/services").with { f ->
-            f.mkdirs()
-            new File(f, 'org.codehaus.groovy.runtime.ExtensionModule').withWriter { w ->
-                w.writeLine 'moduleName=groovy-common-extensions'
-                w.writeLine "moduleVersion=$version"
-                w.writeLine "extensionClasses=${extensionFiles.join(',')}"
-                w.writeLine "staticExtensionClasses=${staticFiles.join(',')}"
             }
+            File services = new File(buildDir,"classes/groovy/main/META-INF/services")
+            services.mkdirs()
+            File ext = new File(services, 'org.codehaus.groovy.runtime.ExtensionModule')
+            ext.text = """moduleName=groovy-common-extensions
+moduleVersion=$version
+extensionClasses=${extensionFiles.join(',')}
+staticExtensionClasses=${staticFiles.join(',')}"""
         }
-    }
 }
 
 publishing {

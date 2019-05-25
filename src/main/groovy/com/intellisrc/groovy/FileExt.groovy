@@ -16,8 +16,7 @@ import java.nio.file.Path
 class FileExt {
     static int getLines(final File self) {
         LineNumberReader lr = new LineNumberReader(new FileReader(self))
-        while (lr.skip(Long.MAX_VALUE) > 0) {
-        }
+        while (lr.skip(Long.MAX_VALUE) > 0) { }
         return lr.lineNumber + 1
     }
 
@@ -182,6 +181,55 @@ class FileExt {
         }
         Files.setPosixFilePermissions(self.toPath(), perms)
         return self
+    }
+
+    /**
+     * Copy a file
+     * @param self
+     * @param target
+     * @return
+     */
+    static boolean copyTo(final File self, final File target) {
+        return Files.copy(self.toPath(), target.toPath())
+    }
+
+    /**
+     * Move a file
+     * @param self
+     * @param target
+     * @return
+     */
+    static boolean moveTo(final File self, final File target) {
+        return Files.move(self.toPath(), target.toPath())
+    }
+    /**
+     * Create link or symlink
+     * @param self
+     * @param target
+     * @param hard : create hard link instead
+     * @return
+     */
+    static boolean linkTo(final File self, final File target, boolean hard = false) {
+        return hard ? Files.createLink(target.toPath(), self.toPath()) : Files.createSymbolicLink(target.toPath(), self.toPath())
+    }
+
+    /**
+     * Link or copy a file
+     * This is useful to prevent duplicated files if possible (free space management)
+     * @param self
+     * @param target
+     * @param force : remove target file if exists
+     * @return
+     */
+    static boolean hardLinkOrCopyTo(final File self, final File target, boolean force = false) {
+        if (force && target.exists()) {
+            target.delete()
+        }
+        try {
+            linkTo(self, target, true)
+        } catch (Exception e) {
+            copyTo(self, target)
+        }
     }
 
     /**
