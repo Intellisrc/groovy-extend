@@ -89,13 +89,13 @@ class NetworkInterfaceStaticEx {
      * from: http://stackoverflow.com/questions/9481865/
      * @return
      */
-    static ArrayList<Inet4Address> getInet4Addresses(final NetworkInterface self) {
-        def ips = new ArrayList<Inet4Address>()
+    static List<Inet4Address> getInet4Addresses(final NetworkInterface self) {
+        List<Inet4Address> ips = []
         try {
             def interfaces = self.getNetworkInterfaces()
 
             while(interfaces.hasMoreElements()){
-                java.net.NetworkInterface i = interfaces.nextElement()
+                NetworkInterface i = interfaces.nextElement()
                 if(i != null){
                     Enumeration<InetAddress> addresses = i.getInetAddresses()
                     while(addresses.hasMoreElements()){
