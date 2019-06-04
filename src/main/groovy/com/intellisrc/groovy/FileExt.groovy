@@ -205,12 +205,15 @@ class FileExt {
     /**
      * Create link or symlink
      * @param self
-     * @param target
+     * @param link
      * @param hard : create hard link instead
      * @return
      */
-    static boolean linkTo(final File self, final File target, boolean hard = false) {
-        return hard ? Files.createLink(target.toPath(), self.toPath()) : Files.createSymbolicLink(target.toPath(), self.toPath())
+    static boolean linkTo(final File self, final File link, boolean hardLink = false) {
+        if(link.exists()) {
+            link.delete()
+        }
+        return hardLink ? Files.createLink(link.toPath(), self.toPath()) : Files.createSymbolicLink(link.toPath(), self.toPath())
     }
 
     /**
