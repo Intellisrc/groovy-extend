@@ -2,6 +2,7 @@ package com.intellisrc.groovy
 
 import spock.lang.Specification
 
+import java.nio.file.Files
 import java.nio.file.attribute.PosixFilePermission
 /**
  * @since 2/17/18.
@@ -91,5 +92,43 @@ class FileExtTest extends Specification {
             assert x > 0
         cleanup:
             matchFile.delete()
+    }
+
+    def "Exists not empty"() {
+        setup:
+            File tmpFile = Files.createTempFile("test", "empty").toFile()
+        when:
+            tmpFile.createNewFile()
+        then:
+            assert !FileExt.existsAndNotEmpty(tmpFile)
+        when:
+            tmpFile.text = "\n"
+        then:
+            assert FileExt.existsAndNotEmpty(tmpFile)
+        when:
+            tmpFile.text = "not empty"
+        then:
+            assert FileExt.existsAndNotEmpty(tmpFile)
+        cleanup:
+            tmpFile.delete()
+    }
+
+    def "is empty"() {
+        setup:
+            File tmpFile = Files.createTempFile("test", "empty").toFile()
+        when:
+            tmpFile.createNewFile()
+        then:
+            assert FileExt.isEmpty(tmpFile)
+        when:
+            tmpFile.text = "\n"
+        then:
+            assert !FileExt.isEmpty(tmpFile)
+        when:
+            tmpFile.text = "not empty"
+        then:
+            assert !FileExt.isEmpty(tmpFile)
+        cleanup:
+            tmpFile.delete()
     }
 }

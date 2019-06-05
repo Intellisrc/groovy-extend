@@ -184,6 +184,23 @@ class FileExt {
     }
 
     /**
+     * Returns true if the file exists and its not empty
+     * @return
+     */
+    static boolean existsAndNotEmpty(final File self) {
+        return self.exists() && self.size() > 0
+    }
+
+    /**
+     * Add shortcut to test if file is empty
+     * @param self
+     * @return
+     */
+    static boolean isEmpty(final File self) {
+        return self.size() == 0
+    }
+
+    /**
      * Copy a file
      * @param self
      * @param target
