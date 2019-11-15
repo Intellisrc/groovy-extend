@@ -31,6 +31,14 @@ class LocalDateExt {
         return LocalDateTime.of(self, LocalTime.MIN)
     }
     /**
+     * Convert LocalDateTime to millis
+     * @param self
+     * @return
+     */
+    static long toMillis(final LocalDateTime self) {
+        return self.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
+    }
+    /**
      * Converts a LocalDateTime to String using DateTimeFormatter
      * @param self
      * @param dateFormat

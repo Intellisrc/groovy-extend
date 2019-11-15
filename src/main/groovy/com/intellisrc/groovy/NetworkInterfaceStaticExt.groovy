@@ -7,7 +7,7 @@ package com.intellisrc.groovy
  * see: http://docs.groovy-lang.org/next/html/documentation/core-metaprogramming.html#_extending_existing_classes
  * @author Alberto Lepe <lepe@intellisrc.com>
  */
-class NetworkInterfaceStaticEx {
+class NetworkInterfaceStaticExt {
     /**
      * Retrieves the first IP address that is not 127.X.X.X
      * @return
@@ -82,6 +82,22 @@ class NetworkInterfaceStaticEx {
             System.err.println("Unable to get free port")
         }
         return port
+    }
+    
+    /**
+     * Checks if a port is free (available)
+     * @param self
+     * @param port
+     * @return
+     */
+    static boolean isPortAvailable(final NetworkInterface self, int port) {
+        // Test port before initializing
+        boolean portAvailable = false
+        try {
+            new ServerSocket(port).close()
+            portAvailable = true
+        } catch (IOException ignored) {}
+        return portAvailable
     }
 
     /**

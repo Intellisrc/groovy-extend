@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.0.2.256 : Fixed File.setText">
+    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.0.2.256 : Added File.empty and File.existsAndNotEmpty">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_net_commons_net_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/sharelock-groovy-extend_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/sharelock-groovy-extend_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/LocalDateStaticExt.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/LocalDateStaticExtTest.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_net_commons_net_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/FileExt.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/FileExt.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/FileExtTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/FileExtTest.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/LocalDateExt.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/LocalDateExt.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/NetworkInterfaceStaticEx.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/NetworkInterfaceStaticExt.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/LocalDateExtTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/LocalDateExtTest.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/NetworkInterfaceStaticExTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/NetworkInterfaceStaticExtTest.groovy" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.gradle/" />
-    <ignored path="$PROJECT_DIR$/build/" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -32,76 +41,12 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="groovy-extend" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="groovy-extend" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="groovy-extend" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="publishing" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="groovy-extend" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
       </state>
     </system>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/FileExt.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="201" selection-start-line="201" selection-end-line="201" />
-              <folding>
-                <element signature="e#31#68#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/FileExtTest.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="106" column="47" lean-forward="true" selection-start-line="106" selection-start-column="47" selection-end-line="106" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -116,116 +61,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/URIExt.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/MapExtTest.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/URLExt.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/URIExtTest.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/NetworkInterfaceStaticExTest.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/FileExtTest.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/DateExt.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/StringExTest.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/LocalDateExt.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateExt.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateStaticExt.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalTimeStaticExt.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateTimeStaticExt.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/StringExt.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/LocalDateExtTest.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/MapExt.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/FileExt.groovy" />
-        <option value="$PROJECT_DIR$/compare.sh" />
-        <option value="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/RandomStaticExTest.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/RandomStaticExt.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/StringExTest.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/StringExt.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/NetworkInterfaceStaticEx.groovy" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/gradle.properties" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/FileExt.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/FileExtTest.groovy" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-3" />
-    <option name="y" value="33" />
-    <option name="width" value="1926" />
-    <option name="height" value="1170" />
-  </component>
+  <component name="ProjectId" id="1Tdj5UPBnGGVyywgHHkP6JnzOZP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="groovy-extend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="groovy-extend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="groovy-extend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="groovy-extend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="groovy-extend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="groovy-extend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="groovy-extend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="groovy-extend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="groovy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="groovy-extend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="groovy-extend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="groovy" type="462c0819:PsiDirectoryNode" />
-              <item name="groovy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="groovy-extend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="groovy-extend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="groovy-extend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="groovy-extend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="groovy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="groovy-extend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="groovy-extend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="groovy" type="462c0819:PsiDirectoryNode" />
-              <item name="groovy" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowMaven.ShowToolbar" value="false" />
@@ -238,15 +75,15 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../../groovy/groovy-extend/build.gradle" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.intellisrc.groovy" />
       <recent name="jp.sharelock.groovy" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -557,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559699136411</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="2.0.2.256 : Added File.empty and File.existsAndNotEmpty">
+      <created>1559702091544</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1559702091544</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -592,93 +436,13 @@
       <configuration name="FileExtTest.Test Async Dir Match" configurationId="JUnit" />
     </history-entry>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-3" y="33" width="1926" height="1170" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15031983" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.46363637" weight="0.5847619" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.41740674" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.6961905" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.53636366" side_tool="true" weight="0.6252101" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.6533333" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.12952381" />
-      <window_info anchor="bottom" id="Dependency Viewer" order="11" weight="0.3295129" />
-      <window_info anchor="bottom" id="Run with VisualVM" order="12" />
-      <window_info anchor="bottom" id="JFrog" order="13" />
-      <window_info anchor="bottom" id="Debug with VisualVM" order="14" />
-      <window_info anchor="bottom" id="Build" order="15" weight="0.3285968" />
-      <window_info anchor="bottom" id="Tail" order="16" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" show_stripe_button="false" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.35607675" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Code Outline" order="6" weight="0.32980332" />
-      <window_info anchor="right" id="Maven" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Palette" order="8" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2840909" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Tail" order="0" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.46363637" weight="0.3372503" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.3983549" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32902467" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32903227" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.53636366" side_tool="true" weight="0.6252101" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Dependency Viewer" order="12" weight="0.3295129" />
-      <window_info anchor="bottom" id="Run with VisualVM" order="13" />
-      <window_info anchor="bottom" id="Debug with VisualVM" order="14" />
-      <window_info anchor="bottom" id="Build" order="15" weight="0.3295129" />
-      <window_info anchor="bottom" id="JFrog" order="16" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.19621213" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Code Outline" order="6" />
-    </layout-to-restore>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -721,176 +485,12 @@
     <MESSAGE value="2.0.1.256 : File links overwrite always" />
     <MESSAGE value="2.0.1.256 : Updated version" />
     <MESSAGE value="2.0.2.256 : Fixed File.setText" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.0.2.256 : Fixed File.setText" />
+    <MESSAGE value="2.0.2.256 : Added File.empty and File.existsAndNotEmpty" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.0.2.256 : Added File.empty and File.existsAndNotEmpty" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/default-java/jre/lib/rt.jar!/java/net/URL.class" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-all/2.4.10/4cd3ebb112ce901e969f6f85d2a42c22f04854d0/groovy-all-2.4.10-sources.jar!/org/codehaus/groovy/runtime/StringGroovyMethods.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/URIExt.groovy" />
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/URLExt.groovy" />
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/jp/sharelock/groovy/URIExtTest.groovy" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spockframework/spock-core/1.1-groovy-2.4/2b08ca54637337988a8da795c6dc3f66d2810ebb/spock-core-1.1-groovy-2.4-sources.jar!/org/spockframework/util/ReflectionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="191" selection-start-line="191" selection-end-line="191" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/default-java/src.zip!/java/time/format/DateTimeFormatter.java" />
-    <entry file="jar:///usr/lib/jvm/default-java/src.zip!/java/time/LocalDateTime.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateStaticExt.groovy" />
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalTimeStaticExt.groovy" />
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/jp/sharelock/groovy/LocalDateTimeStaticExt.groovy" />
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/InetAddressStaticExt.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/Inet4AddressExt.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compare.sh" />
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/LocalDateExtTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1206">
-          <caret line="72" column="34" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/NetworkInterfaceStaticExTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/RandomStaticExTest.groovy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/MapExtTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/StringExTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/classes/main/META-INF/services/org.codehaus.groovy.runtime.ExtensionModule" />
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/DateExt.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/LocalDateExt.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1084">
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/MapExt.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/NetworkInterfaceStaticEx.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="87" column="57" selection-start-line="87" selection-start-column="57" selection-end-line="87" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/StringExt.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/RandomStaticExt.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="252">
-            <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/FileExt.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="201" selection-start-line="201" selection-end-line="201" />
-          <folding>
-            <element signature="e#31#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/FileExtTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="106" column="47" lean-forward="true" selection-start-line="106" selection-start-column="47" selection-end-line="106" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

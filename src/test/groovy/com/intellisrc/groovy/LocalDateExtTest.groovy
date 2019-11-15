@@ -28,6 +28,7 @@ class LocalDateExtTest extends Specification {
             assert LocalDateExt.getHHmm(date.toLocalTime()) == "11:23"
             assert LocalDateExt.getHHmmss(date.toLocalTime()) == "11:23:54"
     }
+    
     def "Converting from-to Date"() {
         setup:
             Date date = new Date()
@@ -35,6 +36,7 @@ class LocalDateExtTest extends Specification {
         expect:
             assert LocalDateExt.toDate(local).toInstant().toEpochMilli() == date.toInstant().toEpochMilli()
     }
+    
     def "Test String conversion"() {
         setup:
             // The way it will be used is: def time = "10:10:00".toTime()
@@ -44,12 +46,14 @@ class LocalDateExtTest extends Specification {
         expect:
             assert StringExt.toDateTime("2000-01-01 12:15:23") == ldt
     }
+    
     def "Date to DateTime"() {
         setup:
             def str = "2011-01-01"
         expect:
             assert LocalDateExt.getYMDHms(LocalDateExt.toDateTime(StringExt.toDate(str))) == str.substring(0, 10) + " " + "00:00:00"
     }
+    
     def "Parse Date"() {
         setup:
             def dates = [
@@ -66,47 +70,55 @@ class LocalDateExtTest extends Specification {
                 assert LocalDateExt.getYMD(StringExt.toDate(it)) == it.substring(0, 10)
             }
     }
+    
     def "Parse DateTime Zero"() {
         setup:
-        def dates = [
-                "2015-03-15 00:00",
-                "2015-03-15T00:00",
-                "2015-03-15 00:00:00",
-                "2015-03-15T00:00:00",
-                "2015-03-15 00:00:00.000",
-                "2015-03-15T00:00:00.000",
-        ]
+            def dates = [
+                    "2015-03-15 00:00",
+                    "2015-03-15T00:00",
+                    "2015-03-15 00:00:00",
+                    "2015-03-15T00:00:00",
+                    "2015-03-15 00:00:00.000",
+                    "2015-03-15T00:00:00.000",
+            ]
         expect:
-        dates.each {
-            assert LocalDateExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "00:00:00"
-        }
+            dates.each {
+                assert LocalDateExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "00:00:00"
+            }
     }
+    
     def "Parse DateTime Hours"() {
         setup:
-        def datehours = [
-                "2015-03-15 10:30",
-                "2015-03-15T10:30",
-                "2015-03-15 10:30:00",
-                "2015-03-15T10:30:00",
-                "2015-03-15 10:30:00.000",
-                "2015-03-15T10:30:00.000",
-        ]
+            def datehours = [
+                    "2015-03-15 10:30",
+                    "2015-03-15T10:30",
+                    "2015-03-15 10:30:00",
+                    "2015-03-15T10:30:00",
+                    "2015-03-15 10:30:00.000",
+                    "2015-03-15T10:30:00.000",
+            ]
         expect:
-        datehours.each {
-            assert LocalDateExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "10:30:00"
-        }
+            datehours.each {
+                assert LocalDateExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "10:30:00"
+            }
     }
+    
     def "Parse DateTime with seconds"() {
         setup:
-        def datesecs = [
-                "2015-03-15 10:30:15",
-                "2015-03-15T10:30:15",
-                "2015-03-15 10:30:15.000",
-                "2015-03-15T10:30:15.000",
-        ]
+            def datesecs = [
+                    "2015-03-15 10:30:15",
+                    "2015-03-15T10:30:15",
+                    "2015-03-15 10:30:15.000",
+                    "2015-03-15T10:30:15.000",
+            ]
         expect:
-        datesecs.each {
-            assert LocalDateExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "10:30:15"
-        }
+            datesecs.each {
+                assert LocalDateExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "10:30:15"
+            }
+    }
+    
+    def "Get millis from LocalDateTime"() {
+        expect:
+            assert Math.abs(System.currentTimeMillis() - LocalDateExt.toMillis(LocalDateTime.now())) < 1000
     }
 }
