@@ -1,12 +1,13 @@
 package com.intellisrc.groovy
 
+import groovy.transform.CompileStatic
 import org.apache.commons.net.util.SubnetUtils
 import org.apache.commons.net.util.SubnetUtils.SubnetInfo
 
-@groovy.transform.CompileStatic
 /**
  * @since 2/19/17.
  */
+@CompileStatic
 class Inet4AddressExt {
 
     /**

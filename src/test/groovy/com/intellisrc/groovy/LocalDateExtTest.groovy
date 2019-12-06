@@ -14,7 +14,7 @@ class LocalDateExtTest extends Specification {
     def "Test LocalDate shortcuts"() {
         setup:
             String sdate = "2015-12-20 11:23:54"
-            LocalDateTime date = StringExt.toDateTime("yyyy-MM-dd HH:mm:ss", sdate)
+            LocalDateTime date = StringExt.toDateTime(sdate, "yyyy-MM-dd HH:mm:ss")
         expect:
             // These will normally be used as: LocalDateTime.now().YY
             assert LocalDateExt.getYMDHms(date) == sdate
@@ -57,8 +57,16 @@ class LocalDateExtTest extends Specification {
     def "Parse Date"() {
         setup:
             def dates = [
+                    "20150315",
+                    "150315",
+                    "2015.03.15",
+                    "2015/03/15",
+                    "15/03/2015",
+                    "15.03.2015",
                     "2015-03-15",
                     "2015-03-15 10:30",
+                    "2015.03.15 10:30",
+                    "15.03.2015 10:30:22",
                     "2015-03-15T00:00",
                     "2015-03-15 10:30:22",
                     "2015-03-15T10:30:22",
@@ -67,7 +75,7 @@ class LocalDateExtTest extends Specification {
             ]
         expect:
             dates.each {
-                assert LocalDateExt.getYMD(StringExt.toDate(it)) == it.substring(0, 10)
+                assert LocalDateExt.getYMD(StringExt.toDate(it)) == "2015-03-15"
             }
     }
     

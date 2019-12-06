@@ -1,12 +1,14 @@
 package com.intellisrc.groovy
 
-@groovy.transform.CompileStatic
+import groovy.transform.CompileStatic
+
 /**
  * Static extension methods for NetworkInterface
  * NOTE: Instance and Static methods should be defined separately:
  * see: http://docs.groovy-lang.org/next/html/documentation/core-metaprogramming.html#_extending_existing_classes
  * @author Alberto Lepe <lepe@intellisrc.com>
  */
+@CompileStatic
 class NetworkInterfaceStaticExt {
     /**
      * Retrieves the first IP address that is not 127.X.X.X

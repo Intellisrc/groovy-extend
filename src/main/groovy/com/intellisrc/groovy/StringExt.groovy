@@ -1,14 +1,17 @@
 package com.intellisrc.groovy
 
+import groovy.transform.CompileStatic
+
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
+import java.time.format.DateTimeParseException
 
-@groovy.transform.CompileStatic
 /**
  * @since 2/19/17.
  */
+@CompileStatic
 class StringExt {
     static String alphaNumeric(final String self) {
         self =~ /w+/
@@ -24,15 +27,15 @@ class StringExt {
     ////////////// Conversion to other types //////////////
 
     static Inet4Address toInet4Address(final String self) throws UnknownHostException {
-        return (Inet4Address) InetAddress.newInstance().getByName(self)
+        return (Inet4Address) InetAddress.getByName(self)
     }
 
     static Inet6Address toInet6Address(final String self) throws UnknownHostException {
-        return (Inet6Address) InetAddress.newInstance().getByName(self)
+        return (Inet6Address) InetAddress.getByName(self)
     }
 
     static InetAddress toInetAddress(final String self) throws UnknownHostException  {
-        return (Inet4Address) InetAddress.newInstance().getByName(self)
+        return (Inet4Address) InetAddress.getByName(self)
     }
     /**
      * Appends a random number to a String
@@ -76,14 +79,66 @@ class StringExt {
                 return map
         }
     }
+    
+    static List<String> yearParsers = [
+            "yyyy-MM-dd",
+            "yyyy.MM.dd",
+            "dd.MM.yyyy",
+            "dd-MM-yyyy",
+            "yyyy/MM/dd",
+            "dd/MM/yyyy",
+            "yyyyMMdd",
+            "ddMMyyyy",
+            "yy-MM-dd",
+            "yy.MM.dd",
+            "yy/MM/dd",
+            "dd-MM-yy",
+            "dd.MM.yy",
+            "dd/MM/yy",
+            "yyMMdd",
+            "ddMMyy"
+    ]
+    static String optional = "['T'][' ']"
+    static List<String> hourParsers = [
+            "HH:mm[:ss][.SSS]",
+            "H:mm[:ss][.SSS]",
+            "HHmmss[.SSS]",
+            "Hmmss[.SSS]",
+            "HHmm[.SSS]",
+            "Hmm[.SSS]"
+    ]
     /**
      * Convert String to LocalDateTime
      * @param format
      * @param self
      * @return
      */
-    static LocalDateTime toDateTime(final String format = "yyyy-MM-dd['T'][' '][HH:mm][:ss][.SSS]", final String self) {
-        return LocalDateTime.parse(self, DateTimeFormatter.ofPattern(format))
+    static LocalDateTime toDateTime(final String self, final String format = null) {
+        String fmt = format
+        LocalDateTime dateTime
+        if(fmt) {
+            dateTime = LocalDateTime.parse(self, DateTimeFormatter.ofPattern(format))
+        } else {
+            List<String> parsers = []
+            yearParsers.each {
+                String yp ->
+                    hourParsers.each {
+                        String hp ->
+                            parsers << "$yp${optional}$hp".toString()
+                    }
+            }
+            parsers.any {
+                String f ->
+                    try {
+                        dateTime = LocalDateTime.parse(self, DateTimeFormatter.ofPattern(f))
+                    } catch(DateTimeParseException ignore) {}
+                    return dateTime
+            }
+        }
+        if(!dateTime) {
+            throw new DateTimeParseException("Date can not be parsed: ", self, 0)
+        }
+        return dateTime
     }
     /**
      * Convert String to LocalDate
@@ -91,8 +146,32 @@ class StringExt {
      * @param self
      * @return
      */
-    static LocalDate toDate(final String format = "yyyy-MM-dd['T'][' '][HH:mm][:ss][.SSS]", final String self) {
-        return LocalDate.parse(self, DateTimeFormatter.ofPattern(format))
+    static LocalDate toDate(final String self, final String format = null) {
+        String fmt = format
+        LocalDate date
+        if(fmt) {
+            date = LocalDate.parse(self, DateTimeFormatter.ofPattern(format))
+        } else {
+            List<String> parsers = []
+            yearParsers.each {
+                String yp ->
+                    hourParsers.each {
+                        String hp ->
+                            parsers << "$yp${optional}[$hp]".toString()
+                    }
+            }
+            parsers.any {
+                String f ->
+                    try {
+                        date = LocalDate.parse(self, DateTimeFormatter.ofPattern(f))
+                    } catch(DateTimeParseException ignore) {}
+                    return date
+            }
+        }
+        if(!date) {
+            throw new DateTimeParseException("Date can not be parsed: ", self, 0)
+        }
+        return date
     }
     /**
      * Convert String to Time
@@ -100,7 +179,31 @@ class StringExt {
      * @param self
      * @return
      */
-    static LocalTime toTime(final String format = "[yyyy-MM-dd]['T'][' ']HH:mm[:ss][.SSS]", final String self) {
-        return LocalTime.parse(self, DateTimeFormatter.ofPattern(format))
+    static LocalTime toTime(final String self, final String format = null) {
+        String fmt = format
+        LocalTime time
+        if(fmt) {
+            time = LocalTime.parse(self, DateTimeFormatter.ofPattern(format))
+        } else {
+            List<String> parsers = []
+            yearParsers.each {
+                String yp ->
+                    hourParsers.each {
+                        String hp ->
+                            parsers << "[$yp]${optional}$hp".toString()
+                    }
+            }
+            parsers.any {
+                String f ->
+                    try {
+                        time = LocalTime.parse(self, DateTimeFormatter.ofPattern(f))
+                    } catch(DateTimeParseException ignore) {}
+                    return time
+            }
+        }
+        if(!time) {
+            throw new DateTimeParseException("Time can not be parsed: ", self, 0)
+        }
+        return time
     }
 }

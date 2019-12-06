@@ -1,15 +1,17 @@
 package com.intellisrc.groovy
 
+import groovy.transform.CompileStatic
+
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.ZoneId
 import java.time.ZonedDateTime
 
-@groovy.transform.CompileStatic
 /**
  * Created by lepe on 17/02/20.
  */
+@CompileStatic
 class DateExt {
     /**
      * Convert a Date to LocalDateTime

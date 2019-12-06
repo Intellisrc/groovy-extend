@@ -1,9 +1,11 @@
 package com.intellisrc.groovy
 
-@groovy.transform.CompileStatic
+import groovy.transform.CompileStatic
+
 /**
  * Created by lepe on 17/02/22.
  */
+@CompileStatic
 class InetAddressStaticExt {
     /**
      * Generates a random IP4

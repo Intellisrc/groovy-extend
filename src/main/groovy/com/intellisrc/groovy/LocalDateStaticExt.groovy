@@ -1,5 +1,7 @@
 package com.intellisrc.groovy
 
+import groovy.transform.CompileStatic
+
 import java.time.Instant
 import java.time.LocalDateTime
 import java.time.ZoneId
@@ -7,6 +9,7 @@ import java.time.ZoneId
 /**
  * @since 2019/10/07.
  */
+@CompileStatic
 class LocalDateStaticExt {
     /**
      * Convert millis to LocalDateTime with default Zone
