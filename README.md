@@ -23,6 +23,8 @@ This project is to extend (Java/Groovy) core classes to improve productivity.
 * `getYMDHms("","")` : Return "yyyyMMddHHmmss"
 * `YMDHmsS` : Return "yyyy-MM-dd HH:mm:ss.SSS"
 * `YMDHm` : Return "yyyy-MM-dd HH:mm"
+* `toMillis` : Return epoch milliseconds (long)
+* `fromMillis` : (static) Convert epoch milliseconds into LocalDateTime
 
 #### LocalDate only:
 * `YMD` : Return "yyyy-MM-dd"
@@ -76,8 +78,8 @@ These extensions provide faster ways to deal with files. Setting permissions and
 
 * `copyTo`
 * `moveTo`
-* `linkTo`
-* `hardLinkOrCopyTo`
+* `linkTo`           : Create a link from a file. Its argument is the link to create. An additional argument is to specify if link is hard or not.
+* `hardLinkOrCopyTo` : Will try to create a hardLink, but if its in another device (which is not allowed), it will copy it.
 
 #### Network
 
@@ -87,6 +89,7 @@ These extensions help to deal with network interfaces.
 
 * `localIP` : Get's the first IP address that is not 127.x.x.x
 * `isLocalAddress` : Test if local device contains such IP address
+* `isPortAvailable` : Test if port is available
 * `getIPStartWith` : Retrieves the first IP address that starts with...
 * `getIPinNetwork` : Retrieves the first IP address that is in Network X
 * `getFreePort` : Retrieves an available port.
