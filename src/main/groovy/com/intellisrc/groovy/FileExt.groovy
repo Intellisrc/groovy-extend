@@ -251,6 +251,23 @@ class FileExt {
             copyTo(self, target)
         }
     }
+    
+    /**
+     * A simplified version of listFiles using simple filter and getting files asynchronously:
+     *    file.listFiles("*.{jpg,png,gif})
+     *
+     * @param self
+     * @param filter
+     * @param closure
+     */
+    static List<File> listFiles(final File self, final String filter, boolean sort = false) {
+        List<File> files = []
+        eachFileMatchAsync(self, filter, {
+            File file ->
+                files << file
+        })
+        return sort ? files.sort { it.name } : files
+    }
 
     /**
      * Return all files asynchronously (e.g. directories with many files)
@@ -289,5 +306,88 @@ class FileExt {
                 stream.close()
             }
         }
+    }
+    
+    /**
+     * Return files asynchronously which match a filter (e.g. directories with many files)
+     *    file.eachFileMatchAsync({} as FileFilter) {
+     *        File f ->
+     *    }
+     * @param self
+     * @param closure
+     * @param filter
+     */
+    static void eachFileMatchAsync(final File self, FileFilter filter, @ClosureParams(value=SimpleType.class,options="java.io.File") final Closure closure) {
+        if(self.exists() && self.isDirectory()) {
+            DirectoryStream<Path> stream = null
+            try {
+                stream = Files.newDirectoryStream(self.toPath())
+                stream.each {
+                    Path p ->
+                        File file = p.toFile()
+                        if (filter.accept(file)) {
+                            closure(file)
+                        }
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace()
+            } finally {
+                stream.close()
+            }
+        }
+    }
+    
+    /**
+     * Delete all files matching filter in directory
+     *    file.deleteFiles({ File file -> it.name == "example.txt" } as FileFilter)
+     * @param self
+     * @param FileFilter
+     * @param closure
+     */
+    static boolean deleteFiles(final File self, final FileFilter filter) {
+        boolean ok = false
+        if(self.exists() && self.isDirectory()) {
+            DirectoryStream<Path> stream = null
+            try {
+                stream = Files.newDirectoryStream(self.toPath())
+                ok = ! stream.any {
+                    Path p ->
+                        File file = p.toFile()
+                        return filter.accept(file) &&! file.delete() // It will stop at the first error
+                }
+            } catch (IOException ex) {
+                ok = false
+                ex.printStackTrace()
+            } finally {
+                stream.close()
+            }
+        }
+        return ok
+    }
+    /**
+     * Delete all files matching filter in directory
+     *    file.deleteFiles("*.{jpg, png, gif}")
+     * @param self
+     * @param FileFilter
+     * @param closure
+     */
+    static boolean deleteFiles(final File self, final String filter) {
+        boolean ok = false
+        if(self.exists() && self.isDirectory()) {
+            DirectoryStream<Path> stream = null
+            try {
+                stream = Files.newDirectoryStream(self.toPath(), filter)
+                ok = ! stream.any {
+                    Path p ->
+                        return ! p.toFile().delete() // It will stop at the first error
+                }
+            } catch (IOException ex) {
+                ok = false
+                ex.printStackTrace()
+            } finally {
+                stream.close()
+            }
+        }
+        return ok
     }
 }

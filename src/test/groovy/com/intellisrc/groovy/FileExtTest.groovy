@@ -47,7 +47,123 @@ class FileExtTest extends Specification {
             ) &&! FileExt.getPermissions(file).contains(
                     PosixFilePermission.GROUP_READ
             )
+        when :
+            FileExt.clearOwnerPermissions(file)
+        then :
+            assert ! FileExt.getPermissions(file).containsAll([
+                    PosixFilePermission.OWNER_READ,
+                    PosixFilePermission.OWNER_WRITE
+            ])
     }
+    def "Set individual permissions"() {
+        setup:
+            FileExt.clearPermissions(file)
+            FileExt.setReadable(file, true, true, true)
+            FileExt.setWritable(file, true, true, true)
+            FileExt.setExecutable(file, true, true, true)
+        expect:
+            assert FileExt.getPermissions(file).containsAll([
+                    PosixFilePermission.OWNER_READ,
+                    PosixFilePermission.OWNER_WRITE,
+                    PosixFilePermission.OWNER_EXECUTE,
+                    PosixFilePermission.GROUP_READ,
+                    PosixFilePermission.GROUP_WRITE,
+                    PosixFilePermission.GROUP_EXECUTE,
+                    PosixFilePermission.OTHERS_READ,
+                    PosixFilePermission.OTHERS_WRITE,
+                    PosixFilePermission.OTHERS_EXECUTE
+            ])
+    }
+    
+    def "Copy File"() {
+        setup:
+            File tmpFile = new File(file.parentFile, "file.ext.copy.test")
+            if(tmpFile.exists()) {
+                tmpFile.delete()
+            }
+            FileExt.copyTo(file, tmpFile)
+        expect:
+            assert tmpFile.exists()
+        cleanup:
+            tmpFile.delete()
+    }
+    
+    def "Move File"() {
+        setup:
+            File tmpFile = new File(file.parentFile, "file.ext.copy.test")
+            if(tmpFile.exists()) {
+                tmpFile.delete()
+            }
+            FileExt.moveTo(file, tmpFile)
+        expect:
+            assert tmpFile.exists()
+            assert ! file.exists()
+        cleanup:
+            tmpFile.delete()
+    }
+    
+    def "Hard Link or copy"() {
+        setup:
+            File tmpFile = new File(file.parentFile, "file.ext.copy.test")
+            if(tmpFile.exists()) {
+                tmpFile.delete()
+            }
+            FileExt.hardLinkOrCopyTo(file, tmpFile)
+        expect:
+            assert tmpFile.exists()
+            assert file.exists()
+        cleanup:
+            tmpFile.delete()
+    }
+    
+    def "List files and delete using string filters"() {
+        setup:
+            File tmpDir = new File(System.getProperty("java.io.tmpdir"))
+            (1..10).each {
+                new File(tmpDir, "test-file-${it}.txt").text = "test"
+            }
+            (1..10).each {
+                new File(tmpDir, "test-file-${it}.tmp").text = "test"
+            }
+        expect:
+            assert FileExt.listFiles(tmpDir, "*.txt").size() == 10
+            assert FileExt.listFiles(tmpDir, "*.tmp").size() == 10
+        when:
+            assert FileExt.deleteFiles(tmpDir, "*.txt")
+        then:
+            assert FileExt.listFiles(tmpDir, "*.txt").size() == 0
+            assert FileExt.listFiles(tmpDir, "*.tmp").size() == 10
+        cleanup:
+            FileExt.deleteFiles(tmpDir, "*.tmp")
+            tmpDir.deleteDir()
+    }
+    
+    def "List files and delete using FileFilter"() {
+        setup:
+            File tmpDir = new File(System.getProperty("java.io.tmpdir"))
+            (1..10).each {
+                new File(tmpDir, "test-file-${it}.tmp").text = "test"
+            }
+            FileFilter filter = { File f -> f.name.endsWith(".tmp") } as FileFilter
+        expect:
+            assert FileExt.listFiles(tmpDir, "*.tmp").size() == 10
+        when:
+            int count = 0
+            FileExt.eachFileMatchAsync(tmpDir, filter) {
+                File item ->
+                    println item
+                    count++
+            }
+        then:
+            assert count == FileExt.listFiles(tmpDir, "*.tmp").size()
+        when:
+            assert FileExt.deleteFiles(tmpDir, filter)
+        then:
+            assert FileExt.listFiles(tmpDir, "*.tmp").size() == 0
+        cleanup:
+            tmpDir.deleteDir()
+    }
+    
     /**
      * Read a directory asynchronously
      * Usage: new File("some/path").eachFileAsync {
