@@ -17,7 +17,7 @@ class FileExt {
     static int getLines(final File self) {
         LineNumberReader lr = new LineNumberReader(new FileReader(self))
         while (lr.skip(Long.MAX_VALUE) > 0) { }
-        return lr.lineNumber + 1
+        return lr.lineNumber
     }
 
     static Set<PosixFilePermission> getPermissions(final File self) {

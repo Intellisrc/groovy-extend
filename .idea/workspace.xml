@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.5.6.2 : Added unit tests for FileExt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/FileExt.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/FileExt.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/FileExtTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/FileExtTest.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +101,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.groovy-extend [artifactoryPublish]">
+  <component name="RunManager" selected="JUnit.FileExtTest.Counting number of lines">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -132,7 +133,7 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FileExtTest.Hard Link or copy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileExtTest.Counting number of lines" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="groovy-extend_test" />
       <extension name="coverage">
         <pattern>
@@ -142,7 +143,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.intellisrc.groovy" />
       <option name="MAIN_CLASS_NAME" value="com.intellisrc.groovy.FileExtTest" />
-      <option name="METHOD_NAME" value="Hard Link or copy" />
+      <option name="METHOD_NAME" value="Counting number of lines" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -218,18 +219,18 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.groovy-extend [artifactoryPublish]" />
-      <item itemvalue="JUnit.FileExtTest.Hard Link or copy" />
       <item itemvalue="JUnit.FileExtTest.List files and delete using filters" />
       <item itemvalue="JUnit.FileExtTest.List files and delete using FileFilter" />
       <item itemvalue="JUnit.FileExtTest.List files and delete using string filters" />
+      <item itemvalue="JUnit.FileExtTest.Counting number of lines" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileExtTest.Counting number of lines" />
         <item itemvalue="Gradle.groovy-extend [artifactoryPublish]" />
         <item itemvalue="JUnit.FileExtTest.List files and delete using FileFilter" />
         <item itemvalue="JUnit.FileExtTest.List files and delete using string filters" />
         <item itemvalue="JUnit.FileExtTest.List files and delete using filters" />
-        <item itemvalue="JUnit.FileExtTest.Hard Link or copy" />
       </list>
     </recent_temporary>
   </component>
@@ -500,30 +501,30 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="743" y="376" width="430" height="479" key="FileChooserDialogImpl/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575864984771" />
-    <state width="1876" height="215" key="GridCell.Tab.0.bottom" timestamp="1575861228788">
+    <state width="1876" height="302" key="GridCell.Tab.0.bottom" timestamp="1579051460655">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state width="1876" height="346" key="GridCell.Tab.0.bottom/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493282" />
     <state width="1322" height="217" key="GridCell.Tab.0.bottom/0.33.1366.680@0.33.1366.680" timestamp="1574922873890" />
-    <state width="1876" height="215" key="GridCell.Tab.0.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.0.center" timestamp="1575861228788">
+    <state width="1876" height="302" key="GridCell.Tab.0.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1579051460655" />
+    <state width="1876" height="302" key="GridCell.Tab.0.center" timestamp="1579051460655">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state width="1876" height="346" key="GridCell.Tab.0.center/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493282" />
     <state width="1322" height="217" key="GridCell.Tab.0.center/0.33.1366.680@0.33.1366.680" timestamp="1574922873886" />
-    <state width="1876" height="215" key="GridCell.Tab.0.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.0.left" timestamp="1575861228788">
+    <state width="1876" height="302" key="GridCell.Tab.0.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1579051460655" />
+    <state width="1876" height="302" key="GridCell.Tab.0.left" timestamp="1579051460655">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state width="1876" height="346" key="GridCell.Tab.0.left/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493281" />
     <state width="1322" height="217" key="GridCell.Tab.0.left/0.33.1366.680@0.33.1366.680" timestamp="1574922873885" />
-    <state width="1876" height="215" key="GridCell.Tab.0.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.0.right" timestamp="1575861228788">
+    <state width="1876" height="302" key="GridCell.Tab.0.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1579051460655" />
+    <state width="1876" height="302" key="GridCell.Tab.0.right" timestamp="1579051460655">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state width="1876" height="346" key="GridCell.Tab.0.right/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493282" />
     <state width="1322" height="217" key="GridCell.Tab.0.right/0.33.1366.680@0.33.1366.680" timestamp="1574922873888" />
-    <state width="1876" height="215" key="GridCell.Tab.0.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
+    <state width="1876" height="302" key="GridCell.Tab.0.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1579051460655" />
     <state width="1876" height="215" key="GridCell.Tab.1.bottom" timestamp="1575861228788">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
