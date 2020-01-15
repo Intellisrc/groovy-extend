@@ -18,7 +18,7 @@ class FileExtTest extends Specification {
         file << "5 More lines\n"
         file << "6 More lines\n"
         file << "7 More lines\n"
-        file << "8 More lines"
+        file << "8 More lines\n"
     }
     def cleanup() {
         file.delete()
