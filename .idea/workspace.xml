@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.5.6.2 : Added unit tests for FileExt">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/CollectionExt.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/CollectionExtTest.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" afterDir="false" />
+    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.5.6.3 : Added CollectionExt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groovy-extend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/groovy-extend.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +29,17 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="groovy-extend" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="groovy-extend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="groovy-extend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="publishing" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -56,6 +59,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1Tdj5UPBnGGVyywgHHkP6JnzOZP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -87,7 +91,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CollectionExtTest.Getting a list of elements with different element sizes">
+  <component name="RunManager" selected="Gradle.groovy-extend [publishToMavenLocal]">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -99,6 +103,25 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="groovy-extend [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishToMavenLocal" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="CollectionExtTest.Getting a list of elements randomly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="groovy-extend_test" />
@@ -168,23 +191,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileExtTest.Counting number of lines" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groovy-extend_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.intellisrc.groovy.CollectionExt" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.intellisrc.groovy" />
-      <option name="MAIN_CLASS_NAME" value="com.intellisrc.groovy.FileExtTest" />
-      <option name="METHOD_NAME" value="Counting number of lines" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -202,19 +208,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.FileExtTest.Counting number of lines" />
       <item itemvalue="JUnit.CollectionExtTest.Getting one element randomly" />
       <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements randomly" />
       <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with invalid values must return empty" />
       <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with different element sizes" />
+      <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
         <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with different element sizes" />
         <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with invalid values must return empty" />
         <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements randomly" />
         <item itemvalue="JUnit.CollectionExtTest.Getting one element randomly" />
-        <item itemvalue="JUnit.FileExtTest.Counting number of lines" />
       </list>
     </recent_temporary>
   </component>
@@ -413,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575860358755</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="2.5.6.3 : Added CollectionExt">
+      <created>1582016572381</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1582016572381</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -444,7 +457,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1.6 Added conditional to handle time in toStringSTD and toDateSTD" />
     <MESSAGE value="1.6.3 : Added toQueryMap and toQueryString. Modified tests to use Ext classes so it can be tested" />
     <MESSAGE value="1.6.4 : Renamed toDateSTD : toYMDHms and added more shortcuts" />
     <MESSAGE value="1.6.4 : Fixed method name" />
@@ -469,14 +481,15 @@
     <MESSAGE value="2.5.6.1 : Added LocalDateTime.fromMillis and NetworkInterface.isPortAvailable" />
     <MESSAGE value="2.5.6.2 : Fixed date/time parsing  (and cleaned code)" />
     <MESSAGE value="2.5.6.2 : Added unit tests for FileExt" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.5.6.2 : Added unit tests for FileExt" />
+    <MESSAGE value="2.5.6.3 : Added CollectionExt" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.5.6.3 : Added CollectionExt" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="107" y="33" width="721" height="803" key="CommitChangelistDialog2" timestamp="1575864963055">
+    <state x="107" y="33" width="721" height="803" key="CommitChangelistDialog2" timestamp="1582016909212">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="57" y="5" width="963" height="763" key="CommitChangelistDialog2/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624475260" />
-    <state x="107" y="33" width="721" height="803" key="CommitChangelistDialog2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575864963055" />
+    <state x="107" y="33" width="721" height="803" key="CommitChangelistDialog2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016909212" />
     <state x="97" y="133" width="1726" height="970" key="DiffContextDialog" timestamp="1575864985230">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
@@ -485,30 +498,30 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="743" y="376" width="430" height="479" key="FileChooserDialogImpl/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575864984771" />
-    <state width="1876" height="439" key="GridCell.Tab.0.bottom" timestamp="1582016410834">
+    <state width="1876" height="661" key="GridCell.Tab.0.bottom" timestamp="1582016899795">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state width="1876" height="346" key="GridCell.Tab.0.bottom/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493282" />
     <state width="1322" height="217" key="GridCell.Tab.0.bottom/0.33.1366.680@0.33.1366.680" timestamp="1574922873890" />
-    <state width="1876" height="439" key="GridCell.Tab.0.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016410834" />
-    <state width="1876" height="439" key="GridCell.Tab.0.center" timestamp="1582016410834">
+    <state width="1876" height="661" key="GridCell.Tab.0.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899795" />
+    <state width="1876" height="661" key="GridCell.Tab.0.center" timestamp="1582016899794">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state width="1876" height="346" key="GridCell.Tab.0.center/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493282" />
     <state width="1322" height="217" key="GridCell.Tab.0.center/0.33.1366.680@0.33.1366.680" timestamp="1574922873886" />
-    <state width="1876" height="439" key="GridCell.Tab.0.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016410834" />
-    <state width="1876" height="439" key="GridCell.Tab.0.left" timestamp="1582016410834">
+    <state width="1876" height="661" key="GridCell.Tab.0.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899794" />
+    <state width="1876" height="661" key="GridCell.Tab.0.left" timestamp="1582016899794">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state width="1876" height="346" key="GridCell.Tab.0.left/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493281" />
     <state width="1322" height="217" key="GridCell.Tab.0.left/0.33.1366.680@0.33.1366.680" timestamp="1574922873885" />
-    <state width="1876" height="439" key="GridCell.Tab.0.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016410834" />
-    <state width="1876" height="439" key="GridCell.Tab.0.right" timestamp="1582016410834">
+    <state width="1876" height="661" key="GridCell.Tab.0.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899794" />
+    <state width="1876" height="661" key="GridCell.Tab.0.right" timestamp="1582016899794">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state width="1876" height="346" key="GridCell.Tab.0.right/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493282" />
     <state width="1322" height="217" key="GridCell.Tab.0.right/0.33.1366.680@0.33.1366.680" timestamp="1574922873888" />
-    <state width="1876" height="439" key="GridCell.Tab.0.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016410834" />
+    <state width="1876" height="661" key="GridCell.Tab.0.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899794" />
     <state width="1876" height="215" key="GridCell.Tab.1.bottom" timestamp="1575861228788">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
@@ -605,6 +618,10 @@
       <screen x="0" y="0" width="1024" height="768" />
     </state>
     <state x="229" y="5" width="791" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624040759" />
+    <state x="737" y="538" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582016635710">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="737" y="538" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016635710" />
     <state x="623" y="294" width="672" height="678" key="search.everywhere.popup" timestamp="1575859152032">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
