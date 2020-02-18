@@ -123,3 +123,7 @@ Extends String methods that are commonly used and easiest ways to convert them.
 ### Random Methods
 
 * `range` : Specify a range to get a random number
+
+### Collection Methods
+
+* `random` : Get one or more random element from a collection (two implementations).
