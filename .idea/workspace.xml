@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.5.6.3 : Added CollectionExt">
+      <change afterPath="$PROJECT_DIR$/gradle.properties.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_spockframework_spock_core_1_2_groovy_2_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_spockframework_spock_unitils_1_2_groovy_2_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groovy-extend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/groovy-extend.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +78,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowMaven.ShowToolbar" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../groovy/groovy-extend/README.md" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3970346" />
@@ -80,20 +86,29 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../../groovy/groovy-extend/README.md" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.intellisrc.groovy" />
       <recent name="jp.sharelock.groovy" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.groovy-extend [publishToMavenLocal]">
+  <component name="RunManager" selected="Gradle.groovy-extend [artifactoryPublish]">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -103,6 +118,25 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="groovy-extend [artifactoryPublish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="artifactoryPublish" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="groovy-extend [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -174,23 +208,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CollectionExtTest.Getting one element randomly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groovy-extend_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.intellisrc.groovy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.intellisrc.groovy" />
-      <option name="MAIN_CLASS_NAME" value="com.intellisrc.groovy.CollectionExtTest" />
-      <option name="METHOD_NAME" value="Getting one element randomly" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -198,29 +215,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.CollectionExtTest.Getting one element randomly" />
+      <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
+      <item itemvalue="Gradle.groovy-extend [artifactoryPublish]" />
       <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements randomly" />
       <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with invalid values must return empty" />
       <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with different element sizes" />
-      <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.groovy-extend [artifactoryPublish]" />
         <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
         <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with different element sizes" />
         <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with invalid values must return empty" />
         <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements randomly" />
-        <item itemvalue="JUnit.CollectionExtTest.Getting one element randomly" />
       </list>
     </recent_temporary>
   </component>
@@ -485,147 +493,43 @@
     <option name="LAST_COMMIT_MESSAGE" value="2.5.6.3 : Added CollectionExt" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="381" y="207" width="587" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587109791175">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state x="381" y="207" width="587" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.29.1366.739@0.29.1366.739" timestamp="1587109791175" />
     <state x="107" y="33" width="721" height="803" key="CommitChangelistDialog2" timestamp="1582016909212">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="57" y="5" width="963" height="763" key="CommitChangelistDialog2/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624475260" />
     <state x="107" y="33" width="721" height="803" key="CommitChangelistDialog2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016909212" />
-    <state x="97" y="133" width="1726" height="970" key="DiffContextDialog" timestamp="1575864985230">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state width="1320" height="168" key="GridCell.Tab.0.bottom" timestamp="1587109950018">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state x="97" y="133" width="1726" height="970" key="DiffContextDialog/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575864985230" />
-    <state x="743" y="376" width="430" height="479" key="FileChooserDialogImpl" timestamp="1575864984771">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state x="743" y="376" width="430" height="479" key="FileChooserDialogImpl/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575864984771" />
-    <state width="1876" height="661" key="GridCell.Tab.0.bottom" timestamp="1582016899795">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="346" key="GridCell.Tab.0.bottom/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493282" />
-    <state width="1322" height="217" key="GridCell.Tab.0.bottom/0.33.1366.680@0.33.1366.680" timestamp="1574922873890" />
+    <state width="1320" height="168" key="GridCell.Tab.0.bottom/0.29.1366.739@0.29.1366.739" timestamp="1587109950018" />
     <state width="1876" height="661" key="GridCell.Tab.0.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899795" />
-    <state width="1876" height="661" key="GridCell.Tab.0.center" timestamp="1582016899794">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state width="1320" height="168" key="GridCell.Tab.0.center" timestamp="1587109950017">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1876" height="346" key="GridCell.Tab.0.center/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493282" />
-    <state width="1322" height="217" key="GridCell.Tab.0.center/0.33.1366.680@0.33.1366.680" timestamp="1574922873886" />
+    <state width="1320" height="168" key="GridCell.Tab.0.center/0.29.1366.739@0.29.1366.739" timestamp="1587109950017" />
     <state width="1876" height="661" key="GridCell.Tab.0.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899794" />
-    <state width="1876" height="661" key="GridCell.Tab.0.left" timestamp="1582016899794">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state width="1320" height="168" key="GridCell.Tab.0.left" timestamp="1587109950016">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1876" height="346" key="GridCell.Tab.0.left/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493281" />
-    <state width="1322" height="217" key="GridCell.Tab.0.left/0.33.1366.680@0.33.1366.680" timestamp="1574922873885" />
+    <state width="1320" height="168" key="GridCell.Tab.0.left/0.29.1366.739@0.29.1366.739" timestamp="1587109950016" />
     <state width="1876" height="661" key="GridCell.Tab.0.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899794" />
-    <state width="1876" height="661" key="GridCell.Tab.0.right" timestamp="1582016899794">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state width="1320" height="168" key="GridCell.Tab.0.right" timestamp="1587109950018">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1876" height="346" key="GridCell.Tab.0.right/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493282" />
-    <state width="1322" height="217" key="GridCell.Tab.0.right/0.33.1366.680@0.33.1366.680" timestamp="1574922873888" />
+    <state width="1320" height="168" key="GridCell.Tab.0.right/0.29.1366.739@0.29.1366.739" timestamp="1587109950018" />
     <state width="1876" height="661" key="GridCell.Tab.0.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899794" />
-    <state width="1876" height="215" key="GridCell.Tab.1.bottom" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.1.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.1.center" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.1.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.1.left" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.1.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.1.right" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.1.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.2.bottom" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.2.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.2.center" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.2.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.2.left" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.2.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.2.right" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.2.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.3.bottom" timestamp="1575861228789">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.3.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228789" />
-    <state width="1876" height="215" key="GridCell.Tab.3.center" timestamp="1575861228789">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.3.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228789" />
-    <state width="1876" height="215" key="GridCell.Tab.3.left" timestamp="1575861228789">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.3.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228789" />
-    <state width="1876" height="215" key="GridCell.Tab.3.right" timestamp="1575861228789">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.3.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228789" />
-    <state width="1876" height="215" key="GridCell.Tab.4.bottom" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.4.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.4.center" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.4.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.4.left" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.4.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.4.right" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.4.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.5.bottom" timestamp="1575861228789">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.5.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228789" />
-    <state width="1876" height="215" key="GridCell.Tab.5.center" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.5.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.5.left" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.5.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.5.right" timestamp="1575861228789">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.5.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228789" />
-    <state x="410" y="88" width="541" height="568" key="RollbackChangesDialog" timestamp="1574922701365">
-      <screen x="0" y="33" width="1366" height="680" />
-    </state>
-    <state x="410" y="88" width="541" height="568" key="RollbackChangesDialog/0.33.1366.680@0.33.1366.680" timestamp="1574922701365" />
     <state x="838" y="240" width="1030" height="840" key="SettingsEditor" timestamp="1582016025766">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="838" y="240" width="1030" height="840" key="SettingsEditor/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016025766" />
-    <state x="555" y="354" width="806" height="523" key="Vcs.Push.Dialog.v2" timestamp="1575864964230">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state x="524" y="360" width="382" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587108268992">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state x="555" y="354" width="806" height="523" key="Vcs.Push.Dialog.v2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575864964230" />
-    <state x="229" y="5" width="791" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1575624040759">
-      <screen x="0" y="0" width="1024" height="768" />
-    </state>
-    <state x="229" y="5" width="791" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624040759" />
-    <state x="737" y="538" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582016635710">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
+    <state x="524" y="360" width="382" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.29.1366.739@0.29.1366.739" timestamp="1587108268992" />
     <state x="737" y="538" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016635710" />
-    <state x="623" y="294" width="672" height="678" key="search.everywhere.popup" timestamp="1575859152032">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state x="623" y="294" width="672" height="678" key="search.everywhere.popup/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575859152032" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
