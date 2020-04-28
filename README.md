@@ -1,6 +1,36 @@
 # About
 This project is to extend (Java/Groovy) core classes to improve productivity.
 
+# Usage
+How to use it in your project:
+
+Maven:
+```xml
+<dependency>
+  <groupId>com.intellisrc</groupId>
+  <artifactId>groovy-extend</artifactId>
+  <version>VERSION</version>
+</dependency>
+```
+Gradle:
+```groovy
+dependecies {
+    implementation 'com.intellisrc:groovy-extend:VERSION'
+    // or extended annotation:
+    implementation compile group: 'com.intellisrc', name: 'groovy-extend', version: 'VERSION'
+}
+```
+In which `VERSION` is this package version, for example: `2.5.6.4`, `2.5.11.0`. The first 3 numbers in the version are
+related to you groovy version target. So if you want to extend groovy `2.5.9`, you need to use `2.5.9.0`. The last 
+number in the version is this library revision number. These are current versions:
+
+* 2.5.6.4
+* 2.5.7.0
+* 2.5.8.0
+* 2.5.9.0
+* 2.5.10.0
+* 2.5.11.0
+
 ## Date & Time
 
 `Date` class should not longer be used. Because of that, we extended `Date` class to make it easier to change it to `LocalDate` and `LocalDateTime`:
@@ -110,9 +140,9 @@ Extends String methods that are commonly used and easiest ways to convert them.
 * `toInet6Address`
 * `toInetAddress`
 * `getQueryMap` : Convert Query String to Map
-* `toDateTime`
-* `toDate`
-* `toTime`
+* `toDateTime`  : Convert String into LocalDateTime (auto detect format)
+* `toDate`      : Convert String into LocalDate (auto detect format)
+* `toTime`      : Convert String into LocalTime (auto detect format)
 
 ## Other
 
