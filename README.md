@@ -17,7 +17,7 @@ Gradle:
 dependecies {
     implementation 'com.intellisrc:groovy-extend:VERSION'
     // or extended annotation:
-    implementation compile group: 'com.intellisrc', name: 'groovy-extend', version: 'VERSION'
+    compile group: 'com.intellisrc', name: 'groovy-extend', version: 'VERSION'
 }
 ```
 In which `VERSION` is this package version, for example: `2.5.6.4`, `2.5.11.0`. The first 3 numbers in the version are
