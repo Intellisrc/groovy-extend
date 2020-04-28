@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="src" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.5.6.3 : Moved version out of gradle.properties" />
+    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.5.6.3 : added gradle.properties to .gitignore">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_spockframework_spock_core_1_3_groovy_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_spockframework_spock_unitils_1_3_groovy_2_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_72.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_72.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_thoughtworks_qdox_qdox_1_12_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_thoughtworks_qdox_qdox_1_12_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_collections_commons_collections_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_collections_commons_collections_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_lang_commons_lang_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_lang_commons_lang_2_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__ognl_ognl_2_6_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ognl_ognl_2_6_9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_unitils_unitils_core_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_unitils_unitils_core_3_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +59,25 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="groovy-extend" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="publishing" type="c8890929:TasksNode$1" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="groovy-extend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="groovy-extend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="groovy-extend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="upload" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -57,6 +100,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
+  <component name="NamedScopeManager">
+    <scope name="src" pattern="src[groovy-extend_main]:com.intellisrc.groovy.CollectionExt||src[groovy-extend_main]:com.intellisrc.groovy.DateExt||src[groovy-extend_main]:com.intellisrc.groovy.FileExt||src[groovy-extend_main]:com.intellisrc.groovy.Inet4AddressExt||src[groovy-extend_main]:com.intellisrc.groovy.InetAddressStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.LocalDateExt||src[groovy-extend_main]:com.intellisrc.groovy.LocalDateStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.MapExt||src[groovy-extend_main]:com.intellisrc.groovy.NetworkInterfaceStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.RandomStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.StringExt" />
+  </component>
   <component name="ProjectId" id="1Tdj5UPBnGGVyywgHHkP6JnzOZP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -72,7 +118,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3970346" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Groovy" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../../groovy/groovy-extend/README.md" />
   </component>
   <component name="RecentsManager">
@@ -87,7 +133,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.groovy-extend [artifactoryPublish]">
+  <component name="RunManager" selected="Gradle.groovy-extend [uploadArchives]">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -109,7 +155,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="groovy-extend [artifactoryPublish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="groovy-extend [javadocJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -120,7 +166,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="artifactoryPublish" />
+            <option value="javadocJar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -128,7 +174,7 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="groovy-extend [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="groovy-extend [signArchives]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -139,7 +185,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="publishToMavenLocal" />
+            <option value="signArchives" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -147,56 +193,62 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CollectionExtTest.Getting a list of elements randomly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groovy-extend_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.intellisrc.groovy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.intellisrc.groovy" />
-      <option name="MAIN_CLASS_NAME" value="com.intellisrc.groovy.CollectionExtTest" />
-      <option name="METHOD_NAME" value="Getting a list of elements randomly" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="groovy-extend [signJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="signJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="CollectionExtTest.Getting a list of elements with different element sizes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groovy-extend_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.intellisrc.groovy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.intellisrc.groovy" />
-      <option name="MAIN_CLASS_NAME" value="com.intellisrc.groovy.CollectionExtTest" />
-      <option name="METHOD_NAME" value="Getting a list of elements with different element sizes" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="groovy-extend [sourceJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="sourceJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="CollectionExtTest.Getting a list of elements with invalid values must return empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groovy-extend_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.intellisrc.groovy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.intellisrc.groovy" />
-      <option name="MAIN_CLASS_NAME" value="com.intellisrc.groovy.CollectionExtTest" />
-      <option name="METHOD_NAME" value="Getting a list of elements with invalid values must return empty" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="groovy-extend [uploadArchives]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="uploadArchives" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -206,33 +258,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
-      <item itemvalue="Gradle.groovy-extend [artifactoryPublish]" />
-      <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements randomly" />
-      <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with invalid values must return empty" />
-      <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with different element sizes" />
+      <item itemvalue="Gradle.groovy-extend [signArchives]" />
+      <item itemvalue="Gradle.groovy-extend [signJar]" />
+      <item itemvalue="Gradle.groovy-extend [javadocJar]" />
+      <item itemvalue="Gradle.groovy-extend [sourceJar]" />
+      <item itemvalue="Gradle.groovy-extend [uploadArchives]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.groovy-extend [artifactoryPublish]" />
-        <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
-        <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with different element sizes" />
-        <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with invalid values must return empty" />
-        <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements randomly" />
+        <item itemvalue="Gradle.groovy-extend [uploadArchives]" />
+        <item itemvalue="Gradle.groovy-extend [signArchives]" />
+        <item itemvalue="Gradle.groovy-extend [sourceJar]" />
+        <item itemvalue="Gradle.groovy-extend [javadocJar]" />
+        <item itemvalue="Gradle.groovy-extend [signJar]" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -431,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587110159219</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="2.5.6.3 : added gradle.properties to .gitignore">
+      <created>1587110312021</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1587110312021</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1.6.4 : Renamed toDateSTD : toYMDHms and added more shortcuts" />
     <MESSAGE value="1.6.4 : Fixed method name" />
     <MESSAGE value="1.7.0 : Removed DateExt methods to replace them with LocalDateTime" />
     <MESSAGE value="1.7.1 : Added static extension to LocalDateTime, etc." />
@@ -487,47 +533,89 @@
     <MESSAGE value="2.5.6.2 : Added unit tests for FileExt" />
     <MESSAGE value="2.5.6.3 : Added CollectionExt" />
     <MESSAGE value="2.5.6.3 : Moved version out of gradle.properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.5.6.3 : Moved version out of gradle.properties" />
+    <MESSAGE value="2.5.6.3 : added gradle.properties to .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.5.6.3 : added gradle.properties to .gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="381" y="207" width="587" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587109791175">
       <screen x="0" y="29" width="1366" height="739" />
     </state>
     <state x="381" y="207" width="587" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.29.1366.739@0.29.1366.739" timestamp="1587109791175" />
-    <state x="76" y="49" width="721" height="803" key="CommitChangelistDialog2" timestamp="1587110289799">
+    <state x="399" y="44" width="560" height="714" key="#groovy-extend_[signArchives]" timestamp="1587955994039">
       <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state x="76" y="49" key="CommitChangelistDialog2/0.29.1366.739@0.29.1366.739" timestamp="1587110289799" />
+    <state x="399" y="44" width="560" height="714" key="#groovy-extend_[signArchives]/0.29.1366.739@0.29.1366.739" timestamp="1587955994039" />
+    <state x="431" y="117" width="496" height="568" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587870175894">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state x="431" y="117" width="496" height="568" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.29.1366.739@0.29.1366.739" timestamp="1587870175894" />
+    <state x="76" y="29" width="644" height="739" key="CommitChangelistDialog2" timestamp="1587110311839">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state x="76" y="29" width="644" height="739" key="CommitChangelistDialog2/0.29.1366.739@0.29.1366.739" timestamp="1587110311839" />
     <state x="107" y="33" width="721" height="803" key="CommitChangelistDialog2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016909212" />
-    <state width="1320" height="168" key="GridCell.Tab.0.bottom" timestamp="1587109950018">
+    <state x="462" y="159" width="426" height="485" key="FileChooserDialogImpl" timestamp="1587869917508">
       <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1320" height="168" key="GridCell.Tab.0.bottom/0.29.1366.739@0.29.1366.739" timestamp="1587109950018" />
+    <state x="462" y="159" width="426" height="485" key="FileChooserDialogImpl/0.29.1366.739@0.29.1366.739" timestamp="1587869917508" />
+    <state width="1320" height="151" key="GridCell.Tab.0.bottom" timestamp="1588036055414">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state width="1320" height="151" key="GridCell.Tab.0.bottom/0.29.1366.739@0.29.1366.739" timestamp="1588036055414" />
     <state width="1876" height="661" key="GridCell.Tab.0.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899795" />
-    <state width="1320" height="168" key="GridCell.Tab.0.center" timestamp="1587109950017">
+    <state width="1320" height="151" key="GridCell.Tab.0.center" timestamp="1588036055414">
       <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1320" height="168" key="GridCell.Tab.0.center/0.29.1366.739@0.29.1366.739" timestamp="1587109950017" />
+    <state width="1320" height="151" key="GridCell.Tab.0.center/0.29.1366.739@0.29.1366.739" timestamp="1588036055414" />
     <state width="1876" height="661" key="GridCell.Tab.0.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899794" />
-    <state width="1320" height="168" key="GridCell.Tab.0.left" timestamp="1587109950016">
+    <state width="1320" height="151" key="GridCell.Tab.0.left" timestamp="1588036055413">
       <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1320" height="168" key="GridCell.Tab.0.left/0.29.1366.739@0.29.1366.739" timestamp="1587109950016" />
+    <state width="1320" height="151" key="GridCell.Tab.0.left/0.29.1366.739@0.29.1366.739" timestamp="1588036055413" />
     <state width="1876" height="661" key="GridCell.Tab.0.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899794" />
-    <state width="1320" height="168" key="GridCell.Tab.0.right" timestamp="1587109950018">
+    <state width="1320" height="151" key="GridCell.Tab.0.right" timestamp="1588036055414">
       <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1320" height="168" key="GridCell.Tab.0.right/0.29.1366.739@0.29.1366.739" timestamp="1587109950018" />
+    <state width="1320" height="151" key="GridCell.Tab.0.right/0.29.1366.739@0.29.1366.739" timestamp="1588036055414" />
     <state width="1876" height="661" key="GridCell.Tab.0.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899794" />
-    <state x="838" y="240" width="1030" height="840" key="SettingsEditor" timestamp="1582016025766">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state width="1320" height="249" key="GridCell.Tab.1.bottom" timestamp="1587993264178">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
+    <state width="1320" height="249" key="GridCell.Tab.1.bottom/0.29.1366.739@0.29.1366.739" timestamp="1587993264178" />
+    <state width="1320" height="249" key="GridCell.Tab.1.center" timestamp="1587993264177">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state width="1320" height="249" key="GridCell.Tab.1.center/0.29.1366.739@0.29.1366.739" timestamp="1587993264177" />
+    <state width="1320" height="249" key="GridCell.Tab.1.left" timestamp="1587993264177">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state width="1320" height="249" key="GridCell.Tab.1.left/0.29.1366.739@0.29.1366.739" timestamp="1587993264177" />
+    <state width="1320" height="249" key="GridCell.Tab.1.right" timestamp="1587993264177">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state width="1320" height="249" key="GridCell.Tab.1.right/0.29.1366.739@0.29.1366.739" timestamp="1587993264177" />
+    <state x="227" y="29" width="902" height="731" key="SettingsEditor" timestamp="1587956603753">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state x="227" y="29" width="902" height="731" key="SettingsEditor/0.29.1366.739@0.29.1366.739" timestamp="1587956603753" />
     <state x="838" y="240" width="1030" height="840" key="SettingsEditor/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016025766" />
+    <state x="278" y="137" width="802" height="529" key="Vcs.Push.Dialog.v2" timestamp="1587110313514">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state x="278" y="137" width="802" height="529" key="Vcs.Push.Dialog.v2/0.29.1366.739@0.29.1366.739" timestamp="1587110313514" />
     <state x="524" y="360" width="390" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587110291761">
       <screen x="0" y="29" width="1366" height="739" />
     </state>
     <state x="524" y="360" width="390" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.29.1366.739@0.29.1366.739" timestamp="1587110291761" />
     <state x="737" y="538" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016635710" />
+    <state x="274" y="63" width="802" height="678" key="scopes" timestamp="1587870174653">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state x="274" y="63" width="802" height="678" key="scopes/0.29.1366.739@0.29.1366.739" timestamp="1587870174653" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1587962772449">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.29.1366.739@0.29.1366.739" timestamp="1587962772449" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
