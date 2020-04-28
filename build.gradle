@@ -66,9 +66,9 @@ uploadArchives {
                 version version
                 packaging 'jar'
                 name projectName
-                description 'Extension to Standard classes using groovy'
+                description projectDescription
                 url projectURL
-                inceptionYear '2017'
+                inceptionYear projectSince
 
                 scm {
                     url projectURL
