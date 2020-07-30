@@ -8,36 +8,47 @@ import java.nio.file.attribute.PosixFilePermission
  * @since 2/17/18.
  */
 class FileExtTest extends Specification {
-    File file
-    def setup() {
-        file = new File(System.getProperty("java.io.tmpdir") + File.separator + "file.ext.test")
-        file << "1 Some content\n"
-        file << "2 More lines\n"
-        file << "3 More lines\n"
-        file << "4 More lines\n"
-        file << "5 More lines\n"
-        file << "6 More lines\n"
-        file << "7 More lines\n"
-        file << "8 More lines\n"
-    }
-    def cleanup() {
-        file.delete()
-    }
+
     def "Counting number of lines"() {
+        setup:
+            File file = Files.createTempFile("test", "test").toFile()
+            file << "1 Some content\n"
+            file << "2 More lines\n"
+            file << "3 More lines\n"
+            file << "4 More lines\n"
+            file << "5 More lines\n"
+            file << "6 More lines\n"
+            file << "7 More lines\n"
+            file << "8 More lines\n"
         expect:
             assert FileExt.getLines(file) == 8
+        cleanup:
+            assert file.delete()
     }
     def "Testing clear permissions"() {
         setup :
+            File file = Files.createTempFile("test", "test").toFile()
+        when:
+            FileExt.ownerPermissions(file, true, true, true)
+        then:
+            assert FileExt.getPermissions(file).containsAll([
+                    PosixFilePermission.OWNER_READ,
+                    PosixFilePermission.OWNER_WRITE,
+                    PosixFilePermission.OWNER_EXECUTE
+            ])
+        when:
             FileExt.clearPermissions(file)
-        expect :
+        then:
             assert FileExt.getPermissions(file).empty
+        cleanup:
+            assert file.delete()
     }
     def "Only owner 600"() {
         setup :
+            File file = Files.createTempFile("test", "test").toFile()
+            FileExt.ownerPermissions(file, true, true, false)
             FileExt.clearGroupPermissions(file)
             FileExt.clearOthersPermissions(file)
-            FileExt.ownerPermissions(file, true, true, false)
         expect :
             assert FileExt.getPermissions(file).containsAll([
                     PosixFilePermission.OWNER_READ,
@@ -54,9 +65,12 @@ class FileExtTest extends Specification {
                     PosixFilePermission.OWNER_READ,
                     PosixFilePermission.OWNER_WRITE
             ])
+        cleanup:
+            assert file.delete()
     }
     def "Set individual permissions"() {
         setup:
+            File file = Files.createTempFile("test", "test").toFile()
             FileExt.clearPermissions(file)
             FileExt.setReadable(file, true, true, true)
             FileExt.setWritable(file, true, true, true)
@@ -73,52 +87,54 @@ class FileExtTest extends Specification {
                     PosixFilePermission.OTHERS_WRITE,
                     PosixFilePermission.OTHERS_EXECUTE
             ])
+        cleanup:
+            assert file.delete()
     }
     
     def "Copy File"() {
         setup:
+            File file = Files.createTempFile("test", "test").toFile()
+            file.text = "Hello World"
             File tmpFile = new File(file.parentFile, "file.ext.copy.test")
-            if(tmpFile.exists()) {
-                tmpFile.delete()
-            }
             FileExt.copyTo(file, tmpFile)
         expect:
             assert tmpFile.exists()
+            assert tmpFile.text == "Hello World"
         cleanup:
-            tmpFile.delete()
+            assert tmpFile.delete()
+            assert file.delete()
     }
     
     def "Move File"() {
         setup:
+            File file = Files.createTempFile("test", "test").toFile()
             File tmpFile = new File(file.parentFile, "file.ext.copy.test")
-            if(tmpFile.exists()) {
-                tmpFile.delete()
-            }
             FileExt.moveTo(file, tmpFile)
         expect:
             assert tmpFile.exists()
             assert ! file.exists()
         cleanup:
-            tmpFile.delete()
+            assert tmpFile.delete()
     }
     
     def "Hard Link or copy"() {
         setup:
+            File file = Files.createTempFile("test", "test").toFile()
+            file.text = "Hello World"
             File tmpFile = new File(file.parentFile, "file.ext.copy.test")
-            if(tmpFile.exists()) {
-                tmpFile.delete()
-            }
             FileExt.hardLinkOrCopyTo(file, tmpFile)
         expect:
             assert tmpFile.exists()
             assert file.exists()
+            assert tmpFile.text == "Hello World"
         cleanup:
-            tmpFile.delete()
+            assert tmpFile.delete()
+            assert file.delete()
     }
     
     def "List files and delete using string filters"() {
         setup:
-            File tmpDir = new File(System.getProperty("java.io.tmpdir"))
+            File tmpDir = Files.createTempDirectory("test").toFile()
             (1..10).each {
                 new File(tmpDir, "test-file-${it}.txt").text = "test"
             }
@@ -134,13 +150,13 @@ class FileExtTest extends Specification {
             assert FileExt.listFiles(tmpDir, "*.txt").size() == 0
             assert FileExt.listFiles(tmpDir, "*.tmp").size() == 10
         cleanup:
-            FileExt.deleteFiles(tmpDir, "*.tmp")
-            tmpDir.deleteDir()
+            assert FileExt.deleteFiles(tmpDir, "*.tmp")
+            assert tmpDir.deleteDir()
     }
     
     def "List files and delete using FileFilter"() {
         setup:
-            File tmpDir = new File(System.getProperty("java.io.tmpdir"))
+            File tmpDir = Files.createTempDirectory("test").toFile()
             (1..10).each {
                 new File(tmpDir, "test-file-${it}.tmp").text = "test"
             }
@@ -161,7 +177,7 @@ class FileExtTest extends Specification {
         then:
             assert FileExt.listFiles(tmpDir, "*.tmp").size() == 0
         cleanup:
-            tmpDir.deleteDir()
+            assert tmpDir.deleteDir()
     }
     
     /**
@@ -173,7 +189,10 @@ class FileExtTest extends Specification {
      */
     def "Test Async Dir"() {
         setup :
-            File tmpDir = new File(System.getProperty("java.io.tmpdir"))
+            File tmpDir = Files.createTempDirectory("test").toFile()
+            (1..10).each {
+                new File(tmpDir, "test-file-${it}.txt").text = "test"
+            }
             int x = 0
         when:
             FileExt.eachFileAsync(tmpDir, {
@@ -182,7 +201,9 @@ class FileExtTest extends Specification {
             })
         then:
             noExceptionThrown()
-            assert x > 0
+            assert x == 10
+        cleanup:
+            assert tmpDir.deleteDir()
     }
 
     /**
@@ -194,7 +215,7 @@ class FileExtTest extends Specification {
      */
     def "Test Async Dir Match"() {
         setup :
-            File tmpDir = new File(System.getProperty("java.io.tmpdir"))
+            File tmpDir = Files.createTempDirectory("test").toFile()
             File matchFile = new File(tmpDir, "test.match")
             matchFile.text = "Just a test"
             int x = 0

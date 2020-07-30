@@ -1,0 +1,19 @@
+# suppress inspection "UnusedProperty" for whole file
+groupName=com.intellisrc
+artifact=groovy-extend
+
+projectName=Groovy Extend
+projectURL=https://gitlab.com/intellisrc/groovy-extend
+projectDevURL=git@gitlab.com:intellisrc/groovy-extend.git
+projectDescription=Extension to Standard classes using groovy
+projectSince=2017
+
+ossrhUsername=
+ossrhPassword=
+
+# gpg --full-generate-key
+signing.password=
+# gpg --list-secret-keys --keyid-format SHORT
+signing.keyId=
+# gpg --export-secret-key KEYID > private.bin.key
+signing.secretKeyRingFile=private.bin.key

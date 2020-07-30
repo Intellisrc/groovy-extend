@@ -1,27 +1,23 @@
-group groupName
-version currentVersion
-
-apply plugin: 'com.jfrog.artifactory'
-apply plugin: 'groovy'
-apply plugin: 'idea'
-apply plugin: 'maven-publish'
-
-repositories {
-    jcenter()
+plugins {
+    id 'idea'
+    id 'groovy'
+    id 'maven'
+    id 'signing'
+    //id 'com.bmuschko.nexus' version "2.3.1"
 }
 
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath(group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '4.+')
-    }
+group groupName
+def groovyVer = "2.5.6"
+version "${groovyVer}.4"
+
+repositories {
+    mavenLocal()
+    mavenCentral()
 }
 
 dependencies {
     compile 'commons-net:commons-net:3.6'
-    compile 'org.codehaus.groovy:groovy-all:2.5.6'
+    compile "org.codehaus.groovy:groovy-all:${groovyVer}"
     testCompile 'org.spockframework:spock-unitils:1.3-groovy-2.5'
 }
 
@@ -35,61 +31,99 @@ task generateModule {
             File g ->
                 String pkg = g.absolutePath.replaceAll(File.separator, '.') -
                         groovy.srcDirs[0].toString().replaceAll(File.separator, '.')
-                String clsName = pkg[1 .. pkg.lastIndexOf('.') - 1].toString()
-                if(clsName.contains('Static')) {
+                String clsName = pkg[1..pkg.lastIndexOf('.') - 1].toString()
+                if (clsName.contains('Static')) {
                     staticFiles << clsName
                 } else {
                     extensionFiles << clsName
                 }
-            }
-            File services = new File(buildDir,"classes/groovy/main/META-INF/services")
-            services.mkdirs()
-            File ext = new File(services, 'org.codehaus.groovy.runtime.ExtensionModule')
-            ext.text = """moduleName=groovy-common-extensions
+        }
+        File services = new File(buildDir, "classes/groovy/main/META-INF/services")
+        services.mkdirs()
+        File ext = new File(services, 'org.codehaus.groovy.runtime.ExtensionModule')
+        ext.text = """moduleName=groovy-common-extensions
 moduleVersion=$version
 extensionClasses=${extensionFiles.join(',')}
 staticExtensionClasses=${staticFiles.join(',')}"""
-        }
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifactId "${artifact}"
-            from components.java
-        }
     }
 }
 
-artifactory {
-    contextUrl = "${repositoryURL}"
-    publish {
-        repository {
-            repoKey = currentVersion.endsWith("SNAPSHOT") ? "${repositoryDevelop}" : "${repositoryStable}" // The Artifactory repository key to publish to
-            username = "${artifactoryUser}" // The publisher user name
-            password = "${artifactoryPassword}" // The publisher password
-        }
-        defaults {
-            publications('mavenJava')
-            publishArtifacts = true
-            // Properties to be attached to the published artifacts.
-            properties = ['qa.level': 'basic', 'dev.team' : 'core']
-            // Publish generated POM files to Artifactory (true by default)
-            publishPom = true
-        }
-    }
-    resolve {
-        repository {
-            repoKey =  "${repositoryResolve}" // The Artifactory repository key to publish to
-            username = "${artifactoryUser}" // The publisher user name
-            password = "${artifactoryPassword}" // The publisher password
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            beforeDeployment { deployment -> signing.signPom(deployment) }
+
+            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+            snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            pom.project {
+                groupId groupName
+                artifactId artifact
+                version version
+                packaging 'jar'
+                name projectName
+                description projectDescription
+                url projectURL
+                inceptionYear projectSince
+
+                scm {
+                    url projectURL
+                    connection "scm:git:${projectURL}.git"
+                    developerConnection "scm:git:${projectDevURL}"
+                }
+
+                licenses {
+                    license {
+                        name 'GNU General Public License v3.0'
+                        url 'https://www.gnu.org/licenses/gpl-3.0.en.html'
+                        distribution 'repo'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'lepe'
+                        name 'Alberto Lepe'
+                        email 'lepe@intellisrc.com'
+                    }
+                }
+            }
         }
     }
 }
+
+/*nexusStaging {
+    packageGroup = groupName //optional if packageGroup == project.getGroup()
+    //stagingProfileId = "" //when not defined will be got from server using "packageGroup"
+}*/
+
+task sourceJar(type: Jar) {
+    archiveClassifier = "sources"
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar) {
+    archiveClassifier = "javadoc"
+    dependsOn("groovydoc")
+    from tasks.groovydoc.destinationDir
+}
+
 
 // Hook up dependencies
-jar.dependsOn( generateModule )
+jar.dependsOn( generateModule, sourceJar, javadocJar )
 test.dependsOn( jar )
+
 artifacts {
-    archives jar
+    archives jar, sourceJar, javadocJar
+}
+
+signing {
+    required {
+        !version.endsWith("SNAPSHOT")
+    }
+    sign configurations.archives
 }

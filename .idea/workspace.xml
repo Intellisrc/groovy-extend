@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="src" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.5.6.3 : Added CollectionExt">
+    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.5.6.4 : Updated gradle.properties.example and build.gradle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties.example" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties.example" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +41,13 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="groovy-extend" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="publishing" type="c8890929:TasksNode$1" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="groovy-extend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="upload" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -61,6 +70,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
+  <component name="NamedScopeManager">
+    <scope name="src" pattern="src[groovy-extend_main]:com.intellisrc.groovy.CollectionExt||src[groovy-extend_main]:com.intellisrc.groovy.DateExt||src[groovy-extend_main]:com.intellisrc.groovy.FileExt||src[groovy-extend_main]:com.intellisrc.groovy.Inet4AddressExt||src[groovy-extend_main]:com.intellisrc.groovy.InetAddressStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.LocalDateExt||src[groovy-extend_main]:com.intellisrc.groovy.LocalDateStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.MapExt||src[groovy-extend_main]:com.intellisrc.groovy.NetworkInterfaceStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.RandomStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.StringExt" />
+  </component>
   <component name="ProjectId" id="1Tdj5UPBnGGVyywgHHkP6JnzOZP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -72,128 +84,28 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowMaven.ShowToolbar" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../groovy/groovy-extend/README.md" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3970346" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Groovy" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../../groovy/groovy-extend/README.md" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.intellisrc.groovy" />
       <recent name="jp.sharelock.groovy" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.groovy-extend [publishToMavenLocal]">
+  <component name="RunManager" selected="Gradle.groovy-extend [uploadArchives]">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="groovy-extend [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="publishToMavenLocal" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CollectionExtTest.Getting a list of elements randomly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groovy-extend_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.intellisrc.groovy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.intellisrc.groovy" />
-      <option name="MAIN_CLASS_NAME" value="com.intellisrc.groovy.CollectionExtTest" />
-      <option name="METHOD_NAME" value="Getting a list of elements randomly" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CollectionExtTest.Getting a list of elements with different element sizes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groovy-extend_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.intellisrc.groovy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.intellisrc.groovy" />
-      <option name="MAIN_CLASS_NAME" value="com.intellisrc.groovy.CollectionExtTest" />
-      <option name="METHOD_NAME" value="Getting a list of elements with different element sizes" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CollectionExtTest.Getting a list of elements with invalid values must return empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groovy-extend_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.intellisrc.groovy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.intellisrc.groovy" />
-      <option name="MAIN_CLASS_NAME" value="com.intellisrc.groovy.CollectionExtTest" />
-      <option name="METHOD_NAME" value="Getting a list of elements with invalid values must return empty" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CollectionExtTest.Getting one element randomly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="groovy-extend_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.intellisrc.groovy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.intellisrc.groovy" />
-      <option name="MAIN_CLASS_NAME" value="com.intellisrc.groovy.CollectionExtTest" />
-      <option name="METHOD_NAME" value="Getting one element randomly" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -207,34 +119,130 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="groovy-extend [javadocJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="javadocJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="groovy-extend [signArchives]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="signArchives" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="groovy-extend [signJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="signJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="groovy-extend [sourceJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="sourceJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="groovy-extend [uploadArchives]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="uploadArchives" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.CollectionExtTest.Getting one element randomly" />
-      <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements randomly" />
-      <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with invalid values must return empty" />
-      <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with different element sizes" />
-      <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
+      <item itemvalue="Gradle.groovy-extend [signArchives]" />
+      <item itemvalue="Gradle.groovy-extend [signJar]" />
+      <item itemvalue="Gradle.groovy-extend [javadocJar]" />
+      <item itemvalue="Gradle.groovy-extend [sourceJar]" />
+      <item itemvalue="Gradle.groovy-extend [uploadArchives]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
-        <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with different element sizes" />
-        <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements with invalid values must return empty" />
-        <item itemvalue="JUnit.CollectionExtTest.Getting a list of elements randomly" />
-        <item itemvalue="JUnit.CollectionExtTest.Getting one element randomly" />
+        <item itemvalue="Gradle.groovy-extend [uploadArchives]" />
+        <item itemvalue="Gradle.groovy-extend [signArchives]" />
+        <item itemvalue="Gradle.groovy-extend [sourceJar]" />
+        <item itemvalue="Gradle.groovy-extend [javadocJar]" />
+        <item itemvalue="Gradle.groovy-extend [signJar]" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -426,7 +434,56 @@
       <option name="project" value="LOCAL" />
       <updated>1582016572381</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="2.5.6.3 : Moved version out of gradle.properties">
+      <created>1587110159219</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1587110159219</updated>
+    </task>
+    <task id="LOCAL-00028" summary="2.5.6.3 : added gradle.properties to .gitignore">
+      <created>1587110312021</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1587110312021</updated>
+    </task>
+    <task id="LOCAL-00029" summary="2.5.6.4 : Updated FileExtTest and build.gradle">
+      <created>1588040669640</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1588040669640</updated>
+    </task>
+    <task id="LOCAL-00030" summary="2.5.6.4 : Updated README.md">
+      <created>1588041594637</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1588041594637</updated>
+    </task>
+    <task id="LOCAL-00031" summary="2.5.6.4 : Updated README.md">
+      <created>1588041681271</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1588041681271</updated>
+    </task>
+    <task id="LOCAL-00032" summary="2.5.6.4 : Updated README.md">
+      <created>1588045191127</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1588045191127</updated>
+    </task>
+    <task id="LOCAL-00033" summary="2.5.6.4 : Updated gradle.properties.example and build.gradle">
+      <created>1588047044831</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1588047044831</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -457,11 +514,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1.6.3 : Added toQueryMap and toQueryString. Modified tests to use Ext classes so it can be tested" />
-    <MESSAGE value="1.6.4 : Renamed toDateSTD : toYMDHms and added more shortcuts" />
-    <MESSAGE value="1.6.4 : Fixed method name" />
-    <MESSAGE value="1.7.0 : Removed DateExt methods to replace them with LocalDateTime" />
-    <MESSAGE value="1.7.1 : Added static extension to LocalDateTime, etc." />
     <MESSAGE value="1.7.2 : Renamed parse() to parseStr() as it conflicts with original parse()" />
     <MESSAGE value="1.7.3 : Renamed parseStr() to parse(str, true)" />
     <MESSAGE value="1.7.6 : Added missing @CompileStatic" />
@@ -482,150 +534,97 @@
     <MESSAGE value="2.5.6.2 : Fixed date/time parsing  (and cleaned code)" />
     <MESSAGE value="2.5.6.2 : Added unit tests for FileExt" />
     <MESSAGE value="2.5.6.3 : Added CollectionExt" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.5.6.3 : Added CollectionExt" />
+    <MESSAGE value="2.5.6.3 : Moved version out of gradle.properties" />
+    <MESSAGE value="2.5.6.3 : added gradle.properties to .gitignore" />
+    <MESSAGE value="2.5.6.4 : Updated FileExtTest and build.gradle" />
+    <MESSAGE value="2.5.6.4 : Updated README.md" />
+    <MESSAGE value="2.5.6.4 : Updated gradle.properties.example and build.gradle" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.5.6.4 : Updated gradle.properties.example and build.gradle" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="107" y="33" width="721" height="803" key="CommitChangelistDialog2" timestamp="1582016909212">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state x="381" y="207" width="587" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587109791175">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state x="57" y="5" width="963" height="763" key="CommitChangelistDialog2/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624475260" />
+    <state x="381" y="207" width="587" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.29.1366.739@0.29.1366.739" timestamp="1587109791175" />
+    <state x="399" y="44" width="560" height="714" key="#groovy-extend_[signArchives]" timestamp="1587955994039">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state x="399" y="44" width="560" height="714" key="#groovy-extend_[signArchives]/0.29.1366.739@0.29.1366.739" timestamp="1587955994039" />
+    <state x="431" y="117" width="496" height="568" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587870175894">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state x="431" y="117" width="496" height="568" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.29.1366.739@0.29.1366.739" timestamp="1587870175894" />
+    <state x="76" y="29" width="644" height="739" key="CommitChangelistDialog2" timestamp="1588047043645">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state x="76" y="29" width="644" height="739" key="CommitChangelistDialog2/0.29.1366.739@0.29.1366.739" timestamp="1588047043645" />
     <state x="107" y="33" width="721" height="803" key="CommitChangelistDialog2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016909212" />
-    <state x="97" y="133" width="1726" height="970" key="DiffContextDialog" timestamp="1575864985230">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state x="99" y="129" width="1168" height="544" key="DiffContextDialog" timestamp="1588040636477">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state x="97" y="133" width="1726" height="970" key="DiffContextDialog/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575864985230" />
-    <state x="743" y="376" width="430" height="479" key="FileChooserDialogImpl" timestamp="1575864984771">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state x="99" y="129" width="1168" height="544" key="DiffContextDialog/0.29.1366.739@0.29.1366.739" timestamp="1588040636477" />
+    <state x="462" y="159" width="426" height="485" key="FileChooserDialogImpl" timestamp="1587869917508">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state x="743" y="376" width="430" height="479" key="FileChooserDialogImpl/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575864984771" />
-    <state width="1876" height="661" key="GridCell.Tab.0.bottom" timestamp="1582016899795">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state x="462" y="159" width="426" height="485" key="FileChooserDialogImpl/0.29.1366.739@0.29.1366.739" timestamp="1587869917508" />
+    <state width="1320" height="274" key="GridCell.Tab.0.bottom" timestamp="1588045659767">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1876" height="346" key="GridCell.Tab.0.bottom/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493282" />
-    <state width="1322" height="217" key="GridCell.Tab.0.bottom/0.33.1366.680@0.33.1366.680" timestamp="1574922873890" />
+    <state width="1320" height="274" key="GridCell.Tab.0.bottom/0.29.1366.739@0.29.1366.739" timestamp="1588045659767" />
     <state width="1876" height="661" key="GridCell.Tab.0.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899795" />
-    <state width="1876" height="661" key="GridCell.Tab.0.center" timestamp="1582016899794">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state width="1320" height="274" key="GridCell.Tab.0.center" timestamp="1588045659765">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1876" height="346" key="GridCell.Tab.0.center/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493282" />
-    <state width="1322" height="217" key="GridCell.Tab.0.center/0.33.1366.680@0.33.1366.680" timestamp="1574922873886" />
+    <state width="1320" height="274" key="GridCell.Tab.0.center/0.29.1366.739@0.29.1366.739" timestamp="1588045659765" />
     <state width="1876" height="661" key="GridCell.Tab.0.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899794" />
-    <state width="1876" height="661" key="GridCell.Tab.0.left" timestamp="1582016899794">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state width="1320" height="274" key="GridCell.Tab.0.left" timestamp="1588045659763">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1876" height="346" key="GridCell.Tab.0.left/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493281" />
-    <state width="1322" height="217" key="GridCell.Tab.0.left/0.33.1366.680@0.33.1366.680" timestamp="1574922873885" />
+    <state width="1320" height="274" key="GridCell.Tab.0.left/0.29.1366.739@0.29.1366.739" timestamp="1588045659763" />
     <state width="1876" height="661" key="GridCell.Tab.0.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899794" />
-    <state width="1876" height="661" key="GridCell.Tab.0.right" timestamp="1582016899794">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state width="1320" height="274" key="GridCell.Tab.0.right" timestamp="1588045659766">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1876" height="346" key="GridCell.Tab.0.right/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624493282" />
-    <state width="1322" height="217" key="GridCell.Tab.0.right/0.33.1366.680@0.33.1366.680" timestamp="1574922873888" />
+    <state width="1320" height="274" key="GridCell.Tab.0.right/0.29.1366.739@0.29.1366.739" timestamp="1588045659766" />
     <state width="1876" height="661" key="GridCell.Tab.0.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016899794" />
-    <state width="1876" height="215" key="GridCell.Tab.1.bottom" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state width="1320" height="249" key="GridCell.Tab.1.bottom" timestamp="1587993264178">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1876" height="215" key="GridCell.Tab.1.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.1.center" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state width="1320" height="249" key="GridCell.Tab.1.bottom/0.29.1366.739@0.29.1366.739" timestamp="1587993264178" />
+    <state width="1320" height="249" key="GridCell.Tab.1.center" timestamp="1587993264177">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1876" height="215" key="GridCell.Tab.1.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.1.left" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state width="1320" height="249" key="GridCell.Tab.1.center/0.29.1366.739@0.29.1366.739" timestamp="1587993264177" />
+    <state width="1320" height="249" key="GridCell.Tab.1.left" timestamp="1587993264177">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1876" height="215" key="GridCell.Tab.1.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.1.right" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state width="1320" height="249" key="GridCell.Tab.1.left/0.29.1366.739@0.29.1366.739" timestamp="1587993264177" />
+    <state width="1320" height="249" key="GridCell.Tab.1.right" timestamp="1587993264177">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1876" height="215" key="GridCell.Tab.1.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.2.bottom" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state width="1320" height="249" key="GridCell.Tab.1.right/0.29.1366.739@0.29.1366.739" timestamp="1587993264177" />
+    <state x="227" y="29" width="902" height="731" key="SettingsEditor" timestamp="1587956603753">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state width="1876" height="215" key="GridCell.Tab.2.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.2.center" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.2.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.2.left" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.2.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.2.right" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.2.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.3.bottom" timestamp="1575861228789">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.3.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228789" />
-    <state width="1876" height="215" key="GridCell.Tab.3.center" timestamp="1575861228789">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.3.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228789" />
-    <state width="1876" height="215" key="GridCell.Tab.3.left" timestamp="1575861228789">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.3.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228789" />
-    <state width="1876" height="215" key="GridCell.Tab.3.right" timestamp="1575861228789">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.3.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228789" />
-    <state width="1876" height="215" key="GridCell.Tab.4.bottom" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.4.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.4.center" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.4.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.4.left" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.4.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.4.right" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.4.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.5.bottom" timestamp="1575861228789">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.5.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228789" />
-    <state width="1876" height="215" key="GridCell.Tab.5.center" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.5.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.5.left" timestamp="1575861228788">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.5.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228788" />
-    <state width="1876" height="215" key="GridCell.Tab.5.right" timestamp="1575861228789">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="215" key="GridCell.Tab.5.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575861228789" />
-    <state x="410" y="88" width="541" height="568" key="RollbackChangesDialog" timestamp="1574922701365">
-      <screen x="0" y="33" width="1366" height="680" />
-    </state>
-    <state x="410" y="88" width="541" height="568" key="RollbackChangesDialog/0.33.1366.680@0.33.1366.680" timestamp="1574922701365" />
-    <state x="838" y="240" width="1030" height="840" key="SettingsEditor" timestamp="1582016025766">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
+    <state x="227" y="29" width="902" height="731" key="SettingsEditor/0.29.1366.739@0.29.1366.739" timestamp="1587956603753" />
     <state x="838" y="240" width="1030" height="840" key="SettingsEditor/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016025766" />
-    <state x="555" y="354" width="806" height="523" key="Vcs.Push.Dialog.v2" timestamp="1575864964230">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state x="278" y="137" width="802" height="529" key="Vcs.Push.Dialog.v2" timestamp="1588047046009">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state x="555" y="354" width="806" height="523" key="Vcs.Push.Dialog.v2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575864964230" />
-    <state x="229" y="5" width="791" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1575624040759">
-      <screen x="0" y="0" width="1024" height="768" />
+    <state x="278" y="137" width="802" height="529" key="Vcs.Push.Dialog.v2/0.29.1366.739@0.29.1366.739" timestamp="1588047046009" />
+    <state x="524" y="360" width="390" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587110291761">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state x="229" y="5" width="791" height="763" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575624040759" />
-    <state x="737" y="538" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582016635710">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
+    <state x="524" y="360" width="390" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.29.1366.739@0.29.1366.739" timestamp="1587110291761" />
     <state x="737" y="538" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1582016635710" />
-    <state x="623" y="294" width="672" height="678" key="search.everywhere.popup" timestamp="1575859152032">
-      <screen x="0" y="0" width="1920" height="1200" />
+    <state x="274" y="63" width="802" height="678" key="scopes" timestamp="1587870174653">
+      <screen x="0" y="29" width="1366" height="739" />
     </state>
-    <state x="623" y="294" width="672" height="678" key="search.everywhere.popup/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1575859152032" />
+    <state x="274" y="63" width="802" height="678" key="scopes/0.29.1366.739@0.29.1366.739" timestamp="1587870174653" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1587962772449">
+      <screen x="0" y="29" width="1366" height="739" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.29.1366.739@0.29.1366.739" timestamp="1587962772449" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
