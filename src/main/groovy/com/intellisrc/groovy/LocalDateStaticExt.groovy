@@ -16,7 +16,7 @@ class LocalDateStaticExt {
      * @param millis
      * @return
      */
-    static LocalDateTime fromMillis(final LocalDateTime self, long millis) {
-        return LocalDateTime.ofInstant(Instant.ofEpochMilli(millis), ZoneId.systemDefault())
+    static LocalDateTime fromMillis(final LocalDateTime self, long millis, ZoneId zoneId = ZoneId.systemDefault()) {
+        return LocalDateTime.ofInstant(Instant.ofEpochMilli(millis), zoneId)
     }
 }

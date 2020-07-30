@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/groovy-extend.iml" filepath="$PROJECT_DIR$/groovy-extend.iml" group="groovy-extend" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-extend_main.iml" group="groovy-extend" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-extend_test.iml" group="groovy-extend" />
+      <module fileurl="file://$PROJECT_DIR$/groovy-extend.iml" filepath="$PROJECT_DIR$/groovy-extend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-extend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-extend.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-extend.test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-extend.test.iml" />
     </modules>
   </component>
 </project>

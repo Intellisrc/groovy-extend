@@ -35,8 +35,8 @@ class LocalDateExt {
      * @param self
      * @return
      */
-    static long toMillis(final LocalDateTime self) {
-        return self.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli()
+    static long toMillis(final LocalDateTime self, ZoneId zoneId = ZoneId.systemDefault()) {
+        return self.atZone(zoneId).toInstant().toEpochMilli()
     }
     /**
      * Converts a LocalDateTime to String using DateTimeFormatter
