@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Gradle: org.junit.platform:junit-platform-engine:1.3.2">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.3.2/junit-platform-engine-1.3.2.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.3.2/c54bc1d4654bd1ef15fccf512ce664184085969/junit-platform-engine-1.3.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

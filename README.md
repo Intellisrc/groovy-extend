@@ -21,15 +21,17 @@ dependecies {
 }
 ```
 In which `VERSION` is this package version, for example: `2.5.6.4`, `2.5.11.0`. The first 3 numbers in the version are
-related to you groovy version target. So if you want to extend groovy `2.5.9`, you need to use `2.5.9.0`. The last 
+related to your groovy version target. So if you want to extend groovy `2.5.9`, you need to use `2.5.9.*`. The last 
 number in the version is this library revision number. These are the current versions:
 
-* 2.5.6.4
-* 2.5.7.0
-* 2.5.8.0
-* 2.5.9.0
-* 2.5.10.0
-* 2.5.11.0
+* 2.5.6.5
+* 2.5.7.5
+* 2.5.8.5
+* 2.5.9.5
+* 2.5.10.5
+* 2.5.11.5
+* 2.5.12.5
+* 2.5.13.5
 
 # Extensions
 
