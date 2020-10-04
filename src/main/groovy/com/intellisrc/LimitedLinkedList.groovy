@@ -38,6 +38,10 @@ class LimitedLinkedList<T> extends LinkedList<T> {
         trim()
     }
 
+    boolean isFull() {
+        return size() == listLength
+    }
+
     @Override
     boolean add(T t) {
         return super.add(t)

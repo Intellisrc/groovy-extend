@@ -26,26 +26,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.5.6.5 : Added LimitedLinkedList. Added ZoneId change when working with Millis().">
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_thoughtworks_qdox_qdox_1_12_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_thoughtworks_qdox_qdox_1_12_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_collections_commons_collections_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_collections_commons_collections_3_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_lang_commons_lang_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_lang_commons_lang_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_3_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_3_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_1_1.xml" afterDir="false" />
+    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.5.6.5 : Added 'isFull' to LimitedLinkedList">
       <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/sharelock-groovy-extend_main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/sharelock-groovy-extend_test.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/groovy-extend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/groovy-extend.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,18 +67,6 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="other" type="c8890929:TasksNode$1" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="groovy-extend" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="upload" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="groovy-extend" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -127,10 +100,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowMaven.ShowToolbar" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3970346" />
@@ -152,7 +123,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.groovy-extend [signArchives]">
+  <component name="RunManager" selected="Gradle.groovy-extend [publish]">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -174,63 +145,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="groovy-extend [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="groovy-extend [compileGroovy]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="compileGroovy" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="groovy-extend [generateModule]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="generateModule" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="groovy-extend [javadocJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -243,6 +157,44 @@
         <option name="taskNames">
           <list>
             <option value="javadocJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="groovy-extend [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishToMavenLocal" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="groovy-extend [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publish" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -269,6 +221,25 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="groovy-extend [sourceJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="sourceJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -277,19 +248,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.groovy-extend [compileGroovy]" />
       <item itemvalue="Gradle.groovy-extend [signArchives]" />
-      <item itemvalue="Gradle.groovy-extend [generateModule]" />
       <item itemvalue="Gradle.groovy-extend [javadocJar]" />
-      <item itemvalue="Gradle.groovy-extend [clean]" />
+      <item itemvalue="Gradle.groovy-extend [sourceJar]" />
+      <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
+      <item itemvalue="Gradle.groovy-extend [publish]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.groovy-extend [publish]" />
+        <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
         <item itemvalue="Gradle.groovy-extend [signArchives]" />
-        <item itemvalue="Gradle.groovy-extend [clean]" />
+        <item itemvalue="Gradle.groovy-extend [sourceJar]" />
         <item itemvalue="Gradle.groovy-extend [javadocJar]" />
-        <item itemvalue="Gradle.groovy-extend [compileGroovy]" />
-        <item itemvalue="Gradle.groovy-extend [generateModule]" />
       </list>
     </recent_temporary>
   </component>
@@ -301,12 +272,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1507777163522</updated>
-      <workItem from="1599994510662" duration="637000" />
-      <workItem from="1600159486413" duration="85000" />
-      <workItem from="1601698538073" duration="1948000" />
-      <workItem from="1601794335980" duration="1387000" />
-      <workItem from="1601796352886" duration="3115000" />
-      <workItem from="1601803732312" duration="87000" />
     </task>
     <task id="LOCAL-00001" summary="1.6 Added conditional to handle time in toStringSTD and toDateSTD">
       <created>1509602034596</created>
@@ -539,11 +504,22 @@
       <option name="project" value="LOCAL" />
       <updated>1588047044831</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="2.5.6.5 : Added LimitedLinkedList. Added ZoneId change when working with Millis().">
+      <created>1596086814184</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1596086814184</updated>
+    </task>
+    <task id="LOCAL-00035" summary="2.5.6.5 : Added 'isFull' to LimitedLinkedList">
+      <created>1599187227631</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1599187227631</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -572,7 +548,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1.7.3 : Renamed parseStr() to parse(str, true)" />
     <MESSAGE value="1.7.6 : Added missing @CompileStatic" />
     <MESSAGE value="sharelock renamed to intellisrc" />
     <MESSAGE value="1.7.7.1 : Fixed RandomExt" />
@@ -597,41 +572,34 @@
     <MESSAGE value="2.5.6.4 : Updated README.md" />
     <MESSAGE value="2.5.6.4 : Updated gradle.properties.example and build.gradle" />
     <MESSAGE value="2.5.6.5 : Added LimitedLinkedList. Added ZoneId change when working with Millis()." />
-    <option name="LAST_COMMIT_MESSAGE" value="2.5.6.5 : Added LimitedLinkedList. Added ZoneId change when working with Millis()." />
+    <MESSAGE value="2.5.6.5 : Added 'isFull' to LimitedLinkedList" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.5.6.5 : Added 'isFull' to LimitedLinkedList" />
   </component>
   <component name="WindowStateProjectService">
     <state x="729" y="488" width="495" height="263" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1596073976426">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="729" y="488" width="495" height="263" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1596073976426" />
-    <state width="1874" height="430" key="GridCell.Tab.0.bottom" timestamp="1601802861577">
-      <screen x="0" y="24" width="1366" height="744" />
+    <state width="1876" height="325" key="GridCell.Tab.0.bottom" timestamp="1599187930321">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1874" height="430" key="GridCell.Tab.0.bottom/0.24.1366.744/5206.0.1024.768@0.24.1366.744" timestamp="1601802861577" />
-    <state width="1320" height="276" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1601710516744" />
-    <state width="1874" height="430" key="GridCell.Tab.0.bottom/0.24.1920.1056/5206.0.1024.768@0.24.1920.1056" timestamp="1601796688478" />
-    <state width="1876" height="169" key="GridCell.Tab.0.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1596078946508" />
-    <state width="1874" height="430" key="GridCell.Tab.0.center" timestamp="1601802861576">
-      <screen x="0" y="24" width="1366" height="744" />
+    <state width="1876" height="325" key="GridCell.Tab.0.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599187930321" />
+    <state width="1876" height="325" key="GridCell.Tab.0.center" timestamp="1599187930321">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1874" height="430" key="GridCell.Tab.0.center/0.24.1366.744/5206.0.1024.768@0.24.1366.744" timestamp="1601802861576" />
-    <state width="1320" height="276" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1601710516743" />
-    <state width="1874" height="430" key="GridCell.Tab.0.center/0.24.1920.1056/5206.0.1024.768@0.24.1920.1056" timestamp="1601796688478" />
-    <state width="1876" height="169" key="GridCell.Tab.0.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1596078946507" />
-    <state width="1874" height="430" key="GridCell.Tab.0.left" timestamp="1601802861576">
-      <screen x="0" y="24" width="1366" height="744" />
+    <state width="1876" height="325" key="GridCell.Tab.0.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599187930321" />
+    <state width="1876" height="325" key="GridCell.Tab.0.left" timestamp="1599187930321">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1874" height="430" key="GridCell.Tab.0.left/0.24.1366.744/5206.0.1024.768@0.24.1366.744" timestamp="1601802861576" />
-    <state width="1320" height="276" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1601710516742" />
-    <state width="1874" height="430" key="GridCell.Tab.0.left/0.24.1920.1056/5206.0.1024.768@0.24.1920.1056" timestamp="1601796688478" />
-    <state width="1876" height="169" key="GridCell.Tab.0.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1596078946507" />
-    <state width="1874" height="430" key="GridCell.Tab.0.right" timestamp="1601802861576">
-      <screen x="0" y="24" width="1366" height="744" />
+    <state width="1876" height="325" key="GridCell.Tab.0.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599187930321" />
+    <state width="1876" height="325" key="GridCell.Tab.0.right" timestamp="1599187930321">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state width="1874" height="430" key="GridCell.Tab.0.right/0.24.1366.744/5206.0.1024.768@0.24.1366.744" timestamp="1601802861576" />
-    <state width="1320" height="276" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1601710516743" />
-    <state width="1874" height="430" key="GridCell.Tab.0.right/0.24.1920.1056/5206.0.1024.768@0.24.1920.1056" timestamp="1601796688478" />
-    <state width="1876" height="169" key="GridCell.Tab.0.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1596078946507" />
+    <state width="1876" height="325" key="GridCell.Tab.0.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599187930321" />
+    <state x="391" y="175" width="806" height="523" key="Vcs.Push.Dialog.v2" timestamp="1599187228708">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="391" y="175" width="806" height="523" key="Vcs.Push.Dialog.v2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599187228708" />
     <state x="486" y="97" width="945" height="1101" key="search.everywhere.popup" timestamp="1596074412718">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>

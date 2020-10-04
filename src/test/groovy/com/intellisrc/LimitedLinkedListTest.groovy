@@ -54,4 +54,21 @@ class LimitedLinkedListTest extends Specification {
             assert queue.last() == 12
             assert queue.first() != 1
     }
+    def "When all queue is full, it should be true"() {
+        setup:
+            LimitedLinkedList<Integer> queue = new LimitedLinkedList<>(3)
+        when:
+            queue.add(1)
+        then:
+            assert ! queue.full
+        when:
+            queue.add(2)
+            queue.add(3)
+        then:
+            assert queue.full
+        when:
+            queue.poll()
+        then:
+            assert ! queue.full
+    }
 }
