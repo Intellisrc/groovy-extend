@@ -44,7 +44,7 @@ class LimitedLinkedList<T> extends LinkedList<T> {
 
     @Override
     boolean add(T t) {
-        return super.add(t)
+        return super.add(t) && trim()
     }
 
     @Override

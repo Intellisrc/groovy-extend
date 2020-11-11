@@ -8,7 +8,7 @@ plugins {
 
 group groupName
 def groovyVer = "2.5.6"
-version "${groovyVer}.5"
+version "${groovyVer}.6"
 
 repositories {
     mavenLocal()
