@@ -15,6 +15,27 @@ class LimitedLinkedListTest extends Specification {
         then:
             assert queue.size() == 2
     }
+    def "Adding elements with 'add' or 'leftShift'"() {
+        setup:
+            LimitedLinkedList<Integer> queue = new LimitedLinkedList<>(10)
+        when:
+            (1..20).each {
+                queue.add(it)
+            }
+        then:
+            assert queue.size() == 10
+        when:
+            queue.clear()
+        then:
+            assert queue.size() == 0 && queue.empty
+        when:
+            (1..20).each {
+                queue << it
+            }
+        then:
+            assert queue.size() == 10
+            assert queue.full
+    }
     def "Limit number of elements after they were set"() {
         setup:
             LimitedLinkedList<Integer> queue = new LimitedLinkedList<>()
