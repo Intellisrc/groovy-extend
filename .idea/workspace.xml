@@ -26,13 +26,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.5.6.5 : Updated build.gradle">
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_3_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_3_2.xml" afterDir="false" />
+    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.5.6.6 : LimitedLinkedList.add didn't trim the list : added test">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/LimitedLinkedList.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/LimitedLinkedList.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groovy-extend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/groovy-extend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/StringExt.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/groovy/StringExt.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/LocalDateExtTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/LocalDateExtTest.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/StringExTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/com/intellisrc/groovy/StringExTest.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +65,7 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="groovy-extend" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
             </expand>
             <select />
@@ -80,8 +85,12 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="NamedScopeManager">
     <scope name="src" pattern="src[groovy-extend_main]:com.intellisrc.groovy.CollectionExt||src[groovy-extend_main]:com.intellisrc.groovy.DateExt||src[groovy-extend_main]:com.intellisrc.groovy.FileExt||src[groovy-extend_main]:com.intellisrc.groovy.Inet4AddressExt||src[groovy-extend_main]:com.intellisrc.groovy.InetAddressStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.LocalDateExt||src[groovy-extend_main]:com.intellisrc.groovy.LocalDateStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.MapExt||src[groovy-extend_main]:com.intellisrc.groovy.NetworkInterfaceStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.RandomStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.StringExt" />
@@ -118,7 +127,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.groovy-extend [publish]">
+  <component name="RunManager" selected="Gradle.LocalDateExtTest.Parse Date">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -140,42 +149,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="groovy-extend [javadocJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LocalDateExtTest.Parse Date" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--tests &quot;com.intellisrc.groovy.LocalDateExtTest.Parse Date&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="javadocJar" />
+            <option value=":test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="groovy-extend [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="publishToMavenLocal" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="groovy-extend [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -194,7 +186,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="groovy-extend [signArchives]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -213,27 +207,44 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="groovy-extend [sourceJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="sourceJar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
+    <configuration name="LimitedLinkedListTest.Adding elements with 'add' or 'leftShift'" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="groovy-extend.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.intellisrc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.intellisrc" />
+      <option name="MAIN_CLASS_NAME" value="com.intellisrc.LimitedLinkedListTest" />
+      <option name="METHOD_NAME" value="Adding elements with 'add' or 'leftShift'" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocalDateExtTest.Parse Date" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="groovy-extend.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.intellisrc.groovy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.intellisrc.groovy" />
+      <option name="MAIN_CLASS_NAME" value="com.intellisrc.groovy.LocalDateExtTest" />
+      <option name="METHOD_NAME" value="Parse Date" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -244,18 +255,18 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.groovy-extend [signArchives]" />
-      <item itemvalue="Gradle.groovy-extend [javadocJar]" />
-      <item itemvalue="Gradle.groovy-extend [sourceJar]" />
-      <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
       <item itemvalue="Gradle.groovy-extend [publish]" />
+      <item itemvalue="Gradle.LocalDateExtTest.Parse Date" />
+      <item itemvalue="JUnit.LimitedLinkedListTest.Adding elements with 'add' or 'leftShift'" />
+      <item itemvalue="JUnit.LocalDateExtTest.Parse Date" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.groovy-extend [publish]" />
-        <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
+        <item itemvalue="Gradle.LocalDateExtTest.Parse Date" />
+        <item itemvalue="JUnit.LocalDateExtTest.Parse Date" />
         <item itemvalue="Gradle.groovy-extend [signArchives]" />
-        <item itemvalue="Gradle.groovy-extend [sourceJar]" />
-        <item itemvalue="Gradle.groovy-extend [javadocJar]" />
+        <item itemvalue="JUnit.LimitedLinkedListTest.Adding elements with 'add' or 'leftShift'" />
+        <item itemvalue="Gradle.groovy-extend [publish]" />
       </list>
     </recent_temporary>
   </component>
@@ -520,7 +531,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599188001589</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="2.5.6.6 : LimitedLinkedList.add didn't trim the list">
+      <created>1605056614381</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1605056614381</updated>
+    </task>
+    <task id="LOCAL-00038" summary="2.5.6.6 : LimitedLinkedList.add didn't trim the list : added test">
+      <created>1605056861568</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1605056861568</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -550,8 +575,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sharelock renamed to intellisrc" />
-    <MESSAGE value="1.7.7.1 : Fixed RandomExt" />
     <MESSAGE value="1.8 : Updated to Groovy 2.5.5. Added File.eachFileAsync()" />
     <MESSAGE value="1.8 : Added File.eachFileMatchAsync" />
     <MESSAGE value="1.8 : Fixed generateModule" />
@@ -575,35 +598,9 @@
     <MESSAGE value="2.5.6.5 : Added LimitedLinkedList. Added ZoneId change when working with Millis()." />
     <MESSAGE value="2.5.6.5 : Added 'isFull' to LimitedLinkedList" />
     <MESSAGE value="2.5.6.5 : Updated build.gradle" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.5.6.5 : Updated build.gradle" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1876" height="325" key="GridCell.Tab.0.bottom" timestamp="1599188007420">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="325" key="GridCell.Tab.0.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599188007420" />
-    <state width="1876" height="325" key="GridCell.Tab.0.center" timestamp="1599188007420">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="325" key="GridCell.Tab.0.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599188007420" />
-    <state width="1876" height="325" key="GridCell.Tab.0.left" timestamp="1599188007420">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="325" key="GridCell.Tab.0.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599188007420" />
-    <state width="1876" height="325" key="GridCell.Tab.0.right" timestamp="1599188007420">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="325" key="GridCell.Tab.0.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599188007420" />
-    <state x="391" y="175" width="806" height="523" key="Vcs.Push.Dialog.v2" timestamp="1599188002584">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state x="391" y="175" width="806" height="523" key="Vcs.Push.Dialog.v2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599188002584" />
-    <state x="748" y="530" width="417" height="163" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605056553226">
-      <screen x="0" y="33" width="1920" height="1117" />
-    </state>
-    <state x="2319" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.26.1920.1174/1920.0.1024.768@1920.0.1024.768" timestamp="1603069094519" />
-    <state x="748" y="530" width="417" height="163" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.33.1920.1117@0.33.1920.1117" timestamp="1605056553226" />
-    <state x="749" y="534" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1601858622943" />
+    <MESSAGE value="2.5.6.6 : LimitedLinkedList.add didn't trim the list" />
+    <MESSAGE value="2.5.6.6 : LimitedLinkedList.add didn't trim the list : added test" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.5.6.6 : LimitedLinkedList.add didn't trim the list : added test" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

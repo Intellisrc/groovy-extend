@@ -206,4 +206,28 @@ class StringExt {
         }
         return time
     }
+    /**
+     * Convert String to snake_case
+     * @param str
+     * @return
+     */
+    static String toSnakeCase(final String self) {
+        return self.replaceAll(/\s+/,'_')    // Convert spaces to "_"
+                .replaceAll( /([A-Z])/, /_$1/ ).toLowerCase() // prepend "_" to each word
+                .replaceAll('__','_')       // Remove any double "_"
+                .replaceAll( /^_/, '' )     // Remove leading "_"
+    }
+    /**
+     * Convert String to CamelCase
+     * @param str
+     * @param capitalized
+     * @return
+     */
+    static String toCamelCase(final String self, boolean capitalized = false) {
+        String conv = self.toLowerCase()
+                .replaceAll(/^_/, "")       // Remove leading "_"
+                .replaceAll(/[^\w]/,"_")    // Convert any non alphanumeric char to "_"
+                .replaceAll( "(_)([A-Za-z0-9])", { List<String> it -> it[2].toUpperCase() } ) // Capitalize words
+        return capitalized ? conv.capitalize() : conv
+    }
 }
