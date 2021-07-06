@@ -24,14 +24,10 @@ In which `VERSION` is this package version, for example: `2.5.6.4`, `2.5.11.0`. 
 related to your groovy version target. So if you want to extend groovy `2.5.9`, you need to use `2.5.9.*`. The last 
 number in the version is this library revision number. These are the current versions:
 
-* 2.5.6.5
-* 2.5.7.5
-* 2.5.8.5
-* 2.5.9.5
-* 2.5.10.5
-* 2.5.11.5
-* 2.5.12.5
-* 2.5.13.5
+* 2.5.6.7       (first ever stable supported version)
+* 2.5.14.7      (latest 2.5.x version) 
+* 3.0.0.7       (first 3.x version)
+* 3.0.8.7       (latest 3.x version)
 
 # Extensions
 
@@ -147,6 +143,8 @@ Extends String methods that are commonly used and easiest ways to convert them.
 * `toDateTime`  : Convert String into LocalDateTime (auto detect format)
 * `toDate`      : Convert String into LocalDate (auto detect format)
 * `toTime`      : Convert String into LocalTime (auto detect format)
+* `toSnakeCase` : Returns a string as snake_case_formatted_string
+* `toCamelCase` : Returns a string as CamelCaseFormattedString
 
 ## Other
 
@@ -161,3 +159,8 @@ Extends String methods that are commonly used and easiest ways to convert them.
 ### Collection Methods
 
 * `random` : Get one or more random element from a collection (two implementations).
+
+### Additional Classes
+
+* `LimitedLinkedList` : A list with a limited number of elements
+
