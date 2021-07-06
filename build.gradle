@@ -11,7 +11,7 @@ repositories {
 }
 
 def groovyVer = "3.0.8"
-def libVersion = "7-SNAPSHOT"
+def libVersion = "7"
 group groupName
 version "${groovyVer}.${libVersion}"
 
@@ -91,15 +91,18 @@ publishing {
         }
     }
 }
-
+/*
 artifacts {
     archives jar, sourcesJar, javadocJar
 }
-
+*/
 signing {
-    sign configurations.archives
+    /*required {
+        !version.endsWith("SNAPSHOT")
+    }
+    sign configurations.archives*/
     //If we remove "artifacts" and set this one, it generates the jar, but without generateModule()
-    //sign publishing.publications.mavenJava
+    sign publishing.publications.mavenJava
 }
 
 task generateModule {
@@ -129,8 +132,9 @@ staticExtensionClasses=${staticFiles.join(',')}"""
     }
 }
 // Hook up dependencies
-jar.dependsOn( generateModule, sourcesJar, javadocJar)
-   .finalizedBy(signArchives)
+jar.dependsOn(generateModule)
+/*jar.dependsOn(generateModule, sourcesJar, javadocJar)
+   .finalizedBy(signArchives)*/
 
 javadoc {
     if(JavaVersion.current().isJava9Compatible()) {

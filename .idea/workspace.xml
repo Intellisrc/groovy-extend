@@ -26,13 +26,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="x.7 : Added StringExt methods">
+    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="3.0.8.7 : Updated build.gradle (Problem: uploading module instead of jar)">
       <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/groovy-extend.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/groovy-extend.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/groovy-extend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/groovy-extend.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -576,8 +574,25 @@
       <option name="project" value="LOCAL" />
       <updated>1625219509604</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="3.0.8.7 : Updated build.gradle (Problem: uploading module instead of jar)">
+      <created>1625565124688</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1625565124688</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -606,7 +621,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1.8 : Fixed generateModule" />
     <MESSAGE value="1.8 : Restyled generateModule" />
     <MESSAGE value="2.0 : Updated to groovy 2.5.7, Java 11. Updated FileExt" />
     <MESSAGE value="2.0 : Added README and removed ArrayList" />
@@ -631,7 +645,8 @@
     <MESSAGE value="2.5.6.6 : LimitedLinkedList.add didn't trim the list : added test" />
     <MESSAGE value="x.6 : Added StringExt methods" />
     <MESSAGE value="x.7 : Added StringExt methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="x.7 : Added StringExt methods" />
+    <MESSAGE value="3.0.8.7 : Updated build.gradle (Problem: uploading module instead of jar)" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.0.8.7 : Updated build.gradle (Problem: uploading module instead of jar)" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
