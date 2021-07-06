@@ -1,26 +1,33 @@
 plugins {
-    id 'idea'
     id 'groovy'
-    id 'maven'
+    id 'java-library'
+    //id 'maven-publish'
     id 'signing'
-    //id 'com.bmuschko.nexus' version "2.3.1"
 }
 
-group groupName
-def groovyVer = "2.5.6"
-version "${groovyVer}.7"
-
 repositories {
-    mavenLocal()
+    // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
 
+def groovyVer = "3.0.8"
+def libVersion = 7
+version "${groovyVer}.${libVersion}"
+
 dependencies {
-    compile 'commons-net:commons-net:3.6'
-    compile "org.codehaus.groovy:groovy-all:${groovyVer}"
-    testCompile 'org.spockframework:spock-unitils:1.3-groovy-2.5'
+    def commonsNet = "3.6"
+
+    // Used in InetAddress to calculate network segments
+    compileOnly "commons-net:commons-net:${commonsNet}"
+    // Use the latest Groovy version for building this library
+    compileOnly "org.codehaus.groovy:groovy-all:${groovyVer}"
+
+    // Use the awesome Spock testing and specification framework even with Java
+    testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+    testImplementation 'junit:junit:4.13.2'
 }
 
+/*
 task generateModule {
     doLast {
         SourceSet main = sourceSets.main
@@ -95,34 +102,40 @@ uploadArchives {
         }
     }
 }
-
+*/
 /*nexusStaging {
     packageGroup = groupName //optional if packageGroup == project.getGroup()
     //stagingProfileId = "" //when not defined will be got from server using "packageGroup"
 }*/
 
 task sourceJar(type: Jar) {
-    archiveClassifier = "sources"
+    archiveClassifier.set("sources")
     from sourceSets.main.allSource
 }
 
 task javadocJar(type: Jar) {
-    archiveClassifier = "javadoc"
+    archiveClassifier.set("javadoc")
     dependsOn("groovydoc")
     from tasks.groovydoc.destinationDir
 }
 
 // Hook up dependencies
-jar.dependsOn( generateModule, sourceJar, javadocJar )
+jar.dependsOn( sourceJar, javadocJar )
+//jar.dependsOn( generateModule, sourceJar, javadocJar )
 test.dependsOn( jar )
 
-artifacts {
+/*artifacts {
     archives jar, sourceJar, javadocJar
 }
-
+*/
 signing {
     required {
         !version.endsWith("SNAPSHOT")
     }
     sign configurations.archives
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
 }
