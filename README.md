@@ -17,17 +17,15 @@ Gradle:
 dependecies {
     implementation 'com.intellisrc:groovy-extend:VERSION'
     // or extended annotation:
-    compile group: 'com.intellisrc', name: 'groovy-extend', version: 'VERSION'
+    implementation group: 'com.intellisrc', name: 'groovy-extend', version: 'VERSION'
 }
 ```
-In which `VERSION` is this package version, for example: `2.5.6.4`, `2.5.11.0`. The first 3 numbers in the version are
-related to your groovy version target. So if you want to extend groovy `2.5.9`, you need to use `2.5.9.*`. The last 
-number in the version is this library revision number. These are the current versions:
+In which `VERSION` is this package version, for example: `3.0.8.7`. 
+The first 3 digits (3.0.8) are the recommended Groovy version (as is the version
+used to compile this package). You can use the groovy version that fits your needs, 
+currently supported: 2.5.x and 3.0.x branches.
 
-* 2.5.6.7       (first ever stable supported version)
-* 2.5.14.7      (latest 2.5.x version) 
-* 3.0.0.7       (first 3.x version)
-* 3.0.8.7       (latest 3.x version)
+**NOTE**: Don't forget to add your groovy dependency.
 
 # Extensions
 
