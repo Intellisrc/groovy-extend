@@ -34,4 +34,34 @@ class StringExTest extends Specification {
             assert map.four == true
             assert map.three == map2.three
     }
+    def "String to snake_case"() {
+        expect :
+            assert StringExt.toSnakeCase(a) == b
+        where:
+            a            |   b
+            "someWord"   |  "some_word"
+            "SomeWord"   |  "some_word"
+            "Some Word"  |  "some_word"
+            "some_word"  |  "some_word"
+            "Some_Word"  |  "some_word"
+    }
+
+    def "String to CamelCase"() {
+        expect :
+            assert StringExt.toCamelCase(a, c) == b
+        where:
+            a            |   b              | c
+            "some_word"  |  "someWord"      | false
+            "some_word"  |  "SomeWord"      | true
+            // prefix: _ will be removed:
+            "_some_word" |  "someWord"      | false
+            // Spaces will become "_"
+            "some word"  |  "someWord"      | false
+            "some word"  |  "SomeWord"      | true
+            "Some Word"  |  "someWord"      | false
+            "Some Word"  |  "SomeWord"      | true
+            // All non-alphanumeric characters will become "_"
+            "Some.Word"  |  "someWord"      | false
+            "Some.Word"  |  "SomeWord"      | true
+    }
 }

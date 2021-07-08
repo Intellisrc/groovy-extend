@@ -26,13 +26,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="2.5.6.5 : Updated build.gradle">
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_3_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_3_2.xml" afterDir="false" />
+    <list default="true" id="e816d701-0fad-494e-aabd-09cab6537d93" name="Default" comment="3.0.8.7 : Upload successful">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/LimitedLinkedList.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/com/intellisrc/LimitedLinkedList.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +53,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="groovy-extend" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="groovy-extend" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -80,8 +71,12 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="NamedScopeManager">
     <scope name="src" pattern="src[groovy-extend_main]:com.intellisrc.groovy.CollectionExt||src[groovy-extend_main]:com.intellisrc.groovy.DateExt||src[groovy-extend_main]:com.intellisrc.groovy.FileExt||src[groovy-extend_main]:com.intellisrc.groovy.Inet4AddressExt||src[groovy-extend_main]:com.intellisrc.groovy.InetAddressStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.LocalDateExt||src[groovy-extend_main]:com.intellisrc.groovy.LocalDateStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.MapExt||src[groovy-extend_main]:com.intellisrc.groovy.NetworkInterfaceStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.RandomStaticExt||src[groovy-extend_main]:com.intellisrc.groovy.StringExt" />
@@ -95,13 +90,15 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowMaven.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.gitignore" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.sdkman/candidates/gradle/7.1.1" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3970346" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../../groovy/groovy-extend/README.md" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../../groovy/groovy-extend/src/test/groovy/com/inspeedia/groovy/FileExtTest.groovy" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -140,7 +137,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="groovy-extend [javadocJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="groovy-extend [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -151,15 +148,17 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="javadocJar" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="groovy-extend [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="groovy-extend [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -170,12 +169,56 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="publishToMavenLocal" />
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="groovy-extend [publishAllPublicationsToMavenRepository]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishAllPublicationsToMavenRepository" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="groovy-extend [publishMavenJavaPublicationToMavenRepository]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishMavenJavaPublicationToMavenRepository" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="groovy-extend [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -194,45 +237,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="groovy-extend [signArchives]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="signArchives" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="groovy-extend [sourceJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="sourceJar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -243,19 +250,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.groovy-extend [signArchives]" />
-      <item itemvalue="Gradle.groovy-extend [javadocJar]" />
-      <item itemvalue="Gradle.groovy-extend [sourceJar]" />
-      <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
+      <item itemvalue="Gradle.groovy-extend [jar]" />
+      <item itemvalue="Gradle.groovy-extend [clean]" />
       <item itemvalue="Gradle.groovy-extend [publish]" />
+      <item itemvalue="Gradle.groovy-extend [publishMavenJavaPublicationToMavenRepository]" />
+      <item itemvalue="Gradle.groovy-extend [publishAllPublicationsToMavenRepository]" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.groovy-extend [publish]" />
-        <item itemvalue="Gradle.groovy-extend [publishToMavenLocal]" />
-        <item itemvalue="Gradle.groovy-extend [signArchives]" />
-        <item itemvalue="Gradle.groovy-extend [sourceJar]" />
-        <item itemvalue="Gradle.groovy-extend [javadocJar]" />
+        <item itemvalue="Gradle.groovy-extend [clean]" />
+        <item itemvalue="Gradle.groovy-extend [jar]" />
+        <item itemvalue="Gradle.groovy-extend [publishAllPublicationsToMavenRepository]" />
+        <item itemvalue="Gradle.groovy-extend [publishMavenJavaPublicationToMavenRepository]" />
       </list>
     </recent_temporary>
   </component>
@@ -267,6 +274,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1507777163522</updated>
+      <workItem from="1625649225370" duration="1146000" />
     </task>
     <task id="LOCAL-00001" summary="1.6 Added conditional to handle time in toStringSTD and toDateSTD">
       <created>1509602034596</created>
@@ -520,15 +528,82 @@
       <option name="project" value="LOCAL" />
       <updated>1599188001589</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="2.5.6.6 : LimitedLinkedList.add didn't trim the list">
+      <created>1605056614381</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1605056614381</updated>
+    </task>
+    <task id="LOCAL-00038" summary="2.5.6.6 : LimitedLinkedList.add didn't trim the list : added test">
+      <created>1605056861568</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1605056861568</updated>
+    </task>
+    <task id="LOCAL-00039" summary="x.6 : Added StringExt methods">
+      <created>1625127219898</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1625127219898</updated>
+    </task>
+    <task id="LOCAL-00040" summary="x.7 : Added StringExt methods">
+      <created>1625219509604</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1625219509604</updated>
+    </task>
+    <task id="LOCAL-00041" summary="3.0.8.7 : Updated build.gradle (Problem: uploading module instead of jar)">
+      <created>1625565124688</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1625565124688</updated>
+    </task>
+    <task id="LOCAL-00042" summary="3.0.8.7 : Upload successful">
+      <created>1625569030748</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1625569030748</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="x.7" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -550,12 +625,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sharelock renamed to intellisrc" />
-    <MESSAGE value="1.7.7.1 : Fixed RandomExt" />
-    <MESSAGE value="1.8 : Updated to Groovy 2.5.5. Added File.eachFileAsync()" />
-    <MESSAGE value="1.8 : Added File.eachFileMatchAsync" />
-    <MESSAGE value="1.8 : Fixed generateModule" />
-    <MESSAGE value="1.8 : Restyled generateModule" />
     <MESSAGE value="2.0 : Updated to groovy 2.5.7, Java 11. Updated FileExt" />
     <MESSAGE value="2.0 : Added README and removed ArrayList" />
     <MESSAGE value="2.0.256 : Rolled back to groovy 2.5.6 due to File.text bug" />
@@ -575,35 +644,13 @@
     <MESSAGE value="2.5.6.5 : Added LimitedLinkedList. Added ZoneId change when working with Millis()." />
     <MESSAGE value="2.5.6.5 : Added 'isFull' to LimitedLinkedList" />
     <MESSAGE value="2.5.6.5 : Updated build.gradle" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.5.6.5 : Updated build.gradle" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1876" height="325" key="GridCell.Tab.0.bottom" timestamp="1599188007420">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="325" key="GridCell.Tab.0.bottom/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599188007420" />
-    <state width="1876" height="325" key="GridCell.Tab.0.center" timestamp="1599188007420">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="325" key="GridCell.Tab.0.center/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599188007420" />
-    <state width="1876" height="325" key="GridCell.Tab.0.left" timestamp="1599188007420">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="325" key="GridCell.Tab.0.left/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599188007420" />
-    <state width="1876" height="325" key="GridCell.Tab.0.right" timestamp="1599188007420">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state width="1876" height="325" key="GridCell.Tab.0.right/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599188007420" />
-    <state x="391" y="175" width="806" height="523" key="Vcs.Push.Dialog.v2" timestamp="1599188002584">
-      <screen x="0" y="0" width="1920" height="1200" />
-    </state>
-    <state x="391" y="175" width="806" height="523" key="Vcs.Push.Dialog.v2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1599188002584" />
-    <state x="748" y="530" width="417" height="163" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605056553226">
-      <screen x="0" y="33" width="1920" height="1117" />
-    </state>
-    <state x="2319" y="342" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.26.1920.1174/1920.0.1024.768@1920.0.1024.768" timestamp="1603069094519" />
-    <state x="748" y="530" width="417" height="163" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.33.1920.1117@0.33.1920.1117" timestamp="1605056553226" />
-    <state x="749" y="534" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1024.768/0.0.1920.1200@0.0.1920.1200" timestamp="1601858622943" />
+    <MESSAGE value="2.5.6.6 : LimitedLinkedList.add didn't trim the list" />
+    <MESSAGE value="2.5.6.6 : LimitedLinkedList.add didn't trim the list : added test" />
+    <MESSAGE value="x.6 : Added StringExt methods" />
+    <MESSAGE value="x.7 : Added StringExt methods" />
+    <MESSAGE value="3.0.8.7 : Updated build.gradle (Problem: uploading module instead of jar)" />
+    <MESSAGE value="3.0.8.7 : Upload successful" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.0.8.7 : Upload successful" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
