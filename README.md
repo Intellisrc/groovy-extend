@@ -76,8 +76,8 @@ These extensions provide faster ways to deal with files. Setting permissions and
 * `lines` : Get total lines in a file (faster way)
 * `eachFileAsync` : Iterate through all files without having to read the whole directory first
 * `eachFileMatchAsync` : Iterate files inside directory using glob search or FileFilter
-* `listFiles` : Using glob search (Async) [@since 2.5.6.2]
-* `deleteFiles` : Delete files using glob search or FileFilter (Async) [@since 2.5.6.2]
+* `listFiles` : Using glob search (Async) [`@since 2.5.6.2`]
+* `deleteFiles` : Delete files using glob search or FileFilter (Async) [`@since 2.5.6.2`]
 
 #### Permissions
 
