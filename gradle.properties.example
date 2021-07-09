@@ -2,6 +2,10 @@
 groupName=com.intellisrc
 artifact=groovy-extend
 
+authorId=
+authorName=
+authorEmail=
+
 projectName=Groovy Extend
 projectURL=https://gitlab.com/intellisrc/groovy-extend
 projectDevURL=git@gitlab.com:intellisrc/groovy-extend.git
