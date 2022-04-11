@@ -274,9 +274,9 @@ class FileExtTest extends Specification {
      */
     def "All paths must match - User dir"() {
         setup:
-            File f1 = new File(new File(FileStaticExt.getUserDir(null), "directory"), "file.txt")
+            File f1 = new File(new File(FileStaticExt.getHomeDir(null), "directory"), "file.txt")
             File f2 = FileStaticExt.get(null,"directory", "file.txt")
-            File f3 = FileStaticExt.get(null,FileStaticExt.getUserDir(null), "directory", "file.txt")
+            File f3 = FileStaticExt.get(FileStaticExt.getUserDir(null), "directory", "file.txt")
         expect:
             assert f1.absolutePath == f2.absolutePath
             assert f2.absolutePath == f3.absolutePath
@@ -288,7 +288,7 @@ class FileExtTest extends Specification {
         setup:
             File f1 = new File(new File(FileStaticExt.getHomeDir(null), "directory"), "file.txt")
             File f2 = FileStaticExt.get(null,"~/directory", "file.txt")
-            File f3 = FileStaticExt.get(null,FileStaticExt.getHomeDir(null), "directory", "file.txt")
+            File f3 = FileStaticExt.get(FileStaticExt.getHomeDir(null), "directory", "file.txt")
         expect:
             assert f1.absolutePath == f2.absolutePath
             assert f2.absolutePath == f3.absolutePath
