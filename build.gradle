@@ -11,15 +11,13 @@ repositories {
 }
 
 def groovyVer = "3.0.8"
-def libVersion = "7"
+def libVersion = "8-SNAPSHOT-DEBUG"
 group groupName
 version "${groovyVer}.${libVersion}"
+boolean isDev = version.contains("SNAPSHOT")
+boolean publishDev = ! version.contains("DEBUG")
 
 dependencies {
-    def commonsNet = "3.6"
-
-    // Used in InetAddress to calculate network segments
-    compileOnly "commons-net:commons-net:${commonsNet}"
     // Use the latest Groovy version for building this library
     compileOnly "org.codehaus.groovy:groovy-all:${groovyVer}"
 
@@ -29,8 +27,10 @@ dependencies {
 }
 
 java {
-    withJavadocJar()
-    withSourcesJar()
+    if(!isDev || publishDev) {
+        withJavadocJar()
+        withSourcesJar()
+    }
 }
 
 publishing {
@@ -38,7 +38,7 @@ publishing {
         maven {
             def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
             def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
-            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            url = isDev ? snapshotsRepoUrl : releasesRepoUrl
             credentials {
                 username = ossrhUsername
                 password = ossrhPassword
@@ -97,12 +97,10 @@ artifacts {
 }
 */
 signing {
-    /*required {
-        !version.endsWith("SNAPSHOT")
-    }
-    sign configurations.archives*/
     //If we remove "artifacts" and set this one, it generates the jar, but without generateModule()
-    sign publishing.publications.mavenJava
+    if(! isDev || publishDev) {
+        sign publishing.publications.mavenJava
+    }
 }
 
 task generateModule {

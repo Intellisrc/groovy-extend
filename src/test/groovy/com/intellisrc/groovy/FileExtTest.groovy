@@ -268,4 +268,41 @@ class FileExtTest extends Specification {
         cleanup:
             tmpFile.delete()
     }
+
+    /**
+     * File.get() must generate the same path:
+     */
+    def "All paths must match - User dir"() {
+        setup:
+            File f1 = new File(new File(FileStaticExt.getHomeDir(null), "directory"), "file.txt")
+            File f2 = FileStaticExt.get(null,"directory", "file.txt")
+            File f3 = FileStaticExt.get(FileStaticExt.getUserDir(null), "directory", "file.txt")
+        expect:
+            assert f1.absolutePath == f2.absolutePath
+            assert f2.absolutePath == f3.absolutePath
+    }
+    /**
+     * File.get() must generate the same path:
+     */
+    def "All paths must match - Home dir"() {
+        setup:
+            File f1 = new File(new File(FileStaticExt.getHomeDir(null), "directory"), "file.txt")
+            File f2 = FileStaticExt.get(null,"~/directory", "file.txt")
+            File f3 = FileStaticExt.get(FileStaticExt.getHomeDir(null), "directory", "file.txt")
+        expect:
+            assert f1.absolutePath == f2.absolutePath
+            assert f2.absolutePath == f3.absolutePath
+    }
+
+    def "Create file should create path and file"() {
+        setup:
+            File f = FileStaticExt.create(null, FileStaticExt.getTempDir(null), "some", "dir", "in", "temp", "path.txt")
+        expect:
+            assert f.exists()
+        cleanup:
+            if(f.exists()) {
+                f.delete()
+                new File(FileStaticExt.getTempDir(null), "some").deleteDir()
+            }
+    }
 }

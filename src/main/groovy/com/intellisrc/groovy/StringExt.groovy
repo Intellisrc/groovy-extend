@@ -211,11 +211,17 @@ class StringExt {
      * @param str
      * @return
      */
-    static String toSnakeCase(final String self) {
-        return self.replaceAll(/\s+/,'_')    // Convert spaces to "_"
-                .replaceAll( /([A-Z])/, /_$1/ ).toLowerCase() // prepend "_" to each word
-                .replaceAll('__','_')       // Remove any double "_"
-                .replaceAll( /^_/, '' )     // Remove leading "_"
+    static String toSnakeCase(final String self, boolean upperCase = false) {
+        boolean areAllUpper = self.toUpperCase() == self
+        String conv = self.replaceAll(/\s+/,'_')    // Convert spaces to "_"
+                .replaceAll(/[^\w]/,"_")    // Convert any non alphanumeric char to "_"
+        // Do not split words if all are uppercase
+        if(! areAllUpper) {
+            conv = conv.replaceAll(/([A-Z])/, /_$1/).toLowerCase() // prepend "_" to each word
+        }
+        conv = conv.replaceAll('__','_')       // Remove any double "_"
+                   .replaceAll( /^_/, '' )     // Remove leading "_"
+        return upperCase ? conv.toUpperCase() : conv
     }
     /**
      * Convert String to CamelCase
@@ -229,5 +235,25 @@ class StringExt {
                 .replaceAll(/[^\w]/,"_")    // Convert any non alphanumeric char to "_"
                 .replaceAll( "(_)([A-Za-z0-9])", { List<String> it -> it[2].toUpperCase() } ) // Capitalize words
         return capitalized ? conv.capitalize() : conv
+    }
+    /**
+     * Converts Strings to "dot.case":
+     * example: VARIABLE_NAME to variable.name
+     *
+     * @param self
+     * @return
+     */
+    static String toDotCase(final String self, boolean lowerCase = true) {
+        String conv = toSnakeCase(self).replaceAll('_', '.')
+        return lowerCase ? conv.toLowerCase() : conv
+    }
+
+    /**
+     * Replace a phrase for kebab-case
+     * @param self
+     * @return
+     */
+    static String toKebabCase(final String self, boolean upperCase = false) {
+        return toSnakeCase(self, upperCase).replaceAll('_', '-')
     }
 }

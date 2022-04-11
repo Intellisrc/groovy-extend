@@ -31,7 +31,7 @@ currently supported: 2.5.x and 3.0.x branches.
 
 ## Date & Time
 
-`Date` class should not longer be used. Because of that, we extended `Date` class to make it easier to change it to `LocalDate` and `LocalDateTime`:
+`Date` class should no longer be used. Because of that, we extended `Date` class to make it easier to change it to `LocalDate` and `LocalDateTime`:
 
 ### Date Methods
 
@@ -71,6 +71,14 @@ These extensions provide faster ways to deal with files. Setting permissions and
 
 ### File Methods
 
+#### Locating
+
+* `get` : Similar to `new File()` but more flexible.
+* `create` : Similar to `get()` but will create an empty file including their directories
+* `userDir` : get User directory (root directory for project)
+* `homeDir` : get Home directory
+* `tempDir` : get the temporal directory
+
 #### Performance
 
 * `lines` : Get total lines in a file (faster way)
@@ -109,21 +117,7 @@ These extensions provide faster ways to deal with files. Setting permissions and
 * `linkTo`           : Create a link from a file. Its argument is the link to create. An additional argument is to specify if link is hard or not.
 * `hardLinkOrCopyTo` : Will try to create a hardLink, but if its in another device (which is not allowed), it will copy it.
 
-#### Network
-
-These extensions help to deal with network interfaces.
-
-### NetworkInterface Methods
-
-* `localIP` : Get's the first IP address that is not 127.x.x.x
-* `isLocalAddress` : Test if local device contains such IP address
-* `isPortAvailable` : Test if port is available
-* `getIPStartWith` : Retrieves the first IP address that starts with...
-* `getIPinNetwork` : Retrieves the first IP address that is in Network X
-* `getFreePort` : Retrieves an available port.
-* `getInet4Addresses` : Retrieves all IP addresses registered in localhost
-
-#### String
+### String
 
 Extends String methods that are commonly used and easiest ways to convert them.
 
@@ -143,6 +137,8 @@ Extends String methods that are commonly used and easiest ways to convert them.
 * `toTime`      : Convert String into LocalTime (auto detect format)
 * `toSnakeCase` : Returns a string as snake_case_formatted_string
 * `toCamelCase` : Returns a string as CamelCaseFormattedString
+* `toDotCase`   : Returns a string as dot.case.formatted.string
+* `toKebabCase` : Returns a string as Kebab-Case-Formatted-String
 
 ## Other
 
