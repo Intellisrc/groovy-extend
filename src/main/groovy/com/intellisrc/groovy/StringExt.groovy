@@ -25,18 +25,19 @@ class StringExt {
         return String.format('%1$' + n + 's', self.toString())
     }
 
+    // https://stackoverflow.com/a/46022277/196507
     /**
      * Insert string at specific position
      * @param self
      * @param position
      * @param insert
      * @return
-     */ // https://stackoverflow.com/a/46022277/196507
+     */
     static String insertAt(final String self, final int position, final String insert) {
         if (insert.isEmpty()) {  return self }
         final int targetLen = self.length()
         if (position < 0 || position > targetLen) {
-            throw new IllegalArgumentException("position=${position}")
+            throw new IllegalArgumentException("position=" + position)
         } else if (position == 0) {
             return insert.concat(self)
         } else if (position == targetLen) {
