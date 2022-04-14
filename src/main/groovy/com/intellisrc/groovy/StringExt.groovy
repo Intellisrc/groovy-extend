@@ -24,6 +24,33 @@ class StringExt {
     static String padLeft(final String self, final int n) {
         return String.format('%1$' + n + 's', self.toString())
     }
+
+    // https://stackoverflow.com/a/46022277/196507
+    /**
+     * Insert string at specific position
+     * @param self
+     * @param position
+     * @param insert
+     * @return
+     */
+    static String insertAt(final String self, final int position, final String insert) {
+        if (insert.isEmpty()) {  return self }
+        final int targetLen = self.length()
+        if (position < 0 || position > targetLen) {
+            throw new IllegalArgumentException("position=" + position)
+        } else if (position == 0) {
+            return insert.concat(self)
+        } else if (position == targetLen) {
+            return self.concat(insert)
+        }
+        final int insertLen = insert.length()
+        final char[] buffer = new char[targetLen + insertLen]
+        self.getChars(0, position, buffer, 0)
+        insert.getChars(0, insertLen, buffer, position)
+        self.getChars(position, targetLen, buffer, position + insertLen)
+        return new String(buffer)
+    }
+
     ////////////// Conversion to other types //////////////
 
     static Inet4Address toInet4Address(final String self) throws UnknownHostException {
