@@ -73,7 +73,7 @@ class FileStaticExt {
                             pathFile = new File(getHomeDir(self), pathPart.replace('~/', ''))
                             break
                         default:
-                            pathFile = new File(getHomeDir(self), pathPart)
+                            pathFile = new File(getUserDir(self), pathPart)
                     }
                 } else {
                     pathFile = new File(pathFile, pathPart)
