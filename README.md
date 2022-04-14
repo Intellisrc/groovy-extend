@@ -125,6 +125,7 @@ Extends String methods that are commonly used and easiest ways to convert them.
 * `padRight` : pad to the right with spaces
 * `padLeft` : pad to the left with spaces
 * `appendRandomNum` : Useful to create random strings, e.g: 'apple1234'
+* `insertAt` : Insert a substring into a string in a specific position
 
 #### Conversion
 
