@@ -24,6 +24,32 @@ class StringExt {
     static String padLeft(final String self, final int n) {
         return String.format('%1$' + n + 's', self.toString())
     }
+
+    /**
+     * Insert string at specific position
+     * @param self
+     * @param position
+     * @param insert
+     * @return
+     */ // https://stackoverflow.com/a/46022277/196507
+    static String insertAt(final String self, final int position, final String insert) {
+        if (insert.isEmpty()) {  return self }
+        final int targetLen = self.length()
+        if (position < 0 || position > targetLen) {
+            throw new IllegalArgumentException("position=${position}")
+        } else if (position == 0) {
+            return insert.concat(self)
+        } else if (position == targetLen) {
+            return self.concat(insert)
+        }
+        final int insertLen = insert.length()
+        final char[] buffer = new char[targetLen + insertLen]
+        self.getChars(0, position, buffer, 0)
+        insert.getChars(0, insertLen, buffer, position)
+        self.getChars(position, targetLen, buffer, position + insertLen)
+        return new String(buffer)
+    }
+
     ////////////// Conversion to other types //////////////
 
     static Inet4Address toInet4Address(final String self) throws UnknownHostException {
@@ -211,11 +237,17 @@ class StringExt {
      * @param str
      * @return
      */
-    static String toSnakeCase(final String self) {
-        return self.replaceAll(/\s+/,'_')    // Convert spaces to "_"
-                .replaceAll( /([A-Z])/, /_$1/ ).toLowerCase() // prepend "_" to each word
-                .replaceAll('__','_')       // Remove any double "_"
-                .replaceAll( /^_/, '' )     // Remove leading "_"
+    static String toSnakeCase(final String self, boolean upperCase = false) {
+        boolean areAllUpper = self.toUpperCase() == self
+        String conv = self.replaceAll(/\s+/,'_')    // Convert spaces to "_"
+                .replaceAll(/[^\w]/,"_")    // Convert any non alphanumeric char to "_"
+        // Do not split words if all are uppercase
+        if(! areAllUpper) {
+            conv = conv.replaceAll(/([A-Z])/, /_$1/).toLowerCase() // prepend "_" to each word
+        }
+        conv = conv.replaceAll('__','_')       // Remove any double "_"
+                   .replaceAll( /^_/, '' )     // Remove leading "_"
+        return upperCase ? conv.toUpperCase() : conv
     }
     /**
      * Convert String to CamelCase
@@ -229,5 +261,25 @@ class StringExt {
                 .replaceAll(/[^\w]/,"_")    // Convert any non alphanumeric char to "_"
                 .replaceAll( "(_)([A-Za-z0-9])", { List<String> it -> it[2].toUpperCase() } ) // Capitalize words
         return capitalized ? conv.capitalize() : conv
+    }
+    /**
+     * Converts Strings to "dot.case":
+     * example: VARIABLE_NAME to variable.name
+     *
+     * @param self
+     * @return
+     */
+    static String toDotCase(final String self, boolean lowerCase = true) {
+        String conv = toSnakeCase(self).replaceAll('_', '.')
+        return lowerCase ? conv.toLowerCase() : conv
+    }
+
+    /**
+     * Replace a phrase for kebab-case
+     * @param self
+     * @return
+     */
+    static String toKebabCase(final String self, boolean upperCase = false) {
+        return toSnakeCase(self, upperCase).replaceAll('_', '-')
     }
 }

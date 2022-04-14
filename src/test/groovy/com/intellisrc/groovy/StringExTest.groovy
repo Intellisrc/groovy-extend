@@ -34,16 +34,33 @@ class StringExTest extends Specification {
             assert map.four == true
             assert map.three == map2.three
     }
+
     def "String to snake_case"() {
         expect :
-            assert StringExt.toSnakeCase(a) == b
+            assert StringExt.toSnakeCase(a, c) == b
         where:
-            a            |   b
-            "someWord"   |  "some_word"
-            "SomeWord"   |  "some_word"
-            "Some Word"  |  "some_word"
-            "some_word"  |  "some_word"
-            "Some_Word"  |  "some_word"
+            a            |   b              | c
+            "someWord"   |  "some_word"     | false
+            "SomeWord"   |  "some_word"     | false
+            "Some Word"  |  "some_word"     | false
+            "some_word"  |  "some_word"     | false
+            "Some_Word"  |  "some_word"     | false
+            "Some-Word"  |  "some_word"     | false
+            "Some.Word"  |  "some_word"     | false
+            "SOME WORD"  |  "SOME_WORD"     | false
+            "SOME-WORD"  |  "SOME_WORD"     | false
+            "SOME.WORD"  |  "SOME_WORD"     | false
+            "SOME_WORD"  |  "SOME_WORD"     | false
+            "someWord"   |  "SOME_WORD"     | true
+            "SomeWord"   |  "SOME_WORD"     | true
+            "Some Word"  |  "SOME_WORD"     | true
+            "some_word"  |  "SOME_WORD"     | true
+            "Some_Word"  |  "SOME_WORD"     | true
+            "Some-Word"  |  "SOME_WORD"     | true
+            "Some.Word"  |  "SOME_WORD"     | true
+            "SOME WORD"  |  "SOME_WORD"     | true
+            "SOME.WORD"  |  "SOME_WORD"     | true
+            "SOME-WORD"  |  "SOME_WORD"     | true
     }
 
     def "String to CamelCase"() {
@@ -53,6 +70,8 @@ class StringExTest extends Specification {
             a            |   b              | c
             "some_word"  |  "someWord"      | false
             "some_word"  |  "SomeWord"      | true
+            "SOME_WORD"  |  "SomeWord"      | true
+            "SOME_WORD"  |  "someWord"      | false
             // prefix: _ will be removed:
             "_some_word" |  "someWord"      | false
             // Spaces will become "_"
@@ -63,5 +82,63 @@ class StringExTest extends Specification {
             // All non-alphanumeric characters will become "_"
             "Some.Word"  |  "someWord"      | false
             "Some.Word"  |  "SomeWord"      | true
+            "Some-Word"  |  "SomeWord"      | true
+            "Some-Word"  |  "someWord"      | false
+    }
+
+    def "String to DotCase"() {
+        expect :
+            assert StringExt.toDotCase(a, c) == b
+        where:
+            a            |   b              | c
+            "someWord"   |  "some.word"     | false
+            "SomeWord"   |  "some.word"     | false
+            "Some Word"  |  "some.word"     | false
+            "some.word"  |  "some.word"     | false
+            "Some.Word"  |  "some.word"     | false
+            "Some.Word"  |  "some.word"     | false
+            "Some.Word"  |  "some.word"     | false
+            "SOME WORD"  |  "SOME.WORD"     | false
+            "SOME.WORD"  |  "SOME.WORD"     | false
+            "SOME.WORD"  |  "SOME.WORD"     | false
+            "SOME.WORD"  |  "SOME.WORD"     | false
+            "someWord"   |  "some.word"     | true
+            "SomeWord"   |  "some.word"     | true
+            "Some Word"  |  "some.word"     | true
+            "some.word"  |  "some.word"     | true
+            "Some.Word"  |  "some.word"     | true
+            "Some.Word"  |  "some.word"     | true
+            "Some.Word"  |  "some.word"     | true
+            "SOME WORD"  |  "some.word"     | true
+            "SOME.WORD"  |  "some.word"     | true
+            "SOME.WORD"  |  "some.word"     | true
+    }
+
+    def "String to KebabCase"() {
+        expect :
+            assert StringExt.toKebabCase(a, c) == b
+        where:
+            a            |   b              | c
+            "someWord"   |  "some-word"     | false
+            "SomeWord"   |  "some-word"     | false
+            "Some Word"  |  "some-word"     | false
+            "some-word"  |  "some-word"     | false
+            "Some-Word"  |  "some-word"     | false
+            "Some-Word"  |  "some-word"     | false
+            "Some.Word"  |  "some-word"     | false
+            "SOME WORD"  |  "SOME-WORD"     | false
+            "SOME-WORD"  |  "SOME-WORD"     | false
+            "SOME.WORD"  |  "SOME-WORD"     | false
+            "SOME-WORD"  |  "SOME-WORD"     | false
+            "someWord"   |  "SOME-WORD"     | true
+            "SomeWord"   |  "SOME-WORD"     | true
+            "Some Word"  |  "SOME-WORD"     | true
+            "some-word"  |  "SOME-WORD"     | true
+            "Some-Word"  |  "SOME-WORD"     | true
+            "Some-Word"  |  "SOME-WORD"     | true
+            "Some.Word"  |  "SOME-WORD"     | true
+            "SOME WORD"  |  "SOME-WORD"     | true
+            "SOME.WORD"  |  "SOME-WORD"     | true
+            "SOME-WORD"  |  "SOME-WORD"     | true
     }
 }
