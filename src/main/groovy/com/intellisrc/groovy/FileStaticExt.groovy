@@ -30,6 +30,24 @@ class FileStaticExt {
         return new File(System.getProperty("java.io.tmpdir"))
     }
     /**
+     * Returns the root directory path
+     * @param self
+     * @return
+     */
+    static File getRootDir(final File self) {
+        File root = new File("/") // Unix like
+        if(! root.exists()) {
+            root = new File(System.getenv("SystemDrive")) //For Windows
+            if(!root.exists()) { // Last resource:
+                root = getUserDir(self)
+                do {
+                    root = root.parentFile
+                } while (root.parentFile)
+            }
+        }
+        return root
+    }
+    /**
      * Alternative to `new File()` which is more flexible
      * Examples:
      *
