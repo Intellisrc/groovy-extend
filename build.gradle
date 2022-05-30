@@ -3,6 +3,7 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'signing'
+    id 'net.saliman.properties' version '1.5.1'
 }
 
 repositories {
@@ -11,7 +12,7 @@ repositories {
 }
 
 def groovyVer = '3.0.10'
-def libVersion = "8"
+def libVersion = "9"
 group groupName
 version "${groovyVer}.${libVersion}"
 boolean isDev = version.contains("SNAPSHOT")

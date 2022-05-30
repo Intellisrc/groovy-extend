@@ -61,7 +61,7 @@ class StringExt {
     }
 
     static InetAddress toInetAddress(final String self) throws UnknownHostException  {
-        return (Inet4Address) InetAddress.getByName(self)
+        return (InetAddress) InetAddress.getByName(self)
     }
     /**
      * Appends a random number to a String
