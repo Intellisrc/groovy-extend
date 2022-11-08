@@ -11,8 +11,8 @@ repositories {
     mavenCentral()
 }
 
-def groovyVer = '3.0.10'
-def libVersion = "9"
+def groovyVer = '3.0.13'
+def libVersion = '10'
 group groupName
 version "${groovyVer}.${libVersion}"
 boolean isDev = version.contains("SNAPSHOT")
@@ -23,7 +23,7 @@ dependencies {
     compileOnly "org.codehaus.groovy:groovy-all:${groovyVer}"
 
     // Use the awesome Spock testing and specification framework even with Java
-    testImplementation 'org.spockframework:spock-core:2.1-groovy-3.0'
+    testImplementation 'org.spockframework:spock-core:2.3-groovy-3.0'
     testImplementation 'junit:junit:4.13.2'
 }
 
