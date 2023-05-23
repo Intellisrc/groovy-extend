@@ -9,11 +9,11 @@ import java.time.temporal.ChronoUnit
 /**
  * @since 2019/10/07.
  */
-class LocalDateStaticExtTest extends Specification {
+class MillisToDateTimeStaticExtTest extends Specification {
     
     def "LocalDateTime from millis"() {
         setup:
-            LocalDateTime now = LocalDateStaticExt.fromMillis(null, System.currentTimeMillis())
+            LocalDateTime now = MillisToDateTimeStaticExt.fromMillis(LocalDateTime.now(), System.currentTimeMillis())
         expect:
             assert Math.abs(ChronoUnit.SECONDS.between(LocalDateTime.now(), now)) <= 1
     }
