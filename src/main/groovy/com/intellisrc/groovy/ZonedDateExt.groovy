@@ -3,6 +3,7 @@ package com.intellisrc.groovy
 import groovy.transform.CompileStatic
 
 import java.time.ZonedDateTime
+import java.time.chrono.ChronoZonedDateTime
 import java.time.format.DateTimeFormatter
 
 /**
@@ -43,5 +44,17 @@ class ZonedDateExt {
      */
     static String getYMDHm(final ZonedDateTime self, String separatorDate = '-', String separator = ' ', String separatorTime = ':') {
         format(self, "yyyy${separatorDate}MM${separatorDate}dd${separator}HH${separatorTime}mm")
+    }
+    /**
+     * Returns true if date is between two zoneddatetimes (inclusive or exclusive)
+     * @param self
+     * @param from
+     * @param to
+     * @param inclusive (optional, default: true)
+     * @return
+     */
+    static boolean isBetween(final ZonedDateTime self, ChronoZonedDateTime from, ChronoZonedDateTime to, boolean inclusive = true) {
+        boolean equal = inclusive ? (self.isEqual(from) || self.isEqual(to)) : false
+        return (self.isAfter(from) && self.isBefore(to)) || equal
     }
 }

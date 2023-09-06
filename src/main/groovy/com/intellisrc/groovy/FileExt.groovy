@@ -4,10 +4,10 @@ import groovy.transform.CompileStatic
 import groovy.transform.stc.ClosureParams
 import groovy.transform.stc.SimpleType
 
-import java.nio.file.Files
-import java.nio.file.attribute.PosixFilePermission
 import java.nio.file.DirectoryStream
+import java.nio.file.Files
 import java.nio.file.Path
+import java.nio.file.attribute.PosixFilePermission
 
 /**
  * @since 2/17/18.

@@ -5,23 +5,15 @@ import groovy.transform.CompileStatic
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.LocalTime
-import java.time.ZoneId
+import java.time.chrono.ChronoLocalDate
 import java.time.format.DateTimeFormatter
 
 /**
- * Extensions to LocalDateTime, LocalDate and LocalTime
+ * Extensions to LocalDate
  * @since 18/06/15.
  */
 @CompileStatic
 class LocalDateExt {
-    /**
-     * Convert LocalDateTime to Date
-     * @param self
-     * @return
-     */
-    static Date toDate(final LocalDateTime self) {
-        return Date.from(self.atZone(ZoneId.systemDefault()).toInstant())
-    }
     /**
      * Convert LocalDate to LocalDateTime (at 00:00:00)
      * @param self
@@ -31,23 +23,6 @@ class LocalDateExt {
         return LocalDateTime.of(self, LocalTime.MIN)
     }
     /**
-     * Convert LocalDateTime to millis
-     * @param self
-     * @return
-     */
-    static long toMillis(final LocalDateTime self, ZoneId zoneId = ZoneId.systemDefault()) {
-        return self.atZone(zoneId).toInstant().toEpochMilli()
-    }
-    /**
-     * Converts a LocalDateTime to String using DateTimeFormatter
-     * @param self
-     * @param dateFormat
-     * @return
-     */
-    static String format(final LocalDateTime self, final String format) {
-        return self.format(DateTimeFormatter.ofPattern(format))
-    }
-    /**
      * Converts a LocalDate to String using DateTimeFormatter
      * @param self
      * @param dateFormat
@@ -55,39 +30,6 @@ class LocalDateExt {
      */
     static String format(final LocalDate self, final String format) {
         return self.format(DateTimeFormatter.ofPattern(format))
-    }
-    /**
-     * Converts a LocalTime to String using DateTimeFormatter
-     * @param self
-     * @param dateFormat
-     * @return
-     */
-    static String format(final LocalTime self, final String format) {
-        return self.format(DateTimeFormatter.ofPattern(format))
-    }
-    /**
-     * Converts a LocalDateTime to standard style:  "yyyy-MM-dd HH:mm:ss"
-     * @param self
-     * @return
-     */
-    static String getYMDHms(final LocalDateTime self, String separatorDate = '-', String separator = ' ', String separatorTime = ':') {
-        format(self, "yyyy${separatorDate}MM${separatorDate}dd${separator}HH${separatorTime}mm${separatorTime}ss")
-    }
-    /**
-     * Converts a LocalDateTime to standard style:  "yyyy-MM-dd HH:mm:ss.SSS"
-     * @param self
-     * @return
-     */
-    static String getYMDHmsS(final LocalDateTime self, String separatorDate = '-', String separator = ' ', String separatorTime = ':') {
-        format(self, "yyyy${separatorDate}MM${separatorDate}dd${separator}HH${separatorTime}mm${separatorTime}ss.SSS")
-    }
-    /**
-     * Converts a LocalDateTime to standard style:  "yyyy-MM-dd HH:mm"
-     * @param self
-     * @return
-     */
-    static String getYMDHm(final LocalDateTime self, String separatorDate = '-', String separator = ' ', String separatorTime = ':') {
-        format(self, "yyyy${separatorDate}MM${separatorDate}dd${separator}HH${separatorTime}mm")
     }
     /**
      * Converts a LocalDate to standard style:  "yyyy-MM-dd" without time
@@ -122,27 +64,31 @@ class LocalDateExt {
         format(self, "dd")
     }
     /**
-     * Converts a LocalTime to standard style:  "HH"
+     * Next day
      * @param self
      * @return
      */
-    static String getHH(final LocalTime self) {
-        format(self, "HH")
+    static LocalDate next(final LocalDate self) {
+        return self.plusDays(1)
     }
     /**
-     * Converts a LocalTime to standard style:  "HHmm"
+     * Previous day
      * @param self
      * @return
      */
-    static String getHHmm(final LocalTime self, String separator = ':') {
-        format(self, "HH${separator}mm")
+    static LocalDate previous(final LocalDate self) {
+        return self.minusDays(1)
     }
     /**
-     * Converts a LocalTime to standard style:  "HHmmss"
+     * Returns true if date is between two dates (inclusive or exclusive)
      * @param self
+     * @param from
+     * @param to
+     * @param inclusive (optional, default: true)
      * @return
      */
-    static String getHHmmss(final LocalTime self, String separator = ':') {
-        format(self, "HH${separator}mm${separator}ss")
+    static boolean isBetween(final LocalDate self, ChronoLocalDate from, ChronoLocalDate to, boolean inclusive = true) {
+        boolean equal = inclusive ? (self.isEqual(from) || self.isEqual(to)) : false
+        return (self.isAfter(from) && self.isBefore(to)) || equal
     }
 }

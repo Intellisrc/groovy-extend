@@ -45,6 +45,7 @@ currently supported: 2.5.x and 3.0.x branches.
 * `toDate` : Only used for external codes which still rely on Date
 * `toDateTime` : Convert to DateTime
 * `format` : use DateTimeFormatter in an easy way
+* `isBetween` : Check if date or time is between two other dates or times
 
 #### LocalDateTime only:
 * `YMDHms` : Return "yyyy-MM-dd HH:mm:ss"
@@ -59,6 +60,7 @@ currently supported: 2.5.x and 3.0.x branches.
 * `YY` : Return "yy"
 * `MM` : Return "MM"
 * `DD` : Return "dd"
+* `next()` and `previous()` : Allows to use it as range: (from..to)
 
 #### LocalTime only:
 * `HHmmss` : Return "HH:mm:ss"
