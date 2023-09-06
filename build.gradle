@@ -11,8 +11,8 @@ repositories {
     mavenCentral()
 }
 
-def groovyVer = '4.0.12'
-def libVersion = '11-DEBUG-SNAPSHOT'
+def groovyVer = '4.0.14'
+def libVersion = '12-SNAPSHOT'
 group groupName
 version "${groovyVer}.${libVersion}"
 boolean isDev = version.contains("SNAPSHOT")
