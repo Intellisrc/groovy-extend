@@ -29,6 +29,11 @@ currently supported: 2.5.x and 3.0.x branches.
 
 # Extensions
 
+## Objects
+
+* `toMap` : Export object as Map<String,Object>
+* `toSnakeMap` : Same as `toMap`, but with names in snake_case
+
 ## Date & Time
 
 `Date` class should no longer be used. Because of that, we extended `Date` class to make it easier to change it to `LocalDate` and `LocalDateTime`:
