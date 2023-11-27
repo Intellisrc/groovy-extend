@@ -2,11 +2,7 @@ package com.intellisrc.groovy
 
 import groovy.transform.CompileStatic
 
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.LocalTime
-import java.time.ZoneId
-import java.time.ZonedDateTime
+import java.time.*
 
 /**
  * Created by lepe on 17/02/20.

@@ -11,8 +11,8 @@ repositories {
     mavenCentral()
 }
 
-def groovyVer = '3.0.13'
-def libVersion = '10'
+def groovyVer = '4.0.15'
+def libVersion = '11'
 group groupName
 version "${groovyVer}.${libVersion}"
 boolean isDev = version.contains("SNAPSHOT")
@@ -20,10 +20,10 @@ boolean publishDev = ! version.contains("DEBUG")
 
 dependencies {
     // Use the latest Groovy version for building this library
-    compileOnly "org.codehaus.groovy:groovy-all:${groovyVer}"
+    compileOnly "org.apache.groovy:groovy:${groovyVer}"
 
     // Use the awesome Spock testing and specification framework even with Java
-    testImplementation 'org.spockframework:spock-core:2.3-groovy-3.0'
+    testImplementation 'org.spockframework:spock-core:2.4-M1-groovy-4.0'
     testImplementation 'junit:junit:4.13.2'
 }
 
@@ -104,7 +104,7 @@ signing {
     }
 }
 
-task generateModule {
+tasks.register('generateModule') {
     doLast {
         SourceSet main = sourceSets.main
         SourceDirectorySet groovy = main.groovy
@@ -113,7 +113,7 @@ task generateModule {
         groovy.toList().each {
             File g ->
                 String pkg = g.absolutePath.replaceAll(File.separator, '.') -
-                        groovy.srcDirs[0].toString().replaceAll(File.separator, '.')
+                    groovy.srcDirs[0].toString().replaceAll(File.separator, '.')
                 String clsName = pkg[1..pkg.lastIndexOf('.') - 1].toString()
                 if (clsName.contains('Static')) {
                     staticFiles << clsName

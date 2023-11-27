@@ -6,6 +6,7 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
+import java.time.temporal.ChronoUnit
 
 /**
  * @since 18/06/15.
@@ -17,16 +18,16 @@ class LocalDateExtTest extends Specification {
             LocalDateTime date = StringExt.toDateTime(sdate, "yyyy-MM-dd HH:mm:ss")
         expect:
             // These will normally be used as: LocalDateTime.now().YY
-            assert LocalDateExt.getYMDHms(date) == sdate
-            assert LocalDateExt.getYMDHm(date) == "2015-12-20 11:23"
-            assert LocalDateExt.getYMDHmsS(date) == "2015-12-20 11:23:54.000"
+            assert LocalDateTimeExt.getYMDHms(date) == sdate
+            assert LocalDateTimeExt.getYMDHm(date) == "2015-12-20 11:23"
+            assert LocalDateTimeExt.getYMDHmsS(date) == "2015-12-20 11:23:54.000"
             assert LocalDateExt.getYMD(date.toLocalDate()) == "2015-12-20"
             assert LocalDateExt.getYY(date.toLocalDate()) == "15"
             assert LocalDateExt.getMM(date.toLocalDate()) == "12"
             assert LocalDateExt.getDD(date.toLocalDate()) == "20"
-            assert LocalDateExt.getHH(date.toLocalTime()) == "11"
-            assert LocalDateExt.getHHmm(date.toLocalTime()) == "11:23"
-            assert LocalDateExt.getHHmmss(date.toLocalTime()) == "11:23:54"
+            assert LocalTimeExt.getHH(date.toLocalTime()) == "11"
+            assert LocalTimeExt.getHHmm(date.toLocalTime()) == "11:23"
+            assert LocalTimeExt.getHHmmss(date.toLocalTime()) == "11:23:54"
     }
     
     def "Converting from-to Date"() {
@@ -34,7 +35,7 @@ class LocalDateExtTest extends Specification {
             Date date = new Date()
             LocalDateTime local = DateExt.toLocalDateTime(date)
         expect:
-            assert LocalDateExt.toDate(local).toInstant().toEpochMilli() == date.toInstant().toEpochMilli()
+            assert LocalDateTimeExt.toDate(local).toInstant().toEpochMilli() == date.toInstant().toEpochMilli()
     }
     
     def "Test String conversion"() {
@@ -51,7 +52,7 @@ class LocalDateExtTest extends Specification {
         setup:
             def str = "2011-01-01"
         expect:
-            assert LocalDateExt.getYMDHms(LocalDateExt.toDateTime(StringExt.toDate(str))) == str.substring(0, 10) + " " + "00:00:00"
+            assert LocalDateTimeExt.getYMDHms(LocalDateExt.toDateTime(StringExt.toDate(str))) == str.substring(0, 10) + " " + "00:00:00"
     }
     
     def "Parse Date"() {
@@ -94,7 +95,7 @@ class LocalDateExtTest extends Specification {
             ]
         expect:
             dates.each {
-                assert LocalDateExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "00:00:00"
+                assert LocalDateTimeExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "00:00:00"
             }
     }
     
@@ -110,7 +111,7 @@ class LocalDateExtTest extends Specification {
             ]
         expect:
             datehours.each {
-                assert LocalDateExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "10:30:00"
+                assert LocalDateTimeExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "10:30:00"
             }
     }
     
@@ -124,12 +125,32 @@ class LocalDateExtTest extends Specification {
             ]
         expect:
             datesecs.each {
-                assert LocalDateExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "10:30:15"
+                assert LocalDateTimeExt.getYMDHms(StringExt.toDateTime(it)) == it.substring(0, 10) + " " + "10:30:15"
             }
     }
     
     def "Get millis from LocalDateTime"() {
         expect:
-            assert Math.abs(System.currentTimeMillis() - LocalDateExt.toMillis(LocalDateTime.now())) < 1000
+            assert Math.abs(System.currentTimeMillis() - LocalDateTimeExt.toMillis(LocalDateTime.now())) < 1000
+    }
+
+    def "Using LocalDate in ranges"() {
+        setup:
+            LocalDate start = StringExt.toDate("2001-02-20")
+            LocalDate finish = StringExt.toDate("2001-03-05")
+        expect:
+            /* This is the way to use it:
+            (start..finish).each {
+                LocalDate it ->
+                    println LocalDateExt.getYMD(it, "-")
+                    assert LocalDateExt.isBetween(it, start, finish)
+            }
+             */
+            LocalDate it = StringExt.toDate(LocalDateExt.getYMD(start, "-"))
+            while(it.isBefore(finish)) {
+                println LocalDateExt.getYMD(it, "-")
+                assert LocalDateExt.isBetween(it, start, finish)
+                it = LocalDateExt.next(it)
+            }
     }
 }
