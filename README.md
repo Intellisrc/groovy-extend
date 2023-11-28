@@ -20,10 +20,9 @@ dependecies {
     implementation group: 'com.intellisrc', name: 'groovy-extend', version: 'VERSION'
 }
 ```
-In which `VERSION` is this package version, for example: `3.0.10.9`. 
-The first 3 digits (3.0.10) are the recommended Groovy version (as is the version
-used to compile this package). You can use the groovy version that fits your needs, 
-currently supported: 2.5.x and 3.0.x branches.
+In which `VERSION` is this package version, for example: `4.0.15.11`. 
+The first 3 numbers (4.0.15) are Groovy version used to compile this package. 
+You can use the groovy version that fits your needs.
 
 **NOTE**: Don't forget to add your groovy dependency.
 
