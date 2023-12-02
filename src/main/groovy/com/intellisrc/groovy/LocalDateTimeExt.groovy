@@ -3,6 +3,7 @@ package com.intellisrc.groovy
 import groovy.transform.CompileStatic
 
 import java.time.LocalDateTime
+import java.time.LocalTime
 import java.time.ZoneId
 import java.time.chrono.ChronoLocalDateTime
 import java.time.format.DateTimeFormatter
@@ -73,5 +74,13 @@ class LocalDateTimeExt {
     static boolean isBetween(final LocalDateTime self, ChronoLocalDateTime from, ChronoLocalDateTime to, boolean inclusive = true) {
         boolean equal = inclusive ? (self.isEqual(from) || self.isEqual(to)) : false
         return (self.isAfter(from) && self.isBefore(to)) || equal
+    }
+    /**
+     * Return LocalDateTime at midnight
+     * @param self
+     * @return
+     */
+    static LocalDateTime clearTime(final LocalDateTime self) {
+        return LocalDateTime.of(self.toLocalDate(), LocalTime.MIDNIGHT)
     }
 }

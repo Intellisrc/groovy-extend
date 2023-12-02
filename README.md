@@ -59,6 +59,7 @@ currently supported: 2.5.x and 3.0.x branches.
 * `YMDHm` : Return "yyyy-MM-dd HH:mm"
 * `toMillis` : Return epoch milliseconds (long)
 * `fromMillis` : (static) Convert epoch milliseconds into LocalDateTime
+* `clearTime` : Return a LocalDateTime with 00:00:00.000 time
 
 #### LocalDate only:
 * `YMD` : Return "yyyy-MM-dd"
