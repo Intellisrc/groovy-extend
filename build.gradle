@@ -12,7 +12,7 @@ repositories {
 }
 
 def groovyVer = '4.0.20'
-def libVersion = '13-SNAPSHOT'
+def libVersion = '13'
 group groupName
 version "${groovyVer}.${libVersion}"
 boolean isDev = version.contains("SNAPSHOT")
