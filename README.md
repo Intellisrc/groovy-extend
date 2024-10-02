@@ -20,8 +20,8 @@ dependecies {
     implementation group: 'com.intellisrc', name: 'groovy-extend', version: 'VERSION'
 }
 ```
-In which `VERSION` is this package version, for example: `4.0.15.11`. 
-The first 3 numbers (4.0.15) are Groovy version used to compile this package. 
+In which `VERSION` is this package version, for example: `4.0.23.14`. 
+The first 3 numbers (4.0.23) are Groovy version used to compile this package. 
 You can use the groovy version that fits your needs.
 
 **NOTE**: Don't forget to add your groovy dependency.
@@ -37,25 +37,34 @@ You can use the groovy version that fits your needs.
 * `toLocalDateTime`
 * `toLocalDate`
 * `toLocalTime`
+* `toZonedDateTime`
 
-### LocalDate / LocalDateTime / LocalTime Methods
+### LocalDate / LocalDateTime / LocalTime / ZonedDateTime Methods
 
 * `toDate` : Only used for external codes which still rely on Date
 * `toDateTime` : Convert to DateTime
 * `format` : use DateTimeFormatter in an easy way
 * `isBetween` : Check if date or time is between two other dates or times
+* `atStartOfDay` : Added to LocalDate as well
+* `atEndOfDay` : get the last nanosecond of the day
 
-#### LocalDateTime only:
+#### LocalDateTime / ZonedDateTime
 * `YMDHms` : Return "yyyy-MM-dd HH:mm:ss"
 * `getYMDHms("","")` : Return "yyyyMMddHHmmss"
 * `YMDHmsS` : Return "yyyy-MM-dd HH:mm:ss.SSS"
 * `YMDHm` : Return "yyyy-MM-dd HH:mm"
 * `toMillis` : Return epoch milliseconds (long)
 * `fromMillis` : (static) Convert epoch milliseconds into LocalDateTime
+* `toSeconds` : Return epoch seconds (long)
+* `fromSeconds` : (static) Convert epoch seconds into LocalDateTime
+
+#### LocalDateTime only:
 * `clearTime` : Return a LocalDateTime with 00:00:00.000 time
 
-#### LocalDate only:
+#### LocalDate / ZonedDateTime:
 * `YMD` : Return "yyyy-MM-dd"
+
+#### LocalDate only:
 * `YY` : Return "yy"
 * `MM` : Return "MM"
 * `DD` : Return "dd"
@@ -141,6 +150,11 @@ Extends String methods that are commonly used and easiest ways to convert them.
 * `toCamelCase` : Returns a string as CamelCaseFormattedString
 * `toDotCase`   : Returns a string as dot.case.formatted.string
 * `toKebabCase` : Returns a string as Kebab-Case-Formatted-String
+
+#### BigDecimal
+
+* `ceil`
+* `floor`
 
 ## Other
 
