@@ -29,6 +29,18 @@ class LocalDateExtTest extends Specification {
             assert LocalTimeExt.getHHmm(date.toLocalTime()) == "11:23"
             assert LocalTimeExt.getHHmmss(date.toLocalTime()) == "11:23:54"
     }
+
+    def "LocalTime.isBetween"() {
+        setup:
+            LocalTime time = StringExt.toTime("12:34:56")
+            LocalTime min = StringExt.toTime("12:30:00")
+            LocalTime max = StringExt.toTime("12:40:00")
+            LocalTime noMin = StringExt.toTime("18:30:00")
+            LocalTime noMax = StringExt.toTime("18:40:00")
+        expect:
+            assert LocalTimeExt.isBetween(time, min, max)
+            assert ! LocalTimeExt.isBetween(time, noMin, noMax)
+    }
     
     def "Converting from-to Date"() {
         setup:
@@ -129,9 +141,10 @@ class LocalDateExtTest extends Specification {
             }
     }
     
-    def "Get millis from LocalDateTime"() {
+    def "Get millis/seconds from LocalDateTime"() {
         expect:
             assert Math.abs(System.currentTimeMillis() - LocalDateTimeExt.toMillis(LocalDateTime.now())) < 1000
+            assert Math.abs(System.currentTimeSeconds() - LocalDateTimeExt.toSeconds(LocalDateTime.now())) < 2
     }
 
     def "Using LocalDate in ranges"() {
@@ -152,5 +165,12 @@ class LocalDateExtTest extends Specification {
                 assert LocalDateExt.isBetween(it, start, finish)
                 it = LocalDateExt.next(it)
             }
+    }
+
+    def "End of date"() {
+        setup:
+            LocalDateTime date = StringExt.toDateTime("2020-02-02 22:12:21")
+        expect:
+            assert LocalDateExt.atEndOfDay(date.toLocalDate()) == LocalDateTimeExt.atEndOfDay(date)
     }
 }

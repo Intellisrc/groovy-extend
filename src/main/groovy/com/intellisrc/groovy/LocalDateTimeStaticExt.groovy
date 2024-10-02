@@ -3,17 +3,17 @@ package com.intellisrc.groovy
 import groovy.transform.CompileStatic
 
 import java.time.Instant
+import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.ZoneId
-import java.time.ZonedDateTime
 
 /**
  * @since 2019/10/07.
  */
 @CompileStatic
-class MillisToDateTimeStaticExt {
+class LocalDateTimeStaticExt {
     /**
-     * Convert millis to LocalDateTime with default Zone
+     * Convert millis to LocalDateTime with Zone (optional)
      * @param millis
      * @return
      */
@@ -21,11 +21,13 @@ class MillisToDateTimeStaticExt {
         return LocalDateTime.ofInstant(Instant.ofEpochMilli(millis), zoneId)
     }
     /**
-     * Convert millis to ZonedDateTime with default Zone
-     * @param millis
+     * Convert seconds to LocalDateTime with Zone (optional)
+     * @param self
+     * @param seconds
+     * @param zoneId
      * @return
      */
-    static ZonedDateTime fromMillis(final ZonedDateTime self, long millis, ZoneId zoneId = ZoneId.systemDefault()) {
-        return ZonedDateTime.ofInstant(Instant.ofEpochMilli(millis), zoneId)
+    static LocalDateTime fromSeconds(final LocalDateTime self, long seconds, ZoneId zoneId = ZoneId.systemDefault()) {
+        return LocalDateTime.ofInstant(Instant.ofEpochSecond(seconds), zoneId)
     }
 }

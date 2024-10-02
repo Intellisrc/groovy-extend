@@ -17,24 +17,6 @@ class LocalDateStaticExt {
      * @param millis
      * @return
      */
-    static LocalDateTime fromMillis(final LocalDateTime self, long millis, ZoneId zoneId = ZoneId.systemDefault()) {
-        return LocalDateTime.ofInstant(Instant.ofEpochMilli(millis), zoneId)
-    }
-    /**
-     * Convert seconds to LocalDateTime with Zone (optional)
-     * @param self
-     * @param seconds
-     * @param zoneId
-     * @return
-     */
-    static LocalDateTime fromSeconds(final LocalDateTime self, long seconds, ZoneId zoneId = ZoneId.systemDefault()) {
-        return LocalDateTime.ofInstant(Instant.ofEpochSecond(seconds), zoneId)
-    }
-    /**
-     * Convert millis to LocalDateTime with Zone (optional)
-     * @param millis
-     * @return
-     */
     static LocalDate fromMillis(final LocalDate self, long millis, ZoneId zoneId = ZoneId.systemDefault()) {
         return LocalDateTime.ofInstant(Instant.ofEpochMilli(millis), zoneId).toLocalDate()
     }

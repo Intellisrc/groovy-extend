@@ -2,9 +2,11 @@ package com.intellisrc.groovy
 
 import groovy.transform.CompileStatic
 
+import java.time.Instant
 import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.ZoneId
+import java.time.ZonedDateTime
 import java.time.chrono.ChronoLocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -29,6 +31,14 @@ class LocalDateTimeExt {
      */
     static long toMillis(final LocalDateTime self, ZoneId zoneId = ZoneId.systemDefault()) {
         return self.atZone(zoneId).toInstant().toEpochMilli()
+    }
+    /**
+     * Convert LocalDateTime to seconds
+     * @param self
+     * @return
+     */
+    static long toSeconds(final LocalDateTime self, ZoneId zoneId = ZoneId.systemDefault()) {
+        return (self.atZone(zoneId).toInstant().toEpochMilli() / 1000d).round() as long
     }
     /**
      * Converts a LocalDateTime to String using DateTimeFormatter
@@ -82,5 +92,21 @@ class LocalDateTimeExt {
      */
     static LocalDateTime clearTime(final LocalDateTime self) {
         return LocalDateTime.of(self.toLocalDate(), LocalTime.MIDNIGHT)
+    }
+    /**
+     * Shortcut to LocalDate.atStartOfDay
+     * @param self
+     * @return
+     */
+    static LocalDateTime atStartOfDay(final LocalDateTime self) {
+        return self.toLocalDate().atStartOfDay()
+    }
+    /**
+     * Shortcut to LocalDate.atEndOfDay
+     * @param self
+     * @return
+     */
+    static LocalDateTime atEndOfDay(final LocalDateTime self) {
+        return LocalDateExt.atEndOfDay(self.toLocalDate())
     }
 }

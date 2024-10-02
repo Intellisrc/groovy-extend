@@ -99,7 +99,7 @@ class LocalDateExt {
      * @return
      */
     static LocalDateTime atEndOfDay(final LocalDate self) {
-        return (self.atTime(23,59,59,999999999))
+        return LocalDateTime.of(self, LocalTime.MAX)
     }
     /**
      * Return the last DateTime of a date using a specific zone id
@@ -108,6 +108,6 @@ class LocalDateExt {
      * @return
      */
     static ZonedDateTime atEndOfDay(final LocalDate self, ZoneId zoneId) {
-        return (self.atTime(23,59,59,999999999)).atZone(zoneId)
+        return LocalDateTime.of(self, LocalTime.MAX).atZone(zoneId)
     }
 }
