@@ -2,9 +2,7 @@ package com.intellisrc.groovy
 
 import groovy.transform.CompileStatic
 
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.LocalTime
+import java.time.*
 import java.time.chrono.ChronoLocalDate
 import java.time.format.DateTimeFormatter
 
@@ -90,5 +88,22 @@ class LocalDateExt {
     static boolean isBetween(final LocalDate self, ChronoLocalDate from, ChronoLocalDate to, boolean inclusive = true) {
         boolean equal = inclusive ? (self.isEqual(from) || self.isEqual(to)) : false
         return (self.isAfter(from) && self.isBefore(to)) || equal
+    }
+    /**
+     * Return the last LocalDateTime of that date
+     * @param self
+     * @return
+     */
+    static LocalDateTime atEndOfDay(final LocalDate self) {
+        return LocalDateTime.of(self, LocalTime.MAX)
+    }
+    /**
+     * Return the last DateTime of a date using a specific zone id
+     * @param self
+     * @param zoneId
+     * @return
+     */
+    static ZonedDateTime atEndOfDay(final LocalDate self, ZoneId zoneId) {
+        return LocalDateTime.of(self, LocalTime.MAX).atZone(zoneId)
     }
 }

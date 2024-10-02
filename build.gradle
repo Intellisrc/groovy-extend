@@ -11,8 +11,8 @@ repositories {
     mavenCentral()
 }
 
-def groovyVer = '4.0.15'
-def libVersion = '11'
+def groovyVer = '4.0.23'
+def libVersion = '14'
 group groupName
 version "${groovyVer}.${libVersion}"
 boolean isDev = version.contains("SNAPSHOT")
@@ -23,8 +23,7 @@ dependencies {
     compileOnly "org.apache.groovy:groovy:${groovyVer}"
 
     // Use the awesome Spock testing and specification framework even with Java
-    testImplementation 'org.spockframework:spock-core:2.4-M1-groovy-4.0'
-    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.spockframework:spock-core:2.4-M4-groovy-4.0'
 }
 
 java {
@@ -37,8 +36,8 @@ java {
 publishing {
     repositories {
         maven {
-            def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
-            def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
+            def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2"
+            def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots"
             url = isDev ? snapshotsRepoUrl : releasesRepoUrl
             credentials {
                 username = ossrhUsername
