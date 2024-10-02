@@ -34,7 +34,6 @@ You can use the groovy version that fits your needs.
 
 ### Date Methods
 
-* `toZonedDateTime` : Using timezone
 * `toLocalDateTime`
 * `toLocalDate`
 * `toLocalTime`
