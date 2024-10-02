@@ -169,6 +169,18 @@ extends java.lang.Object</pre>
                         <tr class="altColor">
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>static&nbsp;java.time.LocalDateTime</code></td>
+                            <td class="colLast"><code><strong><a href="#atEndOfDay(java.time.LocalDateTime)">atEndOfDay</a></strong>(java.time.LocalDateTime self)</code><br>Shortcut to LocalDate.atEndOfDay</td>
+                        </tr>
+                        
+                        <tr class="rowColor">
+                            <td class="colFirst"><code></code></td>
+                            <td class="colLast"><code>static&nbsp;java.time.LocalDateTime</code></td>
+                            <td class="colLast"><code><strong><a href="#atStartOfDay(java.time.LocalDateTime)">atStartOfDay</a></strong>(java.time.LocalDateTime self)</code><br>Shortcut to LocalDate.atStartOfDay</td>
+                        </tr>
+                        
+                        <tr class="altColor">
+                            <td class="colFirst"><code></code></td>
+                            <td class="colLast"><code>static&nbsp;java.time.LocalDateTime</code></td>
                             <td class="colLast"><code><strong><a href="#clearTime(java.time.LocalDateTime)">clearTime</a></strong>(java.time.LocalDateTime self)</code><br>Return LocalDateTime at midnight</td>
                         </tr>
                         
@@ -212,6 +224,12 @@ extends java.lang.Object</pre>
                             <td class="colFirst"><code></code></td>
                             <td class="colLast"><code>static&nbsp;long</code></td>
                             <td class="colLast"><code><strong><a href="#toMillis(java.time.LocalDateTime, java.time.ZoneId)">toMillis</a></strong>(java.time.LocalDateTime self, java.time.ZoneId zoneId)</code><br>Convert LocalDateTime to millis</td>
+                        </tr>
+                        
+                        <tr class="altColor">
+                            <td class="colFirst"><code></code></td>
+                            <td class="colLast"><code>static&nbsp;long</code></td>
+                            <td class="colLast"><code><strong><a href="#toSeconds(java.time.LocalDateTime, java.time.ZoneId)">toSeconds</a></strong>(java.time.LocalDateTime self, java.time.ZoneId zoneId)</code><br>Convert LocalDateTime to seconds</td>
                         </tr>
                         
                     </table>
@@ -282,6 +300,24 @@ extends java.lang.Object</pre>
                 </a>
                     <h3>Method Detail</h3>
                     
+                        <a name="atEndOfDay(java.time.LocalDateTime)"><!-- --></a>
+                        <ul class="blockListLast">
+                            <li class="blockList">
+                                <h4>static&nbsp;java.time.LocalDateTime <strong>atEndOfDay</strong>(java.time.LocalDateTime self)</h4>
+                                <p> Shortcut to LocalDate.atEndOfDay
+ @return <DL><DT><B>Parameters:</B></DT><DD>self</DD></DL></p>
+                            </li>
+                        </ul>
+                    
+                        <a name="atStartOfDay(java.time.LocalDateTime)"><!-- --></a>
+                        <ul class="blockListLast">
+                            <li class="blockList">
+                                <h4>static&nbsp;java.time.LocalDateTime <strong>atStartOfDay</strong>(java.time.LocalDateTime self)</h4>
+                                <p> Shortcut to LocalDate.atStartOfDay
+ @return <DL><DT><B>Parameters:</B></DT><DD>self</DD></DL></p>
+                            </li>
+                        </ul>
+                    
                         <a name="clearTime(java.time.LocalDateTime)"><!-- --></a>
                         <ul class="blockListLast">
                             <li class="blockList">
@@ -350,6 +386,15 @@ extends java.lang.Object</pre>
                             <li class="blockList">
                                 <h4>static&nbsp;long <strong>toMillis</strong>(java.time.LocalDateTime self, java.time.ZoneId zoneId)</h4>
                                 <p> Convert LocalDateTime to millis
+ @return <DL><DT><B>Parameters:</B></DT><DD>self</DD></DL></p>
+                            </li>
+                        </ul>
+                    
+                        <a name="toSeconds(java.time.LocalDateTime, java.time.ZoneId)"><!-- --></a>
+                        <ul class="blockListLast">
+                            <li class="blockList">
+                                <h4>static&nbsp;long <strong>toSeconds</strong>(java.time.LocalDateTime self, java.time.ZoneId zoneId)</h4>
+                                <p> Convert LocalDateTime to seconds
  @return <DL><DT><B>Parameters:</B></DT><DD>self</DD></DL></p>
                             </li>
                         </ul>

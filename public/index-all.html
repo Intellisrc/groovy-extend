@@ -139,6 +139,14 @@ if (location.href.indexOf('is-external=true') == -1) {
 </dt><dd> <div class="block">Appends a random number to a String</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateExt.html#atEndOfDay(java.time.LocalDate, java.time.ZoneId)" title="Method in LocalDateExt">atEndOfDay(java.time.LocalDate, java.time.ZoneId)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateExt.html">LocalDateExt</a>
 </dt><dd> <div class="block">Return the last DateTime of a date using a specific zone id</div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateTimeExt.html#atEndOfDay(java.time.LocalDateTime)" title="Method in LocalDateTimeExt">atEndOfDay(java.time.LocalDateTime)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateTimeExt.html">LocalDateTimeExt</a>
+</dt><dd> <div class="block">Shortcut to LocalDate.atEndOfDay</div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeExt.html#atEndOfDay(java.time.ZonedDateTime)" title="Method in ZonedDateTimeExt">atEndOfDay(java.time.ZonedDateTime)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateTimeExt.html">ZonedDateTimeExt</a>
+</dt><dd> <div class="block">Reset ZonedDateTime time to the end of day</div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateTimeExt.html#atStartOfDay(java.time.LocalDateTime)" title="Method in LocalDateTimeExt">atStartOfDay(java.time.LocalDateTime)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateTimeExt.html">LocalDateTimeExt</a>
+</dt><dd> <div class="block">Shortcut to LocalDate.atStartOfDay</div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeExt.html#atStartOfDay(java.time.ZonedDateTime)" title="Method in ZonedDateTimeExt">atStartOfDay(java.time.ZonedDateTime)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateTimeExt.html">ZonedDateTimeExt</a>
+</dt><dd> <div class="block">Reset ZonedDateTime time to the beginning of day</div></dd>
 </dl>
 
     
@@ -250,13 +258,19 @@ if (location.href.indexOf('is-external=true') == -1) {
 </dt><dd> <div class="block">Converts a LocalDateTime to String using DateTimeFormatter</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalTimeExt.html#format(java.time.LocalTime, java.lang.String)" title="Method in LocalTimeExt">format(java.time.LocalTime, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/LocalTimeExt.html">LocalTimeExt</a>
 </dt><dd> <div class="block">Converts a LocalTime to String using DateTimeFormatter</div></dd>
-<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateExt.html#format(java.time.ZonedDateTime, java.lang.String)" title="Method in ZonedDateExt">format(java.time.ZonedDateTime, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateExt.html">ZonedDateExt</a>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeExt.html#format(java.time.ZonedDateTime, java.lang.String)" title="Method in ZonedDateTimeExt">format(java.time.ZonedDateTime, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateTimeExt.html">ZonedDateTimeExt</a>
 </dt><dd> <div class="block">Converts a ZonedDateTime to String using DateTimeFormatter</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateStaticExt.html#fromMillis(java.time.LocalDate, long, java.time.ZoneId)" title="Method in LocalDateStaticExt">fromMillis(java.time.LocalDate, long, java.time.ZoneId)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateStaticExt.html">LocalDateStaticExt</a>
 </dt><dd> <div class="block">Convert millis to LocalDateTime with Zone (optional)</div></dd>
-<dt><span class="strong"><a href="com/intellisrc/groovy/MillisToDateTimeStaticExt.html#fromMillis(java.time.ZonedDateTime, long, java.time.ZoneId)" title="Method in MillisToDateTimeStaticExt">fromMillis(java.time.ZonedDateTime, long, java.time.ZoneId)</a></span> - Method in <a href="com/intellisrc/groovy/MillisToDateTimeStaticExt.html">MillisToDateTimeStaticExt</a>
+<dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateTimeStaticExt.html#fromMillis(java.time.LocalDateTime, long, java.time.ZoneId)" title="Method in LocalDateTimeStaticExt">fromMillis(java.time.LocalDateTime, long, java.time.ZoneId)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateTimeStaticExt.html">LocalDateTimeStaticExt</a>
+</dt><dd> <div class="block">Convert millis to LocalDateTime with Zone (optional)</div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeStaticExt.html#fromMillis(java.time.ZonedDateTime, long, java.time.ZoneId)" title="Method in ZonedDateTimeStaticExt">fromMillis(java.time.ZonedDateTime, long, java.time.ZoneId)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateTimeStaticExt.html">ZonedDateTimeStaticExt</a>
 </dt><dd> <div class="block">Convert millis to ZonedDateTime with default Zone</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateStaticExt.html#fromSeconds(java.time.LocalDate, long, java.time.ZoneId)" title="Method in LocalDateStaticExt">fromSeconds(java.time.LocalDate, long, java.time.ZoneId)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateStaticExt.html">LocalDateStaticExt</a>
+</dt><dd> <div class="block">Convert seconds to LocalDateTime with Zone (optional)</div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateTimeStaticExt.html#fromSeconds(java.time.LocalDateTime, long, java.time.ZoneId)" title="Method in LocalDateTimeStaticExt">fromSeconds(java.time.LocalDateTime, long, java.time.ZoneId)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateTimeStaticExt.html">LocalDateTimeStaticExt</a>
+</dt><dd> <div class="block">Convert seconds to LocalDateTime with Zone (optional)</div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeStaticExt.html#fromSeconds(java.time.ZonedDateTime, long, java.time.ZoneId)" title="Method in ZonedDateTimeStaticExt">fromSeconds(java.time.ZonedDateTime, long, java.time.ZoneId)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateTimeStaticExt.html">ZonedDateTimeStaticExt</a>
 </dt><dd> <div class="block">Convert seconds to LocalDateTime with Zone (optional)</div></dd>
 </dl>
 
@@ -297,17 +311,19 @@ if (location.href.indexOf('is-external=true') == -1) {
  @return</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateExt.html#getYMD(java.time.LocalDate, java.lang.String)" title="Method in LocalDateExt">getYMD(java.time.LocalDate, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateExt.html">LocalDateExt</a>
 </dt><dd> <div class="block">Converts a LocalDate to standard style:  "yyyy-MM-dd" without time</div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeExt.html#getYMD(java.time.ZonedDateTime, java.lang.String)" title="Method in ZonedDateTimeExt">getYMD(java.time.ZonedDateTime, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateTimeExt.html">ZonedDateTimeExt</a>
+</dt><dd> <div class="block">Converts a ZonedDateTime to standard style:  "yyyy-MM-dd HH:mm:ss"</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateTimeExt.html#getYMDHm(java.time.LocalDateTime, java.lang.String, java.lang.String, java.lang.String)" title="Method in LocalDateTimeExt">getYMDHm(java.time.LocalDateTime, java.lang.String, java.lang.String, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateTimeExt.html">LocalDateTimeExt</a>
 </dt><dd> <div class="block">Converts a LocalDateTime to standard style:  "yyyy-MM-dd HH:mm"</div></dd>
-<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateExt.html#getYMDHm(java.time.ZonedDateTime, java.lang.String, java.lang.String, java.lang.String)" title="Method in ZonedDateExt">getYMDHm(java.time.ZonedDateTime, java.lang.String, java.lang.String, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateExt.html">ZonedDateExt</a>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeExt.html#getYMDHm(java.time.ZonedDateTime, java.lang.String, java.lang.String, java.lang.String)" title="Method in ZonedDateTimeExt">getYMDHm(java.time.ZonedDateTime, java.lang.String, java.lang.String, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateTimeExt.html">ZonedDateTimeExt</a>
 </dt><dd> <div class="block">Converts a ZonedDateTime to standard style:  "yyyy-MM-dd HH:mm"</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateTimeExt.html#getYMDHms(java.time.LocalDateTime, java.lang.String, java.lang.String, java.lang.String)" title="Method in LocalDateTimeExt">getYMDHms(java.time.LocalDateTime, java.lang.String, java.lang.String, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateTimeExt.html">LocalDateTimeExt</a>
 </dt><dd> <div class="block">Converts a LocalDateTime to standard style:  "yyyy-MM-dd HH:mm:ss"</div></dd>
-<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateExt.html#getYMDHms(java.time.ZonedDateTime, java.lang.String, java.lang.String, java.lang.String)" title="Method in ZonedDateExt">getYMDHms(java.time.ZonedDateTime, java.lang.String, java.lang.String, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateExt.html">ZonedDateExt</a>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeExt.html#getYMDHms(java.time.ZonedDateTime, java.lang.String, java.lang.String, java.lang.String)" title="Method in ZonedDateTimeExt">getYMDHms(java.time.ZonedDateTime, java.lang.String, java.lang.String, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateTimeExt.html">ZonedDateTimeExt</a>
 </dt><dd> <div class="block">Converts a ZonedDateTime to standard style:  "yyyy-MM-dd HH:mm:ss"</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateTimeExt.html#getYMDHmsS(java.time.LocalDateTime, java.lang.String, java.lang.String, java.lang.String)" title="Method in LocalDateTimeExt">getYMDHmsS(java.time.LocalDateTime, java.lang.String, java.lang.String, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateTimeExt.html">LocalDateTimeExt</a>
 </dt><dd> <div class="block">Converts a LocalDateTime to standard style:  "yyyy-MM-dd HH:mm:ss.SSS"</div></dd>
-<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateExt.html#getYMDHmsS(java.time.ZonedDateTime, java.lang.String, java.lang.String, java.lang.String)" title="Method in ZonedDateExt">getYMDHmsS(java.time.ZonedDateTime, java.lang.String, java.lang.String, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateExt.html">ZonedDateExt</a>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeExt.html#getYMDHmsS(java.time.ZonedDateTime, java.lang.String, java.lang.String, java.lang.String)" title="Method in ZonedDateTimeExt">getYMDHmsS(java.time.ZonedDateTime, java.lang.String, java.lang.String, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateTimeExt.html">ZonedDateTimeExt</a>
 </dt><dd> <div class="block">Converts a ZonedDateTime to standard style:  "yyyy-MM-dd HH:mm:ss.SSS"</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateExt.html#getYY(java.time.LocalDate)" title="Method in LocalDateExt">getYY(java.time.LocalDate)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateExt.html">LocalDateExt</a>
 </dt><dd> <div class="block">Converts a LocalDate to standard style:  "yy" without time</div></dd>
@@ -340,7 +356,7 @@ if (location.href.indexOf('is-external=true') == -1) {
 </dt><dd> <div class="block">Returns true if date is between two datetimes (inclusive or exclusive)</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalTimeExt.html#isBetween(java.time.LocalTime, java.time.LocalTime, java.time.LocalTime, boolean)" title="Method in LocalTimeExt">isBetween(java.time.LocalTime, java.time.LocalTime, java.time.LocalTime, boolean)</a></span> - Method in <a href="com/intellisrc/groovy/LocalTimeExt.html">LocalTimeExt</a>
 </dt><dd> <div class="block">Returns true if date is between two times (inclusive or exclusive)</div></dd>
-<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateExt.html#isBetween(java.time.ZonedDateTime, java.time.chrono.ChronoZonedDateTime, java.time.chrono.ChronoZonedDateTime, boolean)" title="Method in ZonedDateExt">isBetween(java.time.ZonedDateTime, java.time.chrono.ChronoZonedDateTime, java.time.chrono.ChronoZonedDateTime, boolean)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateExt.html">ZonedDateExt</a>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeExt.html#isBetween(java.time.ZonedDateTime, java.time.chrono.ChronoZonedDateTime, java.time.chrono.ChronoZonedDateTime, boolean)" title="Method in ZonedDateTimeExt">isBetween(java.time.ZonedDateTime, java.time.chrono.ChronoZonedDateTime, java.time.chrono.ChronoZonedDateTime, boolean)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateTimeExt.html">ZonedDateTimeExt</a>
 </dt><dd> <div class="block">Returns true if date is between two zoneddatetimes (inclusive or exclusive)</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/FileExt.html#isEmpty(java.io.File)" title="Method in FileExt">isEmpty(java.io.File)</a></span> - Method in <a href="com/intellisrc/groovy/FileExt.html">FileExt</a>
 </dt><dd> <div class="block">Add shortcut to test if file is empty</div></dd>
@@ -393,6 +409,10 @@ if (location.href.indexOf('is-external=true') == -1) {
 </dt><dd><div class="block">Extensions to LocalDateTime</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateTimeExt.html#LocalDateTimeExt()" title="Constructor in LocalDateTimeExt">LocalDateTimeExt()</a></span> - Constructor in <a href="com/intellisrc/groovy/LocalDateTimeExt.html">LocalDateTimeExt</a>
 </dt><dd> <div class="block"></div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateTimeStaticExt.html" title="Class in com.intellisrc.groovy">LocalDateTimeStaticExt</a></span> - Class in <a href="./com/intellisrc/groovy/package-summary.html">com.intellisrc.groovy</a>
+</dt><dd><div class="block"> <DL><DT><B>Since:</B></DT><DD>2019/10/07.</DD></DL></div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateTimeStaticExt.html#LocalDateTimeStaticExt()" title="Constructor in LocalDateTimeStaticExt">LocalDateTimeStaticExt()</a></span> - Constructor in <a href="com/intellisrc/groovy/LocalDateTimeStaticExt.html">LocalDateTimeStaticExt</a>
+</dt><dd> <div class="block"></div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalTimeExt.html" title="Class in com.intellisrc.groovy">LocalTimeExt</a></span> - Class in <a href="./com/intellisrc/groovy/package-summary.html">com.intellisrc.groovy</a>
 </dt><dd><div class="block">Extensions to LocalTime</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalTimeExt.html#LocalTimeExt()" title="Constructor in LocalTimeExt">LocalTimeExt()</a></span> - Constructor in <a href="com/intellisrc/groovy/LocalTimeExt.html">LocalTimeExt</a>
@@ -407,10 +427,6 @@ if (location.href.indexOf('is-external=true') == -1) {
 <dt><span class="strong"><a href="com/intellisrc/groovy/MapExt.html" title="Class in com.intellisrc.groovy">MapExt</a></span> - Class in <a href="./com/intellisrc/groovy/package-summary.html">com.intellisrc.groovy</a>
 </dt><dd><div class="block"> <DL><DT><B>Since:</B></DT><DD>17/11/29.</DD></DL></div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/MapExt.html#MapExt()" title="Constructor in MapExt">MapExt()</a></span> - Constructor in <a href="com/intellisrc/groovy/MapExt.html">MapExt</a>
-</dt><dd> <div class="block"></div></dd>
-<dt><span class="strong"><a href="com/intellisrc/groovy/MillisToDateTimeStaticExt.html" title="Class in com.intellisrc.groovy">MillisToDateTimeStaticExt</a></span> - Class in <a href="./com/intellisrc/groovy/package-summary.html">com.intellisrc.groovy</a>
-</dt><dd><div class="block"> <DL><DT><B>Since:</B></DT><DD>2019/10/07.</DD></DL></div></dd>
-<dt><span class="strong"><a href="com/intellisrc/groovy/MillisToDateTimeStaticExt.html#MillisToDateTimeStaticExt()" title="Constructor in MillisToDateTimeStaticExt">MillisToDateTimeStaticExt()</a></span> - Constructor in <a href="com/intellisrc/groovy/MillisToDateTimeStaticExt.html">MillisToDateTimeStaticExt</a>
 </dt><dd> <div class="block"></div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/FileExt.html#moveTo(java.io.File, java.io.File)" title="Method in FileExt">moveTo(java.io.File, java.io.File)</a></span> - Method in <a href="com/intellisrc/groovy/FileExt.html">FileExt</a>
 </dt><dd> <div class="block">Move a file</div></dd>
@@ -544,9 +560,15 @@ if (location.href.indexOf('is-external=true') == -1) {
 </dt><dd> <div class="block">Convert a Date to LocalDateTime</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateTimeExt.html#toMillis(java.time.LocalDateTime, java.time.ZoneId)" title="Method in LocalDateTimeExt">toMillis(java.time.LocalDateTime, java.time.ZoneId)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateTimeExt.html">LocalDateTimeExt</a>
 </dt><dd> <div class="block">Convert LocalDateTime to millis</div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeExt.html#toMillis(java.time.ZonedDateTime)" title="Method in ZonedDateTimeExt">toMillis(java.time.ZonedDateTime)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateTimeExt.html">ZonedDateTimeExt</a>
+</dt><dd> <div class="block">Convert ZonedDateTime to millis</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/MapExt.html#toQueryString(java.util.Map)" title="Method in MapExt">toQueryString(java.util.Map)</a></span> - Method in <a href="com/intellisrc/groovy/MapExt.html">MapExt</a>
 </dt><dd> <div class="block">Encodes a Map as query string
  e.g.: key1=val1&key2=val2</div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/LocalDateTimeExt.html#toSeconds(java.time.LocalDateTime, java.time.ZoneId)" title="Method in LocalDateTimeExt">toSeconds(java.time.LocalDateTime, java.time.ZoneId)</a></span> - Method in <a href="com/intellisrc/groovy/LocalDateTimeExt.html">LocalDateTimeExt</a>
+</dt><dd> <div class="block">Convert LocalDateTime to seconds</div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeExt.html#toSeconds(java.time.ZonedDateTime)" title="Method in ZonedDateTimeExt">toSeconds(java.time.ZonedDateTime)</a></span> - Method in <a href="com/intellisrc/groovy/ZonedDateTimeExt.html">ZonedDateTimeExt</a>
+</dt><dd> <div class="block">Convert ZonedDateTime to seconds</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/StringExt.html#toSnakeCase(java.lang.String, boolean)" title="Method in StringExt">toSnakeCase(java.lang.String, boolean)</a></span> - Method in <a href="com/intellisrc/groovy/StringExt.html">StringExt</a>
 </dt><dd> <div class="block">Convert String to snake_case</div></dd>
 <dt><span class="strong"><a href="com/intellisrc/groovy/StringExt.html#toTime(java.lang.String, java.lang.String)" title="Method in StringExt">toTime(java.lang.String, java.lang.String)</a></span> - Method in <a href="com/intellisrc/groovy/StringExt.html">StringExt</a>
@@ -599,9 +621,13 @@ if (location.href.indexOf('is-external=true') == -1) {
 <h2 class="title">Z</h2>
 <dl>
 
-<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateExt.html" title="Class in com.intellisrc.groovy">ZonedDateExt</a></span> - Class in <a href="./com/intellisrc/groovy/package-summary.html">com.intellisrc.groovy</a>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeExt.html" title="Class in com.intellisrc.groovy">ZonedDateTimeExt</a></span> - Class in <a href="./com/intellisrc/groovy/package-summary.html">com.intellisrc.groovy</a>
 </dt><dd><div class="block">Extensions to ZonedDateTime, ZonedDate and ZonedTime</div></dd>
-<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateExt.html#ZonedDateExt()" title="Constructor in ZonedDateExt">ZonedDateExt()</a></span> - Constructor in <a href="com/intellisrc/groovy/ZonedDateExt.html">ZonedDateExt</a>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeExt.html#ZonedDateTimeExt()" title="Constructor in ZonedDateTimeExt">ZonedDateTimeExt()</a></span> - Constructor in <a href="com/intellisrc/groovy/ZonedDateTimeExt.html">ZonedDateTimeExt</a>
+</dt><dd> <div class="block"></div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeStaticExt.html" title="Class in com.intellisrc.groovy">ZonedDateTimeStaticExt</a></span> - Class in <a href="./com/intellisrc/groovy/package-summary.html">com.intellisrc.groovy</a>
+</dt><dd><div class="block">Extensions to ZonedDateTime, ZonedDate and ZonedTime</div></dd>
+<dt><span class="strong"><a href="com/intellisrc/groovy/ZonedDateTimeStaticExt.html#ZonedDateTimeStaticExt()" title="Constructor in ZonedDateTimeStaticExt">ZonedDateTimeStaticExt()</a></span> - Constructor in <a href="com/intellisrc/groovy/ZonedDateTimeStaticExt.html">ZonedDateTimeStaticExt</a>
 </dt><dd> <div class="block"></div></dd>
 </dl>
 
