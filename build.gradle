@@ -3,7 +3,7 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'signing'
-    id 'net.saliman.properties' version '1.5.1'
+    id 'io.github.gradle-nexus.publish-plugin' version '2.0.0'
 }
 
 repositories {
@@ -11,10 +11,25 @@ repositories {
     mavenCentral()
 }
 
-def groovyVer = '4.0.23'
+// Load local overrides
+def localPropsFile = file('gradle-local.properties')
+if (localPropsFile.exists()) {
+    localPropsFile.withInputStream { stream ->
+        Properties props = new Properties()
+        props.load(stream)
+        props.each { key, value ->
+            project.ext.set(key.toString(), value)
+        }
+    }
+}
+
+final int javaVersion = 21
+
+def groovyVer = '4.0.30'
 def libVersion = '14'
-group groupName
-version "${groovyVer}.${libVersion}"
+
+group = groupName
+version = "${groovyVer}.${libVersion}"
 boolean isDev = version.contains("SNAPSHOT")
 boolean publishDev = ! version.contains("DEBUG")
 
@@ -24,6 +39,8 @@ dependencies {
 
     // Use the awesome Spock testing and specification framework even with Java
     testImplementation 'org.spockframework:spock-core:2.4-M4-groovy-4.0'
+    // Fixes "The automatic loading of test framework implementation dependencies has been deprecated." for Gradle 9
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 java {
@@ -31,22 +48,24 @@ java {
         withJavadocJar()
         withSourcesJar()
     }
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(javaVersion)
+    }
 }
-
-publishing {
+nexusPublishing {
     repositories {
-        maven {
-            def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2"
-            def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots"
-            url = isDev ? snapshotsRepoUrl : releasesRepoUrl
-            credentials {
-                username = ossrhUsername
-                password = ossrhPassword
-            }
+        sonatype {
+            // see https://central.sonatype.org/publish/publish-portal-ossrh-staging-api/#configuration
+            nexusUrl.set(uri("https://ossrh-staging-api.central.sonatype.com/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://central.sonatype.com/repository/maven-snapshots/"))
         }
     }
+}
+publishing {
     publications {
         mavenJava(MavenPublication) {
+            assert groupName : "groupName is required"
+            assert artifact : "artifact is required"
             groupId = groupName
             artifactId = artifact
 
@@ -91,11 +110,6 @@ publishing {
         }
     }
 }
-/*
-artifacts {
-    archives jar, sourcesJar, javadocJar
-}
-*/
 signing {
     //If we remove "artifacts" and set this one, it generates the jar, but without generateModule()
     if(! isDev || publishDev) {
@@ -120,7 +134,7 @@ tasks.register('generateModule') {
                     extensionFiles << clsName
                 }
         }
-        File services = new File(buildDir, "classes/groovy/main/META-INF/services")
+        File services = new File(rootDir, "build/classes/groovy/main/META-INF/services")
         services.mkdirs()
         File ext = new File(services, 'org.codehaus.groovy.runtime.ExtensionModule')
         ext.text = """moduleName=groovy-common-extensions
@@ -131,16 +145,16 @@ staticExtensionClasses=${staticFiles.join(',')}"""
 }
 // Hook up dependencies
 jar.dependsOn(generateModule)
-/*jar.dependsOn(generateModule, sourcesJar, javadocJar)
-   .finalizedBy(signArchives)*/
-
 javadoc {
-    if(JavaVersion.current().isJava9Compatible()) {
-        options.addBooleanOption('html5', true)
-    }
+    options.addBooleanOption('html5', true)
 }
-
-tasks.named('test') {
+tasks.withType(Groovydoc).configureEach {
+    classpath += project.configurations.documentation
+}
+tasks.withType(JavaCompile).configureEach {
+    options.release.set(javaVersion) // Ensures bytecode compatibility with Java
+}
+tasks.withType(Test).configureEach {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
