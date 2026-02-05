@@ -9,11 +9,6 @@ plugins {
     id 'io.github.gradle-nexus.publish-plugin' version '2.0.0'
 }
 
-repositories {
-    // Use Maven Central for resolving dependencies.
-    mavenCentral()
-}
-
 // Load local overrides
 def localPropsFile = file('gradle-local.properties')
 if (localPropsFile.exists()) {
@@ -36,6 +31,13 @@ version = "${groovyVer}.${libVersion}"
 boolean isDev = version.contains("SNAPSHOT")
 boolean publishDev = ! version.contains("DEBUG")
 
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+configurations {
+    documentation
+}
 dependencies {
     // Use the latest Groovy version for building this library
     compileOnly "org.apache.groovy:groovy:${groovyVer}"
@@ -45,7 +47,6 @@ dependencies {
     // Fixes "The automatic loading of test framework implementation dependencies has been deprecated." for Gradle 9
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
-
 java {
     if(!isDev || publishDev) {
         withJavadocJar()
@@ -179,7 +180,6 @@ tasks.register("generateModule", GenerateGroovyExtensionModule) {
     moduleVersion.set(project.version.toString())
     outputDir.set(layout.buildDirectory.dir("generated/resources"))
 }
-
 sourceSets {
     main {
         resources.srcDir(layout.buildDirectory.dir("generated/resources"))
@@ -190,9 +190,6 @@ tasks.named("sourcesJar") {
 }
 tasks.named("processResources") {
     dependsOn(tasks.named("generateModule"))
-}
-javadoc {
-    options.addBooleanOption('html5', true)
 }
 tasks.withType(Groovydoc).configureEach {
     classpath += project.configurations.documentation
