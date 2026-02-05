@@ -1,3 +1,6 @@
+import org.gradle.api.tasks.*
+import org.gradle.api.file.*
+
 plugins {
     id 'groovy'
     id 'java-library'
@@ -117,34 +120,77 @@ signing {
     }
 }
 
-tasks.register('generateModule') {
-    doLast {
-        SourceSet main = sourceSets.main
-        SourceDirectorySet groovy = main.groovy
-        List<String> extensionFiles = []
-        List<String> staticFiles = []
-        groovy.toList().each {
-            File g ->
-                String pkg = g.absolutePath.replaceAll(File.separator, '.') -
-                    groovy.srcDirs[0].toString().replaceAll(File.separator, '.')
-                String clsName = pkg[1..pkg.lastIndexOf('.') - 1].toString()
-                if (clsName.contains('Static')) {
-                    staticFiles << clsName
-                } else {
-                    extensionFiles << clsName
-                }
+@CacheableTask
+abstract class GenerateGroovyExtensionModule extends DefaultTask {
+
+    @InputFiles
+    @PathSensitive(PathSensitivity.RELATIVE)
+    abstract ConfigurableFileCollection getGroovySources()
+
+    @Input
+    abstract Property<String> getModuleName()
+
+    @Input
+    abstract Property<String> getModuleVersion()
+
+    @OutputDirectory
+    abstract DirectoryProperty getOutputDir()
+
+    @TaskAction
+    void generate() {
+        List<String> extensionClasses = []
+        List<String> staticExtensionClasses = []
+
+        File srcRoot = project.file("src/main/groovy").canonicalFile
+
+        groovySources.files.each { File g ->
+            File canonical = g.canonicalFile
+            assert canonical.path.startsWith(srcRoot.path)
+
+            String relPath = srcRoot.toPath().relativize(canonical.toPath()).toString()
+
+            String fqcn = relPath
+                .replace(File.separatorChar.toString(), '.')
+                .replaceAll(/\.groovy$/, '')
+
+            if (fqcn.contains('Static')) {
+                staticExtensionClasses << fqcn
+            } else {
+                extensionClasses << fqcn
+            }
         }
-        File services = new File(rootDir, "build/classes/groovy/main/META-INF/services")
-        services.mkdirs()
-        File ext = new File(services, 'org.codehaus.groovy.runtime.ExtensionModule')
-        ext.text = """moduleName=groovy-common-extensions
-moduleVersion=$version
-extensionClasses=${extensionFiles.join(',')}
-staticExtensionClasses=${staticFiles.join(',')}"""
+
+        File servicesDir = outputDir.get().file("META-INF/services").asFile
+        servicesDir.mkdirs()
+
+        File moduleFile = new File(servicesDir, "org.codehaus.groovy.runtime.ExtensionModule")
+        moduleFile.text = """\
+moduleName=${moduleName.get()}
+moduleVersion=${moduleVersion.get()}
+extensionClasses=${extensionClasses.join(',')}
+staticExtensionClasses=${staticExtensionClasses.join(',')}
+"""
     }
 }
-// Hook up dependencies
-jar.dependsOn(generateModule)
+
+tasks.register("generateModule", GenerateGroovyExtensionModule) {
+    groovySources.from(sourceSets.main.groovy)
+    moduleName.set("groovy-common-extensions")
+    moduleVersion.set(project.version.toString())
+    outputDir.set(layout.buildDirectory.dir("generated/resources"))
+}
+
+sourceSets {
+    main {
+        resources.srcDir(layout.buildDirectory.dir("generated/resources"))
+    }
+}
+tasks.named("sourcesJar") {
+    dependsOn(tasks.named("generateModule"))
+}
+tasks.named("processResources") {
+    dependsOn(tasks.named("generateModule"))
+}
 javadoc {
     options.addBooleanOption('html5', true)
 }
