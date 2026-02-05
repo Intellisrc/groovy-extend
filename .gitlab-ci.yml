@@ -1,0 +1,38 @@
+variables:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+before_script:
+  - export GRADLE_USER_HOME=`pwd`/.gradle
+
+build:
+  stage: build
+  image: gradle:jdk21
+  script: gradle --build-cache assemble
+  cache:
+    key: "$CI_COMMIT_REF_NAME"
+    policy: push
+    paths:
+      - build
+      - .gradle
+
+test:
+  stage: test
+  image: gradle:jdk21
+  script: gradle check
+  cache:
+    key: "$CI_COMMIT_REF_NAME"
+    policy: pull
+    paths:
+      - build
+      - .gradle
+
+pages:
+  stage: build
+  image: alpine:latest
+  script:
+  - echo 'Documentation'
+  artifacts:
+    paths:
+    - public
+  only:
+  - docs
