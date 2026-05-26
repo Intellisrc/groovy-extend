@@ -23,8 +23,8 @@ if (localPropsFile.exists()) {
 
 final int javaVersion = 21
 
-def groovyVer = '4.0.30'
-def libVersion = '14'
+def groovyVer = '4.0.32'
+def libVersion = '15'
 
 group = groupName
 version = "${groovyVer}.${libVersion}"
