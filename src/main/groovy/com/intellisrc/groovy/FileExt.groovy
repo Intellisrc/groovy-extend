@@ -16,6 +16,7 @@ import java.nio.file.attribute.PosixFilePermission
 class FileExt {
     static int getLines(final File self) {
         LineNumberReader lr = new LineNumberReader(new FileReader(self))
+        //noinspection GroovyEmptyStatementBody
         while (lr.skip(Long.MAX_VALUE) > 0) { }
         return lr.lineNumber
     }
@@ -206,8 +207,15 @@ class FileExt {
      * @param target
      * @return
      */
-    static boolean copyTo(final File self, final File target) {
-        return Files.copy(self.toPath(), target.toPath())
+    static boolean copyTo(final File self, final File target, boolean force = false) {
+        File moveToFile = target
+        if(self.isFile() && moveToFile.isDirectory()) {
+            moveToFile = FileStaticExt.get(target, self.name)
+        }
+        if(force && moveToFile.exists()) {
+            moveToFile.delete()
+        }
+        return Files.copy(self.toPath(), moveToFile.toPath())
     }
 
     /**
@@ -216,8 +224,15 @@ class FileExt {
      * @param target
      * @return
      */
-    static boolean moveTo(final File self, final File target) {
-        return Files.move(self.toPath(), target.toPath())
+    static boolean moveTo(final File self, final File target, boolean force = false) {
+        File moveToFile = target
+        if(self.isFile() && moveToFile.isDirectory()) {
+            moveToFile = FileStaticExt.get(target, self.name)
+        }
+        if(force && moveToFile.exists()) {
+            moveToFile.delete()
+        }
+        return Files.move(self.toPath(), moveToFile.toPath())
     }
     /**
      * Create link or symlink
@@ -247,7 +262,7 @@ class FileExt {
         }
         try {
             linkTo(self, target, true)
-        } catch (Exception e) {
+        } catch (Exception ignore) {
             copyTo(self, target)
         }
     }
