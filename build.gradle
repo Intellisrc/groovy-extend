@@ -23,7 +23,7 @@ if (localPropsFile.exists()) {
 
 final int javaVersion = 21
 
-def groovyVer = '4.0.32'
+def groovyVer = '5.0.8'
 def libVersion = '15'
 
 group = groupName
@@ -43,7 +43,7 @@ dependencies {
     compileOnly "org.apache.groovy:groovy:${groovyVer}"
 
     // Use the awesome Spock testing and specification framework even with Java
-    testImplementation 'org.spockframework:spock-core:2.4-M4-groovy-4.0'
+    testImplementation 'org.spockframework:spock-core:2.4-groovy-5.0'
     // Fixes "The automatic loading of test framework implementation dependencies has been deprecated." for Gradle 9
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
